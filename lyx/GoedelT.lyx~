@@ -1,0 +1,1323 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options false
+\begin_modules
+theorems-std
+\end_modules
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 2
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Teorema de Gödel
+\end_layout
+
+\begin_layout Standard
+Bosquejaremos la prueba del teorema de incompletitud de Gödel y sus corolarios.
+ Todos los números son enteros no negativos, y todos los predicados son
+ predicados de números.
+ Escribimos los término cerrados 
+\begin_inset Formula $0,0^{\prime},\left(0^{\prime}\right)^{\prime},\left(\left(0^{\prime}\right)^{\prime}\right)^{\prime},\dots$
+\end_inset
+
+ de 
+\begin_inset Formula $N$
+\end_inset
+
+ como 
+\begin_inset Formula $\bar{0},\bar{1},\bar{2},\bar{3},\dots$
+\end_inset
+
+ y los llamaremos los numerales de 
+\begin_inset Formula $N$
+\end_inset
+
+ para distinguirlos de los correspondientes números intuitivos.
+ Si 
+\begin_inset Formula $P\left(v_{1},\dots,v_{n}\right)$
+\end_inset
+
+ es una fórmula de 
+\begin_inset Formula $N$
+\end_inset
+
+, entonces 
+\begin_inset Formula $P\left(\bar{a}_{1},\dots,\bar{a}_{n}\right)$
+\end_inset
+
+ es el resultado de remplazar cada ocurrencia libre de 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ en 
+\begin_inset Formula $P$
+\end_inset
+
+ por una ocurrencia del numeral 
+\begin_inset Formula $\bar{a}_{i}$
+\end_inset
+
+ (correspondiente al número 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+) para 
+\begin_inset Formula $1\leq i\leq n.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un predicado de 
+\begin_inset Formula $n$
+\end_inset
+
+ lugares 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ es expresable en 
+\begin_inset Formula $N$
+\end_inset
+
+ si y sólo si hay una fórmula 
+\begin_inset Formula $P\left(v_{1},\dots,v_{n}\right)$
+\end_inset
+
+ de 
+\begin_inset Formula $N$
+\end_inset
+
+ con exactamente 
+\begin_inset Formula $n$
+\end_inset
+
+ variable libres 
+\begin_inset Formula $v_{1},\dots,v_{n}$
+\end_inset
+
+ tal que para cualquier 
+\begin_inset Formula $n$
+\end_inset
+
+ upla 
+\begin_inset Formula $a_{1},\dots,a_{n}$
+\end_inset
+
+ de números
+\end_layout
+
+\begin_layout Standard
+(i) si 
+\begin_inset Formula $\mathcal{P}\left(a_{1},\dots,a_{n}\right)$
+\end_inset
+
+ es cierta, entonces 
+\begin_inset Formula $\vdash_{N}P\left(\bar{a}_{1},\dots,\bar{a}_{n}\right);$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(ii) si 
+\begin_inset Formula $\mathcal{P}\left(a_{1},\dots,a_{n}\right)$
+\end_inset
+
+ es falsa, entonces 
+\begin_inset Formula $\vdash_{N}\sim P\left(\bar{a}_{1},\dots,\bar{a}_{n}\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por ejemplo, el predicado 
+\begin_inset Formula $x\leq y,$
+\end_inset
+
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ es par y 
+\begin_inset Formula $x$
+\end_inset
+
+ divide a 
+\begin_inset Formula $y$
+\end_inset
+
+ son expresables en 
+\begin_inset Formula $N$
+\end_inset
+
+ por las fórmulas 
+\begin_inset Formula $\exists z\left(x+z=y\right),$
+\end_inset
+
+ 
+\begin_inset Formula $\exists y\left(x=\bar{2}y\right),$
+\end_inset
+
+ y 
+\begin_inset Formula $\exists z\left(y=zx\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una expresión de 
+\begin_inset Formula $N$
+\end_inset
+
+ es una cadena o una sucesión infinita de cadenas de 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ Una numeración Gödel para 
+\begin_inset Formula $N$
+\end_inset
+
+ es una función que asigna a cada expresión de N un número, llamado el número
+ de Gödel de la expresión, tal que (i) hay un procedimiento efectivo para
+ computar el número de Gödel de cada expresión, (ii) diferentes expresiones
+ siempre tienen diferentes números de Gödel, y (iii) hay un procedimiento
+ efectivo para decidir si un número 
+\begin_inset Formula $n$
+\end_inset
+
+ es el número de Gödel de una expresión, y si es así, para recapturar la
+ expresión de 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La prueba del teorema 1 de la sección de decibilidad usa una numeración
+ de Gödel.
+ Gödel usó una numeración basada en el teorema fundamental de la aritmética.
+ Demos una versión para 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ A cada símbolo formal 
+\begin_inset Formula $s$
+\end_inset
+
+ se asigna un número 
+\begin_inset Formula $g\left(s\right)$
+\end_inset
+
+ como sigue
+\begin_inset Formula \[
+\begin{tabular}{lllllllllllll}
+ \ensuremath{\mathbf{s}} &  \ensuremath{\sim} &  \ensuremath{\rightarrow} &  \ensuremath{\forall} &  \ensuremath{(} &  \ensuremath{,} &  \ensuremath{)} &  \ensuremath{\alpha} &  \ensuremath{\beta} &  \ensuremath{\gamma} &  \ensuremath{x} &  \ensuremath{|} &  \ensuremath{\#}\\
+\ensuremath{\mathbf{g}\left(s\right)} &  \ensuremath{1} &  \ensuremath{3} &  \ensuremath{5} &  \ensuremath{7} &  \ensuremath{9} &  \ensuremath{11} &  \ensuremath{13} &  \ensuremath{15} &  \ensuremath{17} &  \ensuremath{19} &  \ensuremath{21} &  \ensuremath{23}\end{tabular}\]
+
+\end_inset
+
+Sean 
+\begin_inset Formula $p_{1},\dots,p_{n}$
+\end_inset
+
+ los primeros 
+\begin_inset Formula $n$
+\end_inset
+
+ primos 
+\begin_inset Formula $2,3,5,7,11,\dots,p_{n}$
+\end_inset
+
+ en su orden natural.
+ entonces a cada cadena 
+\begin_inset Formula $s_{1}\dots s_{n}$
+\end_inset
+
+ se le asigna el número 
+\begin_inset Formula $g\left(s_{1}\dots s_{n}\right)=p_{1}^{g\left(s_{1}\right)},\dots,p_{n}^{g\left(s_{n}\right)}.$
+\end_inset
+
+ por ejemplo
+\begin_inset Formula \[
+g\left(A\left(x\right)\right)=g\left(\alpha\#\left(x\right)\right)=2^{13}3^{23}5^{7}7^{19}11^{11}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cada sucesión finita 
+\begin_inset Formula $S_{1},\dots,S_{n}$
+\end_inset
+
+ de cadenas se le asigna el número 
+\begin_inset Formula $g\left(S_{1},\dots,S_{n}\right)=p_{1}^{g\left(S_{1}\right)},\dots,p_{n}^{g\left(S_{n}\right)}$
+\end_inset
+
+.
+ Desde ahora a toda referencia a numeración de Gödel sera la ya descrita.
+\end_layout
+
+\begin_layout Standard
+Una numeración de Gödel permite que enunciados de N se traduzcan en enunciados
+ de la teoría informal de números, y la expresabilidad habilita enunciados
+ de la teoría en informal de números traducirse en proposiciones de N.
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $v$
+\end_inset
+
+ es una variable traducida en el predicado de la teoría de números 
+\begin_inset Formula $\mathcal{V}\left(n\right)$
+\end_inset
+
+: 
+\begin_inset Formula $n=2^{19}$
+\end_inset
+
+ o hay un primo 
+\begin_inset Formula $p_{k}$
+\end_inset
+
+ mayor que 2 tal que 
+\begin_inset Formula $n=p_{1}^{19}p_{2}^{21}\cdots p_{k}^{21}$
+\end_inset
+
+.
+ Suponga que 
+\begin_inset Formula $\mathcal{V}\left(n\right)$
+\end_inset
+
+ es expresable en N por la fórmula 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Entonces la proposición 
+\begin_inset Formula $x||$
+\end_inset
+
+ es una variable de N se traduce en el teorema 
+\begin_inset Formula $V\left(\overline{2^{19}3^{21}5^{21}}\right)$
+\end_inset
+
+ de N.
+\end_layout
+
+\begin_layout Standard
+Para enunciar el teorema de Göedel necesitamos la noción de 
+\begin_inset Formula $\omega-$
+\end_inset
+
+consistencia.
+ N es 
+\begin_inset Formula $\omega-$
+\end_inset
+
+ consistente si y solo si cualquier fórmula 
+\begin_inset Formula $Q\left(v\right)$
+\end_inset
+
+ de N con exactamente una variable libre 
+\begin_inset Formula $v$
+\end_inset
+
+, si 
+\begin_inset Formula $Q\left(\overline{n}\right)$
+\end_inset
+
+ es un teorema de N para cualquier número 
+\begin_inset Formula $n$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\sim\forall vQ\left(v\right)$
+\end_inset
+
+ no es un teorema de N.
+\end_layout
+
+\begin_layout Lemma
+Si N es 
+\begin_inset Formula $\omega-$
+\end_inset
+
+ consistente, entonces N es consistente
+\begin_inset CommandInset label
+LatexCommand label
+name "siwconsisconsis"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Suponga que N es 
+\begin_inset Formula $\omega$
+\end_inset
+
+- consistente.
+ Sea 
+\begin_inset Formula $Q\left(v\right)$
+\end_inset
+
+ una fórmula de N con exactamente una variable libre 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ O 
+\begin_inset Formula $Q\left(\overline{n}\right)$
+\end_inset
+
+ es un teorema de N para cualquier número 
+\begin_inset Formula $n$
+\end_inset
+
+, o hay un número 
+\begin_inset Formula $k$
+\end_inset
+
+ tal que 
+\begin_inset Formula $Q\left(\overline{k}\right)$
+\end_inset
+
+ no es un teorema de N.
+ En el primer caso 
+\begin_inset Formula $\sim\forall vQ\left(v\right)$
+\end_inset
+
+ no es un teorema de N por la definición de 
+\begin_inset Formula $\omega-$
+\end_inset
+
+consistencia, y en el segundo caso 
+\begin_inset Formula $Q\left(\overline{k}\right)$
+\end_inset
+
+ no es un teorema de N.
+ Por esto N es consistente.
+\end_layout
+
+\begin_layout Lemma
+Sea 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+ ua predicado de 2 lugares definido por: 
+\begin_inset Formula $\mathcal{G}\left(a,b\right)$
+\end_inset
+
+ es cierto si y solo si 
+\begin_inset Formula $a$
+\end_inset
+
+ es le número de Gödel de una fórmula 
+\begin_inset Formula $P\left(x\right)$
+\end_inset
+
+ con variable libre 
+\begin_inset Formula $x$
+\end_inset
+
+, y 
+\begin_inset Formula $b$
+\end_inset
+
+ es número de Gödel de una prueba de 
+\begin_inset Formula $P\left(\overline{a}\right)$
+\end_inset
+
+ en N.
+ Entonces 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+ es expresable en N por una fórmula G.
+\begin_inset CommandInset label
+LatexCommand label
+name "lem:Sea--ua"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Omitimos la prueba.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $P$
+\end_inset
+
+ la fórmula 
+\begin_inset Formula $\forall y\sim G\left(x,y\right)$
+\end_inset
+
+, y sea 
+\begin_inset Formula $i$
+\end_inset
+
+ el número de Gödel de 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $S$
+\end_inset
+
+ la proposición 
+\begin_inset Formula $P\left(i\right)$
+\end_inset
+
+, o sea 
+\begin_inset Formula $\forall y\sim G\left(i,y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+(Teorema de la incompletitud de Gödel) Si N es consistente, entonces 
+\begin_inset Formula $S$
+\end_inset
+
+ no es un teorema de N; si 
+\begin_inset Formula $N$
+\end_inset
+
+ es 
+\begin_inset Formula $\omega$
+\end_inset
+
+-consistente, entonces 
+\begin_inset Formula $\sim S$
+\end_inset
+
+ no es un teorema de N.
+ Luego, si N es 
+\begin_inset Formula $\omega$
+\end_inset
+
+ - consistente, entonces N es incompleto.
+\end_layout
+
+\begin_layout Proof
+Suponga que N es consistente.
+ Suponga por contradicción que 
+\begin_inset Formula $S$
+\end_inset
+
+ es un teorema de N, o sea 
+\begin_inset Formula $\vdash_{N}\forall y\sim G\left(i,y\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $j$
+\end_inset
+
+ el número de Gödel de una prueba de 
+\begin_inset Formula $S$
+\end_inset
+
+ en N.
+ Entonces 
+\begin_inset Formula $\mathcal{G}\left(i,j\right)$
+\end_inset
+
+ es cierto por la definición de 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+ y 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $\vdash_{N}G\left(i,j\right)$
+\end_inset
+
+ por lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:Sea--ua"
+
+\end_inset
+
+.
+ Pero spec aplicado a 
+\begin_inset Formula $S$
+\end_inset
+
+ da 
+\begin_inset Formula $\vdash_{N}\sim G\left(i,j\right)$
+\end_inset
+
+, contradiciendo la consistencia de N.
+\end_layout
+
+\begin_layout Proof
+Suponga que N es 
+\begin_inset Formula $\omega$
+\end_inset
+
+ - consistente.
+ Entonces N es consistente por lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "siwconsisconsis"
+
+\end_inset
+
+.
+ Luego S no es un teorema de N, por la primera parte de esta prueba.
+ Entonces ningún número 
+\begin_inset Formula $n$
+\end_inset
+
+ es el número de Gödel de la prueba de S en N, o sea 
+\begin_inset Formula $\mathcal{G}\left(i,n\right)$
+\end_inset
+
+ es falsa para cualquier 
+\begin_inset Formula $n$
+\end_inset
+
+ por lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:Sea--ua"
+
+\end_inset
+
+.
+ 
+\begin_inset Formula $\sim G\left(\bar{i},y\right)$
+\end_inset
+
+ es una fórmula con exactamente una variable libre.
+ Entonces por la 
+\begin_inset Formula $\omega$
+\end_inset
+
+ - consistencia, 
+\begin_inset Formula $\sim\forall y\sim G\left(i,y\right)$
+\end_inset
+
+ no es un teorema de N.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $G$
+\end_inset
+
+ se interpreta como 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+, entonces la interpretación para 
+\begin_inset Formula $S$
+\end_inset
+
+ es: 
+\begin_inset Formula $\mathcal{G}\left(i,n\right)$
+\end_inset
+
+ es falsa para cualquier 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Por la definición de 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+, 
+\begin_inset Formula $i$
+\end_inset
+
+, y 
+\begin_inset Formula $S$
+\end_inset
+
+, esto significa que no hay prueba de 
+\begin_inset Formula $S$
+\end_inset
+
+ en 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ Luego se dice que 
+\begin_inset Formula $S$
+\end_inset
+
+ es improbable.
+ Si 
+\begin_inset Formula $N$
+\end_inset
+
+ es consistente, entonces 
+\begin_inset Formula $S$
+\end_inset
+
+ es cierta en esta interpretación pero improbable.
+\end_layout
+
+\begin_layout Standard
+Por uso de una proposición más complicada que 
+\begin_inset Formula $S$
+\end_inset
+
+, Rosser reemplazó la hipótesis de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ - consistencia en el teorema de Göedel por la hipótesis mas débil de consistenc
+ia.
+ Bosquejamos la prueba de Rosser.
+\end_layout
+
+\begin_layout Lemma
+(a) Para cualquier número 
+\begin_inset Formula $k$
+\end_inset
+
+,
+\begin_inset Formula \[
+\vdash_{N}Q\left(\bar{0}\right)\wedge Q\left(\bar{1}\right)\wedge\cdots\wedge Q\left(\bar{k}\right)\rightarrow\forall z\left(z\leq\bar{k}\rightarrow Q\left(z\right)\right)\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(b) para cualquier número 
+\begin_inset Formula $m$
+\end_inset
+
+, 
+\begin_inset Formula $\vdash_{N}y\leq\bar{m}\vee\bar{m}\leq y$
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "lem5"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(a) es el teorema 24 de la sección de la teoría de números.
+ Cada instancia de (b) se sigue inmediatamente po spec de 
+\begin_inset Formula $\vdash_{N}\forall x\forall y.x\leq y\vee y\leq x$
+\end_inset
+
+, que es el teorema 22 de la sección de teoría de números
+\end_layout
+
+\begin_layout Lemma
+Sea 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ el predicado de dos lugares definido por: 
+\begin_inset Formula $\mathcal{H}\left(a,b\right)$
+\end_inset
+
+ es cierto si y solo si 
+\begin_inset Formula $a$
+\end_inset
+
+ es el número de Gödel de una fórmula 
+\begin_inset Formula $P\left(x\right)$
+\end_inset
+
+ con variable libre 
+\begin_inset Formula $x$
+\end_inset
+
+, y 
+\begin_inset Formula $b$
+\end_inset
+
+ es el número de Gödel de una prueba de 
+\begin_inset Formula $\sim P\left(x\right)$
+\end_inset
+
+ en N.
+ Entonces 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ es expresable en N por una fórmula 
+\begin_inset Formula $H$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "lemHesexpresable"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+La prueba del Lema se omite
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $P$
+\end_inset
+
+ la fórmula 
+\begin_inset Formula $\forall y\left(G\left(x,y\right)\rightarrow\exists z\left(z\leq y\wedge H\left(x,z\right)\right)\right)$
+\end_inset
+
+, y sea 
+\begin_inset Formula $j$
+\end_inset
+
+ el número de Gödel de 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $R$
+\end_inset
+
+ la proposición 
+\begin_inset Formula $P\left(\bar{j}\right)$
+\end_inset
+
+, o sea
+\begin_inset Formula \[
+\forall y\left(G\left(\bar{j},y\right)\rightarrow\exists z\left(z\leq y\wedge H\left(\bar{j},z\right)\right)\right)\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+(El teorema de Gödel Rosser).
+ Si N es consistente, entonces ni 
+\begin_inset Formula $\sim R$
+\end_inset
+
+ ni 
+\begin_inset Formula $R$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Supongamos que 
+\begin_inset Formula $N$
+\end_inset
+
+ es consistente.
+ Supongamos por contradicción que 
+\begin_inset Formula $R$
+\end_inset
+
+ es un teorema de N.
+ O sea, 
+\begin_inset Formula $\vdash_{N}\forall y\left(G\left(\bar{j},y\right)\rightarrow\exists z\left(z\leq y\wedge H\left(\bar{j},z\right)\right)\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $k$
+\end_inset
+
+ el número de la prueba de 
+\begin_inset Formula $R$
+\end_inset
+
+ en N.
+ Entonces 
+\begin_inset Formula $\mathcal{G}\left(j,k\right)$
+\end_inset
+
+ es cierto por la definición de 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+ y 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\vdash_{N}G\left(\bar{i},\bar{k}\right)$
+\end_inset
+
+ por lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:Sea--ua"
+
+\end_inset
+
+.
+ Spec aplicado a 
+\begin_inset Formula $R$
+\end_inset
+
+ da 
+\begin_inset Formula $\vdash_{N}\left(G\left(\bar{j},\bar{k}\right)\rightarrow\exists z\left(z\leq\bar{k}\wedge H\left(\bar{j},z\right)\right)\right)$
+\end_inset
+
+ entonces modus ponens da 
+\begin_inset Formula $\vdash_{N}\exists z\left(z\leq\bar{k}\wedge H\left(\bar{j},z\right)\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\sim R$
+\end_inset
+
+ no es un teorema de N porque 
+\begin_inset Formula $R$
+\end_inset
+
+ es un teorema de N y N es consistente.
+ Entonces no hay un número 
+\begin_inset Formula $n$
+\end_inset
+
+ de Gödel que sea de la prueba de 
+\begin_inset Formula $\sim R$
+\end_inset
+
+ en N.
+ Entonces 
+\begin_inset Formula $\mathcal{H}\left(i,n\right)$
+\end_inset
+
+ es falso para cualquier 
+\begin_inset Formula $n$
+\end_inset
+
+ por la definición de 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ y 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Por el lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lemHesexpresable"
+
+\end_inset
+
+, 
+\begin_inset Formula $\vdash_{N}\sim H\left(\bar{j},\bar{n}\right)$
+\end_inset
+
+ para cualquier 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Entonces por el cálculo de proposiciones, 
+\begin_inset Formula $\vdash_{N}\sim H\left(\bar{j},\bar{0}\right)\wedge\sim H\left(\bar{j},\bar{1}\right)\wedge\cdots\wedge\sim H\left(\bar{j},\bar{k}\right)$
+\end_inset
+
+.
+ Por lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem5"
+
+\end_inset
+
+ y el cálculo de proposiciones 
+\begin_inset Formula \[
+\vdash_{N}\forall z\left(z\leq\bar{k}\rightarrow\sim H\left(\bar{j},z\right)\right)\]
+
+\end_inset
+
+Entonces 
+\begin_inset Formula $\vdash_{N}\sim\exists z\left(z\leq\bar{k}\wedge H\left(\bar{j},z\right)\right)$
+\end_inset
+
+ por el cálculo de predicados (Teorema 5 de la sección equivalencia y reemplazo,
+ y el teorema de reemplazo).
+ Pero ya teníamos que 
+\begin_inset Formula $\vdash_{N}\exists z\left(z\leq\bar{k}\wedge H\left(\bar{j},z\right)\right)$
+\end_inset
+
+ contradiciendo la consistencia de N
+\end_layout
+
+\begin_layout Proof
+Ahora supongamos para contradicción que 
+\begin_inset Formula $\sim R$
+\end_inset
+
+ es un teorema de N.
+ Sea 
+\begin_inset Formula $m$
+\end_inset
+
+ el número de Gödel de una prueba de 
+\begin_inset Formula $\sim R$
+\end_inset
+
+ en N.
+ Entonces 
+\begin_inset Formula $\mathcal{H}\left(j,m\right)$
+\end_inset
+
+ es cierto por la definición de 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ y 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Por el lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lemHesexpresable"
+
+\end_inset
+
+, 
+\begin_inset Formula $\vdash_{N}H\left(\bar{j},\bar{m}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R$
+\end_inset
+
+ no es un teorema de N porque 
+\begin_inset Formula $\sim R$
+\end_inset
+
+ es un teorema de N y N es consistente.
+ Entonces 
+\begin_inset Formula $\mathcal{G}\left(j,n\right)$
+\end_inset
+
+ es falsa para cualquier 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\vdash_{N}\sim G\left(\bar{j},\bar{n}\right)$
+\end_inset
+
+ por lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem:Sea--ua"
+
+\end_inset
+
+.
+ Entonces por el cálculo de proposiciones, 
+\begin_inset Formula $\vdash_{N}\sim G\left(\bar{j},\bar{0}\right)\wedge\sim G\left(\bar{j},\bar{1}\right)\wedge\cdots\wedge\sim G\left(\bar{j},\bar{k}\right)$
+\end_inset
+
+.
+ Por lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem5"
+
+\end_inset
+
+, el cálculo de proposiciones y spec da (i) 
+\begin_inset Formula $\vdash_{N}y\leq\bar{m}\rightarrow\sim G\left(\bar{j},y\right)$
+\end_inset
+
+.
+ Supongamos que 
+\begin_inset Formula $\bar{m}\leq y$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\bar{m}\leq y\wedge H\left(\bar{j},\bar{m}\right)$
+\end_inset
+
+ ya que 
+\begin_inset Formula $\vdash_{N}H\left(\bar{j},\bar{m}\right)$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $\exists z\left(z\leq y\wedge H\left(\bar{j},z\right)\right)$
+\end_inset
+
+ por 
+\begin_inset Formula $\exists$
+\end_inset
+
+.
+ Entonces el teorema de la deducción da (ii) 
+\begin_inset Formula $\vdash_{N}\bar{m}\leq y\rightarrow\exists z\left(z\leq y\wedge H\left(\bar{j},z\right)\right)$
+\end_inset
+
+ entonces el cálculo de proposiciones en (i) y (ii), y el lema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem5"
+
+\end_inset
+
+ da 
+\begin_inset Formula \[
+\vdash_{N}\sim G\left(\bar{j},y\right)\vee\exists z\left(z\leq y\wedge H\left(\bar{j},z\right)\right)\]
+
+\end_inset
+
+Entonces el cálculo de proposiciones y gen da
+\begin_inset Formula \[
+\vdash_{N}\forall y\left(G\left(\bar{j},y\right)\rightarrow\exists z\left(z\leq y\wedge H\left(\bar{j},z\right)\right)\right)\]
+
+\end_inset
+
+O sea 
+\begin_inset Formula $\vdash_{N}R$
+\end_inset
+
+.
+ Pero 
+\begin_inset Formula $\vdash_{N}R$
+\end_inset
+
+ contradiciendo la consistencia de N.
+\end_layout
+
+\begin_layout Standard
+La prueba del teorema de Gödel Rosser es constructiva: la prueba de los
+ lemas 3 y 6 dan un procedimiento efectivo apra construir las fórmulas 
+\begin_inset Formula $G$
+\end_inset
+
+ y 
+\begin_inset Formula $H$
+\end_inset
+
+, y entonces la proposición 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El teorema de Göedel Rosser no es una peculiaridad de N.
+ La prueba va a través de varias formulaciones para las que los lemas 3,
+ 5 y 7 se mantienen.
+ Estas incluyen formulaciones mas fuertes y más débiles que N.
+ En particular, la prueba se mantiene si 
+\begin_inset Formula $R$
+\end_inset
+
+ o 
+\begin_inset Formula $\sim R$
+\end_inset
+
+ se adjuntan a N como axioma propio, supuesto que la teoría resultante es
+ formal.
+\end_layout
+
+\begin_layout Standard
+El segundo teorema de Gödel es un corolario del teorema de la incompletitud.
+ Sea 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ un predicado de tres lugares definido por: 
+\begin_inset Formula $\mathcal{L}\left(a,b,c\right)$
+\end_inset
+
+ es cierto si y solo si 
+\begin_inset Formula $a$
+\end_inset
+
+ es el número de Gödel de una fórmula 
+\begin_inset Formula $P$
+\end_inset
+
+ de N, 
+\begin_inset Formula $b$
+\end_inset
+
+ es el número de Gödel de una prueba de 
+\begin_inset Formula $P$
+\end_inset
+
+ en N y 
+\begin_inset Formula $c$
+\end_inset
+
+ es el número de Gödel de una prueba de 
+\begin_inset Formula $\sim P$
+\end_inset
+
+ en 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+ es expresable en N por una fórmula 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ Sea Consis la proposición 
+\begin_inset Formula $\forall x\sim\exists y\exists zL\left(x,y,z\right)$
+\end_inset
+
+ de N.
+\end_layout
+
+\begin_layout Theorem
+(El segundo teorema de Gödel) Si N es consistente, entonces Consis no es
+ probable en N.
+\end_layout
+
+\begin_layout Proof
+Esbozaremos la prueba.
+ Si 
+\begin_inset Formula $L$
+\end_inset
+
+ se interpreta como 
+\begin_inset Formula $\mathcal{L}$
+\end_inset
+
+, entonces Consis dice que no hay fórmula 
+\begin_inset Formula $P$
+\end_inset
+
+ tal que tanto 
+\begin_inset Formula $P$
+\end_inset
+
+ como 
+\begin_inset Formula $\sim P$
+\end_inset
+
+ son teoremas de N, o sea N es consistente.
+ Recuerde que la proposición 
+\begin_inset Formula $S$
+\end_inset
+
+ dice que 
+\begin_inset Formula $S$
+\end_inset
+
+ es no probable.
+ Ya que Consis
+\begin_inset Formula $\rightarrow S$
+\end_inset
+
+ dice que si N es consistente entonces 
+\begin_inset Formula $S$
+\end_inset
+
+ no es probable.
+ Por medio de la numeración de Gödel y la expresibilidad, la prueba (teorema
+ 4) que si N es consistente entonces N es no probable puede traducirse en
+ la prueba de Consis
+\begin_inset Formula $\rightarrow S$
+\end_inset
+
+ en N.
+ Suponga ahora que 
+\begin_inset Formula $\vdash_{N}Co$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

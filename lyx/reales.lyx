@@ -1,0 +1,303 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\newcommand{\gr}{\longrightarrow}
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Ejemplo}[Teorema]{Ejemplo}
+\newtheorem{Corolario}[Teorema]{Corolario}
+\newtheorem{Caso}{Caso}
+\newenvironment{Prueba}[1][Prueba]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-std
+\end_modules
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Reales
+\end_layout
+
+\begin_layout Enumerate
+Suponga que 
+\begin_inset Formula $x_{k}\in K$
+\end_inset
+
+ para todo 
+\begin_inset Formula $k\geq0$
+\end_inset
+
+.
+ Entonces la sucesión 
+\begin_inset Formula $\left\langle x_{k}\right\rangle $
+\end_inset
+
+ tiene a lo sumo un límite en 
+\begin_inset Formula $K$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Probar que si una sucesión es convergente entonces es fundamental o de Cauchy
+\end_layout
+
+\begin_layout Enumerate
+Dar un bosquejo de la prueba del teorema de Bolzano - Weierstrass
+\end_layout
+
+\begin_layout Enumerate
+Muestre que las sucesiones de Cauchy son acotadas
+\end_layout
+
+\begin_layout Enumerate
+Usando el teorema de Bolzano - Weierstrass demuestre que si un cuerpo 
+\begin_inset Formula $K$
+\end_inset
+
+ es continuamente ordenado entonces, si 
+\begin_inset Formula $\left\langle x_{k}\right\rangle \in Fd\left(K\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\left\langle x_{k}\right\rangle $
+\end_inset
+
+es convergente
+\end_layout
+
+\begin_layout Enumerate
+Suponga que 
+\begin_inset Formula $A\subset K$
+\end_inset
+
+, y que 
+\begin_inset Formula $A$
+\end_inset
+
+ es un subcuerpo de 
+\begin_inset Formula $K$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\left\langle x_{k}\right\rangle $
+\end_inset
+
+, 
+\begin_inset Formula $\left\langle y_{k}\right\rangle \in Fd\left(A\right)$
+\end_inset
+
+, tenemos
+\begin_inset Formula \[
+\left\langle x_{k}\right\rangle +\left\langle y_{k}\right\rangle ,\,\left\langle x_{k}\right\rangle -\left\langle y_{k}\right\rangle ,\,\left\langle x_{k}\right\rangle .\left\langle y_{k}\right\rangle \in Fd\left(A\right)\]
+
+\end_inset
+
+si 
+\begin_inset Formula $y_{k}\neq0$
+\end_inset
+
+ para todo 
+\begin_inset Formula $k$
+\end_inset
+
+ y 
+\begin_inset Formula $\lim_{k\rightarrow\infty}y_{k}\neq0$
+\end_inset
+
+ entonces también 
+\begin_inset Formula $\left\langle x_{k}\right\rangle /\left\langle y_{k}\right\rangle \in Fd\left(A\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\lim_{k\rightarrow\infty}x_{k}=a$
+\end_inset
+
+, 
+\begin_inset Formula $\lim_{k\rightarrow\infty}y_{k}=b$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\lim_{k\rightarrow\infty}\left(x_{k}\pm y_{k}\right)=a\pm b$
+\end_inset
+
+, 
+\begin_inset Formula $\lim_{k\rightarrow\infty}\left(x_{k}.y_{k}\right)=a.b$
+\end_inset
+
+, y si 
+\begin_inset Formula $y_{k}\neq0$
+\end_inset
+
+ y 
+\begin_inset Formula $b\neq0$
+\end_inset
+
+ para todo 
+\begin_inset Formula $k$
+\end_inset
+
+ y 
+\begin_inset Formula $\lim_{k\rightarrow\infty}y_{k}\neq0$
+\end_inset
+
+ entonces también 
+\begin_inset Formula $\lim x_{k}/y_{k}=a/b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\begin_inset Formula $\left\langle x_{k}\right\rangle $
+\end_inset
+
+, 
+\begin_inset Formula $\left\langle y_{k}\right\rangle \in Fd\left(A\right)$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\lim_{k\rightarrow\infty}x_{k}=\lim_{k\rightarrow\infty}y_{k}$
+\end_inset
+
+, es equivalente a 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $\lim_{k\rightarrow\infty}x_{k}-y_{k}=0$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Enumerate
+Si 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $\lim_{k\rightarrow\infty}x_{k}=a$
+\end_inset
+
+ , 
+\begin_inset Formula $\lim_{k\rightarrow\infty}y_{k}=b$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\left\langle y_{k}\right\rangle <\left\langle x_{k}\right\rangle $
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $a<b$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Forme el conjunto cociente 
+\begin_inset Formula $Fd*\left(Ra\right)$
+\end_inset
+
+ en 
+\begin_inset Formula $Fd\left(Ra\right)$
+\end_inset
+
+ inducido por la relación 
+\begin_inset Formula $\left\langle x_{k}\right\rangle \equiv\left\langle y_{k}\right\rangle $
+\end_inset
+
+ si y solo si 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $\lim_{k\rightarrow\infty}x_{k}-y_{k}=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+De un bosquejo de la prueba que 
+\begin_inset Quotes eld
+\end_inset
+
+Existe un cuerpo continuamente ordenado que contiene un subcuerpo isomorfo
+ a los racionales
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document

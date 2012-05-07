@@ -1,0 +1,5299 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\newcommand{\gr}{\longrightarrow}
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Ejemplo}[Teorema]{Ejemplo}
+\newtheorem{Corolario}[Teorema]{Corolario}
+\newtheorem{Caso}{Caso}
+\newenvironment{Prueba}[1][Prueba]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-std
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+
+\lang spanish
+Deducción
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+En esta sección mostraremos como las técnicas del cálculo de predicado recorren
+ las teorías de primer orden.
+ Comencemos con algunos teoremas de 
+\begin_inset Formula $AG.$
+\end_inset
+
+ Recordemos los axiomas propios de 
+\begin_inset Formula $AG:$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+AG1.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(x+y\right)+z=x+\left(y+z\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+AG2.
+ 
+\begin_inset Formula $\forall x\left(x+0=x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+AG3.
+ 
+\begin_inset Formula $\forall x\exists y\left(x+y=0\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+AG4.
+ 
+\begin_inset Formula $\forall x\forall y\left(x+y=y+x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\lang spanish
+\begin_inset Formula $\vdash_{AG}\exists!y\forall x\left(x+y=x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\lang spanish
+Primeramente daremos la prueba intuitiva.
+ Por AG2 hay un 
+\begin_inset Formula $y,$
+\end_inset
+
+ llamémosle 
+\begin_inset Formula $0,$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\forall x\left(x+y=x\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\forall x\left(x+y_{1}=x\right).$
+\end_inset
+
+ Entonces en particular, 
+\begin_inset Formula $y_{1}+y=y_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $y+y_{1}=y.$
+\end_inset
+
+ Entonces por la ley conmutativa (AG4) tenemos 
+\begin_inset Formula $y=y_{1}.$
+\end_inset
+
+Transformaremos esta prueba intuitiva en el siguiente esbozo de prueba
+\begin_inset Formula 
+\[
+\begin{tabular}{lll}
+ 1.  &  \ensuremath{\forall x\left(x+0=x\right)} &  AG2 \\
+2.  &  \ensuremath{\exists y\forall x\left(x+y=x\right)} &  \ensuremath{\exists}\\
+3.  &  \ \ \ \ensuremath{\forall x\left(x+y=x\right)\wedge\forall x\left(x+y_{1}=x\right)} &  as \\
+4.  &  \ \ \ \ensuremath{\forall x\left(x+y=x\right)} &  SC \\
+5.  &  \ \ \ \ensuremath{y_{1}+y=y_{1}} &  spec \\
+6.  &  \ \ \ \ensuremath{\forall x\left(x+y_{1}=x\right)} &  SC,3 \\
+7.  &  \ \ \ \ensuremath{y+y_{1}=y} &  spec \\
+8.  &  \ \ \ \ensuremath{\forall x\forall y\left(x+y=y+x\right)} &  AG4 \\
+9.  &  \ensuremath{\ \ \ y_{1}+y=y+y_{1}} &  spec \\
+10.  &  \ \ \ \ensuremath{y=y_{1}} &  \ensuremath{=,7,9,5}\\
+11.  &  \ensuremath{\forall y\forall y_{1}.\forall x\left(x+y=x\right)\wedge\forall x\left(x+y_{1}=x\right)\rightarrow y=y_{1}} &  DT,3-10, y gen \\
+12.  &  \ensuremath{\exists!y\forall x\left(x+y=x\right)} &  SC,2,11
+\end{tabular}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\lang spanish
+\begin_inset Formula $\vdash_{AG}\forall x\forall z\forall z_{1}\left(x+z=x+z_{1}\rightarrow z=z_{1}\right)$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:cancelacionAG"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\lang spanish
+Suponga que 
+\begin_inset Formula $x+z=x+z_{1}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $z+x=z_{1}+x$
+\end_inset
+
+ por la ley conmutativa.
+ Por AG3 hay un 
+\begin_inset Formula $y$
+\end_inset
+
+ tal que 
+\begin_inset Formula $x+y=0$
+\end_inset
+
+.
+ Sumando 
+\begin_inset Formula $y$
+\end_inset
+
+ a ambos lados y usando la ley asociativa (AG1), tenemos que 
+\begin_inset Formula $z+\left(x+y\right)=z_{1}+\left(x+y\right).$
+\end_inset
+
+ Entonces 
+\begin_inset Formula $z+0=z_{1}+0$
+\end_inset
+
+, ya que 
+\begin_inset Formula $x+y=0.$
+\end_inset
+
+ Entonces 
+\begin_inset Formula $z=z_{1}$
+\end_inset
+
+ por 
+\begin_inset Formula $AG2.$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\begin{tabular}{lll}
+ 1.  &  \ensuremath{\,\,\,\, x+z=x+z_{1}} &  as \\
+2.  &  \ensuremath{\,\,\,\,\forall x\forall y\left(x+y=y+x\right)} &  AG4\\
+3.  &  \ \ \ \ensuremath{x+z=z+x} &  spec \\
+4.  &  \ \ \ \ensuremath{x+z_{1}=z_{1}+x} &  spec,2 \\
+5.  &  \ \ \ \ensuremath{z+x=z_{1}+x} &  \mbox{=, 3,1,4} \\
+6.  &  \ \ \ \ensuremath{\forall x\exists y\left(x+y=0\right)} &  AG3 \\
+7.  &  \ \ \ \ensuremath{\exists y\left(x+y=0\right)} &  spec \\
+8.  &  \ \ \ \,\,\,\,\ensuremath{\left(x+y=0\right)} &  C\mbox{\ensuremath{y}} \\
+9.  &  \ensuremath{\ \ \ \,\,\,\,\left(z+x\right)+y=\left(z_{1}+x\right)+y} &  sub,5 \\
+10.  &  \ \ \ \ensuremath{\,\,\,\,\forall x\forall y\forall z\left(\left(x+y\right)+z=x+\left(y+z\right)\right)} &  AG1\\
+11.  &  \,\,\,\,\,\,\,\,\,\ensuremath{\left(z+x\right)+y=z+\left(x+y\right)} &  spec\\
+12.  &  \ensuremath{\,\,\,\,\,\,\,\,\,\ensuremath{\left(z_{1}+x\right)+y=z_{1}+\left(x+y\right)}} &  spec,10\\
+13.  &  \,\,\,\,\,\,\,\,\,\,\mbox{\ensuremath{z+\left(x+y\right)=z_{1}+\left(x+y\right)}}  &  =,11,9,12\\
+14  &  \,\,\,\,\,\,\,\,\,\,\mbox{\ensuremath{z+0=z_{1}+0}}  &  sub,8,13\\
+15  &  \,\,\,\,\,\,\,\,\,\,\mbox{\forall\ensuremath{x\left(x+0=x\right)}}  &  AG2\\
+16.  &  \,\,\,\,\,\,\,\,\,\,\mbox{\ensuremath{z+0=z}}  &  spec\\
+17.  &  \,\,\,\,\,\,\,\,\,\,\mbox{\ensuremath{z_{1}+0=z_{1}}}  &  spec,15\\
+18.  &  \,\,\,\,\,\,\,\,\,\,\mbox{\ensuremath{z=z_{1}}}  &  =16,14,17\\
+19.  &  \,\,\,\mbox{\,\ensuremath{z=z_{1}}}  &  C,8\\
+20.  &  \ensuremath{\forall x\forall z\forall z_{1}\left(x+z=x+z_{1}\rightarrow z=z_{1}\right)} &  DT,1-19\,\,\ y\,\,\ gen
+\end{tabular}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\lang spanish
+\begin_inset Formula $\vdash_{AG}\forall x\exists!y\left(x+y=0\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\lang spanish
+Sea 
+\begin_inset Formula $x$
+\end_inset
+
+ fija pero arbitraria.
+ Por AG3 hay un único 
+\begin_inset Formula $y$
+\end_inset
+
+ tal que 
+\begin_inset Formula $x+y=0$
+\end_inset
+
+.
+ Suponga que 
+\begin_inset Formula $x+y=0$
+\end_inset
+
+ y 
+\begin_inset Formula $x+y_{1}=0$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $x+y=x+y_{1},$
+\end_inset
+
+ y por teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:cancelacionAG"
+
+\end_inset
+
+ 
+\begin_inset Formula $y=y_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\lang spanish
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+1.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\exists y\left(x+y=0\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+AG3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+2.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\exists y\left(x+y=0\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+3.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x+y=0\wedge x+y_{1}=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+as
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+4.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x+y=x+y_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+=, 3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+5.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\forall x\forall z\forall z_{1}\left(x+z=x+z_{1}\rightarrow z=z_{1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+T2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+6.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x+y=x+y_{1}\rightarrow y=y_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+7.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $y=y_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+MP, 6,4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+8.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall y\forall y_{1}\left(x+y=0\wedge x+y_{1}=0\rightarrow y=y_{1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+DT, 3-7 y gen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+9.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\exists!y\left(x+y=0\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+SC, 2,8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+10.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\exists!y\left(x+y=0\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+gen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\vdash_{AG}\forall x\forall y\exists!z\left(x+z=y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $x$
+\end_inset
+
+y 
+\begin_inset Formula $y$
+\end_inset
+
+ 
+\lang spanish
+fijos pero arbitrarios.
+ Por AG3 hay un 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ tal que 
+\begin_inset Formula $x+y_{1}=0.$
+\end_inset
+
+ Entonces 
+\begin_inset Formula $x+\left(y_{1}+y\right)=\left(x+y_{1}\right)+y=0+y=y+0=0$
+\end_inset
+
+.
+ Entonces hay un 
+\begin_inset Formula $z$
+\end_inset
+
+, llamado 
+\begin_inset Formula $y_{1}+y,$
+\end_inset
+
+ tal que 
+\begin_inset Formula $x+z=y.$
+\end_inset
+
+ Supongamos que 
+\begin_inset Formula $x+z=y$
+\end_inset
+
+ y 
+\begin_inset Formula $x+z_{1}=y$
+\end_inset
+
+.
+ Entonces por teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:cancelacionAG"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\lang spanish
+\begin_inset Tabular
+<lyxtabular version="3" rows="20" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+1.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\exists y\left(x+y=0\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+AG3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+2.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\exists y\left(x+y=0\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+3.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x+y_{1}=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+C
+\begin_inset Formula $y_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+4.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(x+y\right)+z=x+\left(y+z\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+AG1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+5.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\left(x+y_{1}\right)+y=x+\left(y_{1}+y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+6.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $0+y=x+\left(y_{1}+y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+sub, 3,5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+7.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\forall x\forall y\left(x+y=y+x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+AG4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+8.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $0+y=y+0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+9.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\forall x\left(x+0=x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+AG2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+10.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $y+0=y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+11.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x+\left(y_{1}+y\right)=y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+=,6,8,10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+12.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\exists z\left(x+z=y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\exists$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+13.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\exists z\left(x+z=y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+C,3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+14.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x+z=y\wedge x+z_{1}=y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+as
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+15.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x+z=x+z_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $=,$
+\end_inset
+
+ 14
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+16.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\forall x\forall z\forall z_{1}\left(x+z=x+z_{1}\rightarrow z=z_{1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+T2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+17.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x+z=x+z_{1}\rightarrow z=z_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+18.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $z=z_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+MP 17,15
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+19.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall z\forall z_{1}.x+z=y\wedge x+z_{1}=y\rightarrow z=z_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+DT, 14-18, y gen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+20.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\forall y\exists!z\left(x+z=y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+SC, 13,19, y gen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Ahora probaremos en L la ley de la tricotomía, que establece que para toda
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ y 
+\begin_inset Formula $y$
+\end_inset
+
+, exactamente una sola de lo siguiente se mantiene: 
+\begin_inset Formula $x<y$
+\end_inset
+
+, 
+\begin_inset Formula $x=y$
+\end_inset
+
+, 
+\begin_inset Formula $y<x$
+\end_inset
+
+.
+ Necesitamos el o exclusivo.
+ El conectivo binario 
+\begin_inset Formula $\veebar$
+\end_inset
+
+ se define como sigue: 
+\begin_inset Formula $P\veebar Q$
+\end_inset
+
+ es una abreviatura para 
+\begin_inset Formula $P\vee Q\wedge\sim\left(P\wedge Q\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\veebar$
+\end_inset
+
+ es asociativo así que tiene sentido escribir 
+\begin_inset Formula $P\veebar Q\veebar R.$
+\end_inset
+
+ Una revisión de la tabla de verdad de 
+\begin_inset Formula $P\veebar Q\veebar R$
+\end_inset
+
+ revelará que no es adecuada para la ley de la tricotomía.
+ Lo que nosotros necesitamos aquí es un conectivo ternario 
+\begin_inset Formula $\widehat{\vee}$
+\end_inset
+
+ que está definido como sigue: 
+\begin_inset Formula $\widehat{\vee}\left(P,Q,R\right)$
+\end_inset
+
+ es una abreviatura para 
+\begin_inset Formula $P\vee Q\vee R\wedge\sim\left(P\wedge Q\right)\wedge\sim\left(P\wedge R\right)\wedge\sim\left(Q\wedge R\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Recordemos los axiomas propios de la teoría L son
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+L1.
+ 
+\begin_inset Formula $\forall x\sim\left(x<x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+L2.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(x<y\wedge y<z\rightarrow x<z\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+L3.
+ 
+\begin_inset Formula $\forall x\forall y\left(x<y\vee x=y\vee y<x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+La razón por la que L3 se toma como axioma es que la ley de tricotomía fuerte
+ es que la última puede ser probada de L1 a L3.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\vdash_{L}\forall x\forall y\widehat{\vee}\left(x<y,x=y,y<x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\lang spanish
+Sean 
+\begin_inset Formula $x$
+\end_inset
+
+ y 
+\begin_inset Formula $y$
+\end_inset
+
+ fijos pero arbitrarios.
+ Por L3, al menos uno de 
+\begin_inset Formula $x<y$
+\end_inset
+
+, 
+\begin_inset Formula $x=y$
+\end_inset
+
+, 
+\begin_inset Formula $y<x$
+\end_inset
+
+ se cumple.
+ Para mostrar que solo uno de ellos se cumple, mostraremos que cualquier
+ par junto lleva a una contradicción.
+ De 
+\begin_inset Formula $x<y$
+\end_inset
+
+ y 
+\begin_inset Formula $x=y$
+\end_inset
+
+ se llega a que 
+\begin_inset Formula $x<x$
+\end_inset
+
+ por sub, contradiciendo L1.
+ De 
+\begin_inset Formula $x<y$
+\end_inset
+
+ y 
+\begin_inset Formula $y<x$
+\end_inset
+
+ se llega a que 
+\begin_inset Formula $x<x$
+\end_inset
+
+ por L2, contradiciendo L1.
+ De 
+\begin_inset Formula $x=y$
+\end_inset
+
+ y 
+\begin_inset Formula $y<x$
+\end_inset
+
+ se llega a que 
+\begin_inset Formula $x<x$
+\end_inset
+
+ por sub, contradiciendo L1.
+ Entonces 
+\begin_inset Formula $\widehat{\vee}\left(x<y,x=y,y<x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\lang spanish
+\begin_inset Tabular
+<lyxtabular version="3" rows="16" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+1.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\forall y\left(x<y\vee x=y\vee y<x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+L3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+2.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $x<y\vee x=y\vee y<x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+3.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x<y\wedge x=y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+as
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+4.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x<y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+SC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+5.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x=y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+SC,3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+6.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x<x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+sub,5,4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+7.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $x<y\wedge x=y\rightarrow x<x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+DT 3-6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+8.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\sim\left(x<x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+L1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+9.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\sim\left(x<x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+10.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\sim\left(x<y\wedge x=y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+SC, 7,9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+11.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\forall y\forall z\left(x<y\wedge y<z\rightarrow x<z\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+L2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+12.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $x<y\wedge y<x\rightarrow x<x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+13.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\sim\left(x<y\wedge y<x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+SC, 12,9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+14.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\sim\left(x=y\wedge y<x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+similar a 3-10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+15.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\widehat{\vee}\left(x<y,x=y,y<x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+SC, 2,10,13,14
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+16.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\forall y\widehat{\vee}\left(x<y,x=y,y<x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+gen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Ahora un teorema de la teoría de anillos.
+ Los axiomas propios de 
+\begin_inset Formula $R$
+\end_inset
+
+ son.
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+R1.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(x+y\right)+z=x+\left(y+z\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+R2.
+ 
+\begin_inset Formula $\forall x\left(x+0=x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+R3.
+ 
+\begin_inset Formula $\forall x\exists y\left(x+y=0\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+R4.
+ 
+\begin_inset Formula $\forall x\forall y\left(x+y=y+x\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+R5.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(xy\right)z=x\left(yz\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+R6.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(x\left(y+z\right)=xy+xz\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+R7.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(y+z\right)x=yx+zx\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Ya que R1 a R4 son lo mismo que AG1 a AG4, cualquier teorema de AG es también
+ un teorema de R.
+ Por esto los teoremas 1 a 4 son teoremas de R.
+\end_layout
+
+\begin_layout Theorem
+
+\lang spanish
+\begin_inset Formula $\vdash_{R}\forall x\left(x0=0\right)$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:absorcion"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\lang spanish
+\begin_inset Formula $x0+0=x0=x\left(0+0\right)=x0+x0$
+\end_inset
+
+ por R2 y R6.
+ Entonces teorema 2 aplicado a 
+\begin_inset Formula $x0+x0=x0+0$
+\end_inset
+
+ da 
+\begin_inset Formula $x0=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\lang spanish
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+1.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\left(x+0=x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+R2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+2.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $x0+0=x0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+3.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\forall y\forall z\left(x\left(y+z\right)=xy+xz\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+R6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+4.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $x\left(0+0\right)=x0+x0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+5.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $0+0=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec,1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+6.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $x0=x0+x0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+sub, 5,4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+7.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $x0+x0=x0+0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $=$
+\end_inset
+
+6,2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+8.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\forall z\forall z_{1}\left(x+z=x+z_{1}\rightarrow z=z_{1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+T
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:cancelacionAG"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+9.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $x0+x0=x0+0\rightarrow x0=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+10.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $x0=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+MP 9,7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+11.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\left(x0=0\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+gen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Finalmente tenemos algunos teoremas de la teoría de cuerpos.
+ Los axiomas propios de 
+\begin_inset Formula $F$
+\end_inset
+
+ son
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+F1.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(x+y\right)+z=x+\left(y+z\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+F2.
+ 
+\begin_inset Formula $\forall x\left(x+0=x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+F3.
+ 
+\begin_inset Formula $\forall x\exists y\left(x+y=0\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+F4.
+ 
+\begin_inset Formula $\forall x\forall y\left(x+y=y+x\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+F5.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(xy\right)z=x\left(yz\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+F6.
+ 
+\begin_inset Formula $\forall x\left(x1=x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+F7.
+ 
+\begin_inset Formula $\forall x\left(x\neq0\rightarrow\exists z\left(xz=1\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+F8.
+ 
+\begin_inset Formula $\forall x\forall y\left(xy=yx\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+F9.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(x\left(y+z\right)=xy+xz\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+F10.
+ 
+\begin_inset Formula $0\neq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+
+\lang spanish
+\begin_inset Formula $\vdash_{F}\forall x\forall y\forall z\left(\left(y+z\right)x=yx+zx\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\lang spanish
+\begin_inset Formula $\left(y+z\right)x=x\left(y+z\right)=xy+xz=yx+zx$
+\end_inset
+
+ F8, F9, y F8
+\end_layout
+
+\begin_layout Proof
+
+\lang spanish
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+1.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\forall y\left(xy=yx\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+F8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+2.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\left(y+z\right)x=x\left(y+z\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+3.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\forall y\forall z\left(x\left(y+z\right)=xy+xz\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+F9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+4.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $x\left(y+z\right)=xy+xz$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+5.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\left(y+z\right)x=xy+xz$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $=2,4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+6.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $xy=yx$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec 1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+7.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\left(y+z\right)x=yx+xz$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+sub 6,5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+8.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $xz=zx$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec 1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+9.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\left(y+z\right)x=yx+zx$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+sub 8,7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+10.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(y+z\right)x=yx+zx\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+gen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\lang spanish
+Observamos que cualquier axioma de R es un teorema de F.
+ Por esto cualquier teorema de R es un teorema de F, o sea, cualquier cuerpo
+ es un anillo.
+\end_layout
+
+\begin_layout Theorem
+
+\lang spanish
+\begin_inset Formula $\vdash_{F}\forall x\forall y\left(xy=0\rightarrow x=0\vee y=0\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\lang spanish
+Suponga que 
+\begin_inset Formula $xy=0$
+\end_inset
+
+ y 
+\begin_inset Formula $y\neq0$
+\end_inset
+
+.
+ Entonces por F7 hay un 
+\begin_inset Formula $z$
+\end_inset
+
+ tal que 
+\begin_inset Formula $yz=1$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $x=x1=x\left(yz\right)=\left(xy\right)z=0z=z0=0$
+\end_inset
+
+ F6, sub, F5, sub, F8 y T
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:absorcion"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\lang spanish
+\begin_inset Tabular
+<lyxtabular version="3" rows="22" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+1.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $xy=0\wedge y\neq0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+as
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+2.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $xy=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+SC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+3.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $y\neq0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+SC,1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+4.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\left(x\neq0\rightarrow\exists z\left(xz=1\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+F7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+5.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $y\neq0\rightarrow\exists z\left(yz=1\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+6.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\exists z\left(yz=1\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+MP 5,3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+7.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $yz=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+C
+\begin_inset Formula $z$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+8.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\forall x\left(x1=x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+F6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+9.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x1=x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+10.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x\left(yz\right)=x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+sub, 7,9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+11.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(xy\right)z=x\left(yz\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+F5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\left(xy\right)z=x\left(yz\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+13.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $0z=x\left(yz\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+sub 2,12
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+14.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\forall x\forall y\left(xy=yx\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+F8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+15.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $0z=z0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+16.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\forall x\left(x0=0\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+T
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:absorcion"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+17.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $z0=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+18.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $=$
+\end_inset
+
+10,13,15,17
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+19.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $x=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+C,7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+20.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $xy=0\wedge y\neq0\rightarrow x=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+DT, 1-19
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+21.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $xy=0\rightarrow x=0\vee y=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+SC
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+22.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Formula $\forall x\forall y\left(xy=0\rightarrow x=0\vee y=0\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang spanish
+gen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\lang spanish
+Alguna verificación es necesaria en transferir un metateorema del cálculo
+ de predicados a las teorías de primer orden.
+ Por ejemplo, suponga que 
+\begin_inset Formula $\Delta,P\vdash_{T}Q$
+\end_inset
+
+ , donde 
+\begin_inset Formula $T$
+\end_inset
+
+ es una teoría de primer orden, 
+\begin_inset Formula $P$
+\end_inset
+
+ y 
+\begin_inset Formula $Q$
+\end_inset
+
+ son fórmulas de 
+\begin_inset Formula $T,$
+\end_inset
+
+ y 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ es un conjunto finito de fórmulas de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Entonces 
+\begin_inset Formula $\vdash_{T}P\rightarrow Q$
+\end_inset
+
+ por el teorema de la deducción.
+ Surge la posibilidad el teorema de la deducción no se aplique porque alguno
+ de los pasos en la deducción de 
+\begin_inset Formula $P\rightarrow Q$
+\end_inset
+
+ de 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ no son fórmulas de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ No hay un problema real, porque en la prueba del teorema de la deducción,
+ cada paso en el teorema de la deducción de 
+\begin_inset Formula $P\rightarrow Q$
+\end_inset
+
+ desde 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ es realmente una prueba de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+
+\lang spanish
+Similarmente, la posibilidad surge que un teorema del cálculo de predicados
+ que es una fórmula de 
+\begin_inset Formula $T$
+\end_inset
+
+ puede no ser un teorema de 
+\begin_inset Formula $T$
+\end_inset
+
+ ya que los pasos en su prueba no es una fórmula de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Mostraremos luego que eso no pasa nunca.
+ En su momento justificaremos el uso del esquema de teoremas ya probado
+ en el cálculo de predicados por la observación que no hay prueba de una
+ fórmula 
+\begin_inset Formula $P$
+\end_inset
+
+ que introduzca un símbolo propio que no está en 
+\begin_inset Formula $P,$
+\end_inset
+
+ y entonces cada paso de la prueba de 
+\begin_inset Formula $P$
+\end_inset
+
+ es una fórmula de 
+\begin_inset Formula $T$
+\end_inset
+
+ siempre y cuando 
+\begin_inset Formula $P$
+\end_inset
+
+ sea una fórmula de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section*
+
+\lang spanish
+Ejercicios
+\end_layout
+
+\begin_layout Enumerate
+
+\lang spanish
+Probar 
+\begin_inset Formula $\vdash_{AG}\forall z.z=0\leftrightarrow\forall x\left(x+z=x\wedge\exists y\left(x+y=z\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang spanish
+Probar: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\lang spanish
+\begin_inset Formula $\vdash_{R}\forall x\left(0x=0\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang spanish
+\begin_inset Formula $\vdash_{R}\forall x\forall y\left(x\left(y+y\right)=\left(x+x\right)y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\lang spanish
+Probar: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\vdash_{F}\exists!y\forall x\left(xy=x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\vdash_{F}\forall x\forall z\forall z_{1}\left(x\neq0.\rightarrow xz=xz_{1}\rightarrow z=z_{1}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\vdash_{F}\forall x\left(x\neq0\rightarrow\exists!y\left(xy=1\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang spanish
+\begin_inset Formula $\vdash_{F}\forall x\forall y\left(x\neq0\rightarrow\exists!z\left(xz=y\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang spanish
+\begin_inset Formula $\vdash_{F}\forall x\forall y\left(x^{2}=y^{2}\rightarrow x=y\vee x+y=0\right)$
+\end_inset
+
+ 
+\begin_inset Formula $r^{2}$
+\end_inset
+
+ es una abreviatura para 
+\begin_inset Formula $rr$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\lang spanish
+Sea AG' el resultado de adjuntar a AG el símbolo de operación de un lugar
+ 
+\begin_inset Formula $-$
+\end_inset
+
+, y reemplazar AG3 por AG3': 
+\begin_inset Formula $\forall x\left(x+\left(-x\right)=0\right)$
+\end_inset
+
+.
+ Probar 
+\begin_inset Formula $\vdash_{AG'}\forall x\forall y\left(-x=y\leftrightarrow x+y=0\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang spanish
+Probar
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\vdash_{LA}\forall x\forall y\forall z\left(x\cup y=z\leftrightarrow x\leq z\wedge y\leq z\wedge\forall z_{1}\left(x\leq z_{1}\wedge y\leq z_{1}\rightarrow z\leq z_{1}\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\vdash\forall x\forall y\exists!z\left(x\leq z\wedge y\leq z\wedge\forall z_{1}\left(x\leq z_{1}\wedge y\leq z_{1}\rightarrow z\leq z_{1}\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

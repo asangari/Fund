@@ -1,0 +1,2497 @@
+#LyX 1.6.4 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\setcounter{MaxMatrixCols}{10}%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Saturday, May 03, 2008 18:27:57}
+%TCIDATA{LastRevised=Friday, October 03, 2008 12:14:20}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=article.cst}
+\newtheorem{theorem}{Teorema}\newtheorem{acknowledgement}[theorem]{Acknowledgement}\newtheorem{algorithm}[theorem]{Algorithm}\newtheorem{axiom}[theorem]{Axiom}\newtheorem{case}[theorem]{Case}\newtheorem{claim}[theorem]{Claim}\newtheorem{conclusion}[theorem]{Conclusion}\newtheorem{condition}[theorem]{Condition}\newtheorem{conjecture}[theorem]{Conjecture}\newtheorem{corollary}[theorem]{Corollary}\newtheorem{criterion}[theorem]{Criterion}\newtheorem{definition}[theorem]{Definition}\newtheorem{example}[theorem]{Ejemplo}\newtheorem{exercise}[theorem]{Exercise}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{notation}[theorem]{Notation}\newtheorem{problem}[theorem]{Problem}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{remark}[theorem]{Remark}\newtheorem{solution}[theorem]{Solution}\newtheorem{summary}[theorem]{Summary}\newenvironment{proof}[1][Prueba]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options false
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 2
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Teoría de primer orden
+\end_layout
+
+\begin_layout Subsection
+Definiciones y ejemplos
+\end_layout
+
+\begin_layout Standard
+Desde ahora "cálculos de predicados" significa cálculo de predicados con
+ igualdad, y 
+\begin_inset Formula $\vdash$
+\end_inset
+
+ indica una deducción en el cálculo de predicados.
+ Los axiomas lógicos son los axiomas en el cálculo de predicados, o sea
+ las instancias de 
+\begin_inset Formula $A1$
+\end_inset
+
+ a la 
+\begin_inset Formula $A6,$
+\end_inset
+
+ 
+\begin_inset Formula $E1$
+\end_inset
+
+ y las instancias 
+\begin_inset Formula $E2$
+\end_inset
+
+ y 
+\begin_inset Formula $E3,$
+\end_inset
+
+ junto con los axiomas adicionales dados por el Ax Gen.
+ Los símbolos propios del cálculo de predicados son todos los predicados,
+ operaciones y simbolos de constantes.
+\end_layout
+
+\begin_layout Standard
+Una teoría de primer órden 
+\begin_inset Formula $T$
+\end_inset
+
+ está definida por un conjunto 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ de símbolos propios que contiene 
+\begin_inset Formula $=$
+\end_inset
+
+ y un conjunto 
+\begin_inset Formula $X$
+\end_inset
+
+ de proposiciones.
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ se llama el conjunto de símbolos propios de 
+\begin_inset Formula $T$
+\end_inset
+
+ y 
+\begin_inset Formula $X$
+\end_inset
+
+ se llama axiomas propios de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Las fórmulas de 
+\begin_inset Formula $T,$
+\end_inset
+
+ son todas las fórmulas construibles de 
+\begin_inset Formula $T.$
+\end_inset
+
+ o sea 
+\begin_inset Formula $P$
+\end_inset
+
+ es una fórmula de 
+\begin_inset Formula $T$
+\end_inset
+
+ si y solo si cualquier símbolo propio que ocurra en 
+\begin_inset Formula $P,$
+\end_inset
+
+ está en el conjunto 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ .
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ puede ser cualquier conjunto de proposiciones de 
+\begin_inset Formula $T.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ un conjunto finito de fórmulas de 
+\begin_inset Formula $T,$
+\end_inset
+
+ y sea 
+\begin_inset Formula $Q$
+\end_inset
+
+ una fórmula de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Entonces 
+\begin_inset Formula $\Delta\vdash_{T}Q$
+\end_inset
+
+ significa que hay una sucesión 
+\begin_inset Formula $S_{1},S_{2},\dots,S_{n}$
+\end_inset
+
+ de fórmulas de 
+\begin_inset Formula $T$
+\end_inset
+
+ tales que 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ es 
+\begin_inset Formula $Q,$
+\end_inset
+
+ y cada 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+ (
+\begin_inset Formula $1\leq i\leq n)$
+\end_inset
+
+ es un axioma lógico, o un axioma propio o se infiere por modus ponens de
+ 
+\begin_inset Formula $S_{j}$
+\end_inset
+
+ y 
+\begin_inset Formula $S_{k}$
+\end_inset
+
+ para algún 
+\begin_inset Formula $j$
+\end_inset
+
+ y 
+\begin_inset Formula $k$
+\end_inset
+
+ menores que 
+\begin_inset Formula $i,$
+\end_inset
+
+ o está en 
+\begin_inset Formula $\Delta.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ es el conjunto vacío, escribimos 
+\begin_inset Formula $\vdash_{T}Q$
+\end_inset
+
+ y decimos que 
+\begin_inset Formula $Q$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La única diferencia entre una deducción en el cálculo de predicados y una
+ deducción en 
+\begin_inset Formula $T$
+\end_inset
+
+ es que ciertas proposiciones que tienen que ser nombradas como suposiciones
+ en el cálculo de predicados, se nombran como axiomas propios en 
+\begin_inset Formula $T.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ una teoría de primer orden.
+ 
+\begin_inset Formula $\vdash_{T}Q$
+\end_inset
+
+ si y solo si hay un conjunto finito 
+\begin_inset Formula $\left\{ P_{1},\dots,P_{k}\right\} $
+\end_inset
+
+ de axiomas propios de 
+\begin_inset Formula $T$
+\end_inset
+
+ tal que 
+\begin_inset Formula $P_{1},\dots,P_{k}\vdash Q$
+\end_inset
+
+ y cada paso de la deducción es una fórmula de 
+\begin_inset Formula $T$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Supongamos que 
+\begin_inset Formula $\vdash_{T}Q.$
+\end_inset
+
+ Sea 
+\begin_inset Formula $S_{1},\dots,S_{n}$
+\end_inset
+
+ una una prueba de 
+\begin_inset Formula $Q$
+\end_inset
+
+ en 
+\begin_inset Formula $T.$
+\end_inset
+
+ Sean 
+\begin_inset Formula $P_{1},\dots,P_{k}$
+\end_inset
+
+ los pasos que son nombrados como axiomas propios.
+ Renombremos cada 
+\begin_inset Formula $P_{i}$
+\end_inset
+
+ como una suposición.
+ Entonces 
+\begin_inset Formula $S_{1},\dots,S_{n}$
+\end_inset
+
+ es una deducción de 
+\begin_inset Formula $Q$
+\end_inset
+
+ de 
+\begin_inset Formula $\left\{ P_{1},\dots,P_{k}\right\} ,$
+\end_inset
+
+ en el cálculo de predicados, o sea 
+\begin_inset Formula $P_{1},\dots,P_{k}\vdash Q.$
+\end_inset
+
+ Supongamos ahora que hay un 
+\begin_inset space \space{}
+\end_inset
+
+conjunto finito 
+\begin_inset Formula $\left\{ P_{1},\dots,P_{k}\right\} $
+\end_inset
+
+ de axiomas de 
+\begin_inset Formula $T,$
+\end_inset
+
+ tal que 
+\begin_inset Formula $P_{1},\dots,P_{k}\vdash Q$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $S_{1},\dots,S_{n}$
+\end_inset
+
+ una deducción de 
+\begin_inset Formula $Q$
+\end_inset
+
+ de 
+\begin_inset Formula $\left\{ P_{1},\dots,P_{k}\right\} $
+\end_inset
+
+ en el cálculo de predicados.
+ Renombremos cada 
+\begin_inset Formula $P_{i}$
+\end_inset
+
+ como un axioma propio.
+ Entonces 
+\begin_inset Formula $S_{1},\dots,S_{n}$
+\end_inset
+
+ es una prueba de 
+\begin_inset Formula $Q$
+\end_inset
+
+ en 
+\begin_inset Formula $T.$
+\end_inset
+
+ o sea 
+\begin_inset Formula $\vdash_{T}Q$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Damos algunos ejemplos de teorías de primer orden.
+ Con una exepción, todos los ejemplos son de álgebra moderna.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ El conjunto de los símbolos propios de la teoría 
+\begin_inset Formula $L$
+\end_inset
+
+ de los conjuntos linelmente ordenados es 
+\begin_inset Formula $\left\{ =,<\right\} .$
+\end_inset
+
+ Los axiomas propios de 
+\begin_inset Formula $L$
+\end_inset
+
+ son
+\begin_inset Newline newline
+\end_inset
+
+ L1 
+\begin_inset Formula $\ \forall x\sim\left(x<x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ L2 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $\forall x\forall y\forall z\left(x<y\wedge y<z\longrightarrow x<z\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ L3 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $\forall x\forall y\left(x<y\vee x=y\vee y<x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ Recuerde que 
+\begin_inset Formula $=$
+\end_inset
+
+ es primer símbolo de predicado de 2 lugares, o sea, 
+\begin_inset Formula $r=s$
+\end_inset
+
+ es una abreviatura para 
+\begin_inset Formula $\alpha\#\#\left(r,s\right).$
+\end_inset
+
+ 
+\begin_inset Formula $P$
+\end_inset
+
+ es una fórmula de 
+\begin_inset Formula $L$
+\end_inset
+
+ si y solo si cualquier símbolo propio que ocurra en 
+\begin_inset Formula $P$
+\end_inset
+
+ está en 
+\begin_inset Formula $\left\{ =,<\right\} $
+\end_inset
+
+.
+ Los axiomas de igualdad son 
+\begin_inset Newline newline
+\end_inset
+
+ E1.
+ 
+\begin_inset Formula $\forall x\left(x=x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ E2=.
+ 
+\begin_inset Formula $\forall x_{1}\forall x_{2}\forall y_{1}\forall y_{2}\left(x_{1}=y_{1}\wedge x_{2}=y_{2}.\longrightarrow.x_{1}=x_{2}\longleftrightarrow y_{1}=y_{2}\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ E3<.
+ 
+\begin_inset Formula $\forall x_{1}\forall x_{2}\forall y_{1}\forall y_{2}\left(x_{1}=y_{1}\wedge x_{2}=y_{2}.\longrightarrow.x_{1}<x_{2}\longleftrightarrow y_{1}<y_{2}\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ El conjunto de símbolos propios de la teoría 
+\begin_inset Formula $AG$
+\end_inset
+
+ de grupos abelianos es 
+\begin_inset Formula $\left\{ =,+,0\right\} .$
+\end_inset
+
+ Los axiomas propios de 
+\begin_inset Formula $AG$
+\end_inset
+
+ son
+\begin_inset Newline newline
+\end_inset
+
+ AG1.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(x+y\right)+z=x+\left(y+z\right)\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ AG2.
+ 
+\begin_inset Formula $\forall x\left(x+0=x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ AG3.
+ 
+\begin_inset Formula $\forall x\exists y\left(x+y=0\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ AG4.
+ 
+\begin_inset Formula $\forall x\forall y\left(x+y=y+x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $+$
+\end_inset
+
+ es el primer símbolo de predicado de 2 lugares, o sea, 
+\begin_inset Formula $r+s$
+\end_inset
+
+ es una abreviatura para 
+\begin_inset Formula $\beta\#\#\left(r,s\right).$
+\end_inset
+
+ 
+\begin_inset Formula $0$
+\end_inset
+
+ es una abreviatura para el primer símbolo de constante 
+\begin_inset Formula $\gamma.$
+\end_inset
+
+ 
+\begin_inset Formula $P$
+\end_inset
+
+ es una fórmula de 
+\begin_inset Formula $AG$
+\end_inset
+
+ si y solo si cualquier símbolo propio que ocurra en 
+\begin_inset Formula $P$
+\end_inset
+
+ está en 
+\begin_inset Formula $\left\{ =,+,0\right\} $
+\end_inset
+
+.
+ Los axiomas de igualdad son 
+\begin_inset Newline newline
+\end_inset
+
+ E1.
+ 
+\begin_inset Formula $\forall x\left(x=x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ E2=.
+ 
+\begin_inset Formula $\forall x_{1}\forall x_{2}\forall y_{1}\forall y_{2}\left(x_{1}=y_{1}\wedge x_{2}=y_{2}.\longrightarrow.x_{1}=x_{2}\longleftrightarrow y_{1}=y_{2}\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ E3+.
+ 
+\begin_inset Formula $\forall x_{1}\forall x_{2}\forall y_{1}\forall y_{2}\left(x_{1}=y_{1}\wedge x_{2}=y_{2}.\longrightarrow.x_{1}+x_{2}\longleftrightarrow y_{1}+y_{2}\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ El conjunto de símbolos propios de la teoría 
+\begin_inset Formula $R$
+\end_inset
+
+ de anilos 
+\begin_inset Formula $\left\{ =,+,\cdot,0\right\} .$
+\end_inset
+
+donde 
+\begin_inset Formula $+$
+\end_inset
+
+ es el primer símbolo de operaciones de 2 lugares, 
+\begin_inset Formula $\cdot$
+\end_inset
+
+ es el segundo símbolo de operaciones de 2 lugares y 
+\begin_inset Formula $0$
+\end_inset
+
+ es el primer símbolo de constante.
+ Los axiomas propios de 
+\begin_inset Formula $R$
+\end_inset
+
+ son
+\begin_inset Newline newline
+\end_inset
+
+ R1.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(x+y\right)+z=x+\left(y+z\right)\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ R2.
+ 
+\begin_inset Formula $\forall x\left(x+0=x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ R3.
+ 
+\begin_inset Formula $\forall x\exists y\left(x+y=0\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ R4.
+ 
+\begin_inset Formula $\forall x\forall y\left(x+y=y+x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ R5.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(xy\right)z=x\left(yz\right)\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ R6.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(x\left(y+z\right)=xy+xz\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ R7.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(y+z\right)x=yx+zx\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $rs$
+\end_inset
+
+ es una abreviatura para 
+\begin_inset Formula $r\cdot s,$
+\end_inset
+
+ y 
+\begin_inset Formula $rs+rt$
+\end_inset
+
+ es una abreviatura para 
+\begin_inset Formula $\left(rs\right)+\left(rt\right).$
+\end_inset
+
+ Los enteros y los reales son anillos con el significado usual de 
+\begin_inset Formula $=,+,\cdot,$
+\end_inset
+
+ y 
+\begin_inset Formula $0.$
+\end_inset
+
+ Note que R1 a R4 son los mismos que AG1 a AG4.
+ Por esto, cualquier anillo es un grupo abeliano.La teoría de anillos conmutativo
+s es el resultado de adjuntar a 
+\begin_inset Formula $R$
+\end_inset
+
+ le axioma propio 
+\begin_inset Formula $\forall x\forall y\left(xy=yx\right).$
+\end_inset
+
+ Los axiomas de igualdad de 
+\begin_inset Formula $R$
+\end_inset
+
+ son E1, E2=, E3+, y E3
+\begin_inset Formula $\cdot.$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ El conjunto de símbolos propios de la teoría 
+\begin_inset Formula $LA$
+\end_inset
+
+ de reticulados es 
+\begin_inset Formula $\left\{ =,<,\cup,\cap\right\} ,$
+\end_inset
+
+ donde 
+\begin_inset Formula $<$
+\end_inset
+
+ es el segundo de los símbolos de predicados de dos lugares y 
+\begin_inset Formula $\cup$
+\end_inset
+
+ y 
+\begin_inset Formula $\cap$
+\end_inset
+
+ son los primeros dos símbolos de operaciones de dos lugares.
+ Los axiomas propios de 
+\begin_inset Formula $LA$
+\end_inset
+
+ son
+\begin_inset Newline newline
+\end_inset
+
+ LA1 
+\begin_inset Formula $\ \forall x\sim\left(x<x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ LA2 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $\forall x\forall y\forall z\left(x<y\wedge y<z\longrightarrow x<z\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ LA3 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $\forall x\forall y\left(x\leq x\cup y\wedge y\leq x\cup y\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ LA4 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $\forall x\forall y\left(x\cap y\leq x\wedge y\cap x\leq y\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ LA5.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(x\leq z\wedge y\leq z\longrightarrow x\cup y\leq z\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ LA6.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(z\leq x\wedge z\leq y\longrightarrow z\leq x\cap y\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $r\leq s$
+\end_inset
+
+ es una abreviatura para 
+\begin_inset Formula $r<s\vee r=s.$
+\end_inset
+
+ 
+\begin_inset Formula $r\cup s$
+\end_inset
+
+ se llama la menor cota superior de 
+\begin_inset Formula $r$
+\end_inset
+
+ y 
+\begin_inset Formula $s.$
+\end_inset
+
+ 
+\begin_inset Formula $r\cap s$
+\end_inset
+
+ se llama la mayor cota inferior de 
+\begin_inset Formula $r$
+\end_inset
+
+ y 
+\begin_inset Formula $s.$
+\end_inset
+
+ Los enteros y los reales son reticulados con el significado usual de 
+\begin_inset Formula $=$
+\end_inset
+
+ y 
+\begin_inset Formula $<,$
+\end_inset
+
+ con 
+\begin_inset Formula $a\cup b$
+\end_inset
+
+ el mayor de 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ y 
+\begin_inset Formula $a\cap b$
+\end_inset
+
+ el menor de 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b.$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ El conjunto de los simbolos propios de la teoría de grupos 
+\begin_inset Formula $G$
+\end_inset
+
+ es 
+\begin_inset Formula $\left\{ =,\cdot,1\right\} $
+\end_inset
+
+ donde 
+\begin_inset Formula $\cdot$
+\end_inset
+
+ es el primer simbolo de operación de dos lugares y 
+\begin_inset Formula $1$
+\end_inset
+
+ es el primer simbolo de constante.
+ Los axiomas propios de 
+\begin_inset Formula $G$
+\end_inset
+
+ son 
+\begin_inset Newline newline
+\end_inset
+
+ G1.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(x+y\right)+z=x+\left(y+z\right)\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ G2.
+ 
+\begin_inset Formula $\forall x\left(x1=x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ G3.
+ 
+\begin_inset Formula $\forall x\exists y\left(xy=1\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $rs$
+\end_inset
+
+ es una abreviatura de 
+\begin_inset Formula $r\cdot s.$
+\end_inset
+
+ Note que 
+\begin_inset Formula $G1$
+\end_inset
+
+ a 
+\begin_inset Formula $G3$
+\end_inset
+
+ son exactamente los mismos que 
+\begin_inset Formula $AG1$
+\end_inset
+
+ a 
+\begin_inset Formula $AG3$
+\end_inset
+
+ cuando en ambos se los escribe sin abreviaturas.
+ De aquí se deduce que los grupos abelianos son grupos.
+ Un grupo abeliano es un grupo en el que la operación conmuta.
+ La práctica matemática es reservar la notación aditiva 
+\begin_inset Formula $+$
+\end_inset
+
+ y 
+\begin_inset Formula $0$
+\end_inset
+
+ para los grupos abelianos y la notación multiplicativa 
+\begin_inset Formula $\cdot$
+\end_inset
+
+ y 
+\begin_inset Formula $1$
+\end_inset
+
+ para todos los grupos, abelianos o no.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ El conjunto de los símbolos propios de la teoría de cuerpos 
+\begin_inset Formula $F$
+\end_inset
+
+ es 
+\begin_inset Formula $\left\{ =,+,\cdot,0,1\right\} ,$
+\end_inset
+
+ donde 
+\begin_inset Formula $+$
+\end_inset
+
+ y 
+\begin_inset Formula $\cdot$
+\end_inset
+
+ son los primeros símbolos de operaciones de 2 lugares, y 
+\begin_inset Formula $0$
+\end_inset
+
+ y 
+\begin_inset Formula $1$
+\end_inset
+
+ son los primero símbolos de constante.
+ Es usual escribir 
+\begin_inset Formula $rs$
+\end_inset
+
+ en vez de 
+\begin_inset Formula $r\cdot s.$
+\end_inset
+
+ y 
+\begin_inset Formula $rs+rt$
+\end_inset
+
+ en vez de 
+\begin_inset Formula $\left(rs\right)+\left(rt\right).$
+\end_inset
+
+ Los axiomas propios de 
+\begin_inset Formula $F$
+\end_inset
+
+ son
+\begin_inset Newline newline
+\end_inset
+
+ F1.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(x+y\right)+z=x+\left(y+z\right)\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ F2.
+ 
+\begin_inset Formula $\forall x\left(x+0=x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ F3.
+ 
+\begin_inset Formula $\forall x\exists y\left(x+y=0\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ F4.
+ 
+\begin_inset Formula $\forall x\forall y\left(x+y=y+x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ F5.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(xy\right)z=x\left(yz\right)\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ F6.
+ 
+\begin_inset Formula $\forall x\left(x1=x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ F7.
+ 
+\begin_inset Formula $\forall x\left(x\neq0\rightarrow\exists z\left(xz=1\right)\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ F8.
+ 
+\begin_inset Formula $\forall x\forall y\left(xy=yx\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ F9.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(x\left(y+z\right)=xy+xz\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ F10.
+ 
+\begin_inset Formula $0\neq1$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ Los números racionales, los reales y los complejos son cuerpos con el significa
+do usual de 
+\begin_inset Formula $=,+,\cdot,0,$
+\end_inset
+
+ y 
+\begin_inset Formula $1.$
+\end_inset
+
+ Los enteros no forman un curepo porque F7 falla.
+ F1 a F4 aseguran que los cuerpos son grupos abelianos con 
+\begin_inset Formula $+$
+\end_inset
+
+ y 
+\begin_inset Formula $0.$
+\end_inset
+
+ F5 a F8 establecen que los elementos distintos de cero de un cuerpo forman
+ un grupo abeliano con 
+\begin_inset Formula $\cdot$
+\end_inset
+
+ y 
+\begin_inset Formula $1.$
+\end_inset
+
+ La teoría de anillo de división 
+\begin_inset space \space{}
+\end_inset
+
+es el resultado de reemplazar F8 por 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(y+z\right)x=yx+zx\right)$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ En la teoría 
+\begin_inset Formula $F$
+\end_inset
+
+ de cuerpos, sea 
+\begin_inset Formula $n$
+\end_inset
+
+ una abreviatura para el término 
+\begin_inset Formula $\underset{n\text{ veces}}{\underbrace{1+1+\cdots+1}}.$
+\end_inset
+
+ En los cuerpos familiares, 
+\begin_inset Formula $n\neq0$
+\end_inset
+
+ para cualquier entero positivo 
+\begin_inset Formula $n.$
+\end_inset
+
+ Tales cuerpos se llaman de característica 
+\begin_inset Formula $0.$
+\end_inset
+
+ En álgebra se prueba que si un campo no es de característica 
+\begin_inset Formula $0,$
+\end_inset
+
+ entonces hay un primo 
+\begin_inset Formula $p$
+\end_inset
+
+ tal que 
+\begin_inset Formula $n\neq0$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $n$
+\end_inset
+
+ es múltiplo de 
+\begin_inset Formula $p.$
+\end_inset
+
+ Tal cuerpo se dice de característica 
+\begin_inset Formula $p.$
+\end_inset
+
+ Existen cuerpos de característica 
+\begin_inset Formula $p$
+\end_inset
+
+ para cualquier primo 
+\begin_inset Formula $p.$
+\end_inset
+
+ La teoría 
+\begin_inset Formula $F^{p}$
+\end_inset
+
+ de cuerpos es el resultado de adjuntar a 
+\begin_inset Formula $F$
+\end_inset
+
+ el axioma propio 
+\begin_inset Formula $p=0.$
+\end_inset
+
+ La teoría 
+\begin_inset Formula $F^{0}$
+\end_inset
+
+ de cuerpos de característica cero es el resultado de adjuntar a 
+\begin_inset Formula $F$
+\end_inset
+
+ como axioma propio todos los enunciados 
+\begin_inset Formula $p\neq0:$
+\end_inset
+
+
+\begin_inset Formula \[
+1+1\neq0,\ \ 1+1+1\neq0,\ \ 1+1+1+1+1\neq0,\ \ \]
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ La teoría 
+\begin_inset Formula $ACF$
+\end_inset
+
+ de cuerpos algebraicamente cerrados es el resultado de agregar a la teoría
+ de cuerpos un axioma propio para cada entero positivo 
+\begin_inset Formula $n$
+\end_inset
+
+ que dice que cada polinomio de grado 
+\begin_inset Formula $n$
+\end_inset
+
+ tiene una raiz.
+ Para 
+\begin_inset Formula $n=3$
+\end_inset
+
+, el axioma es 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula \[
+\forall y\forall y_{1}\forall y_{2}\forall y_{3}\left(y_{3}\neq0\rightarrow\exists x\left(y+y_{1}x+y_{2}x^{2}+y_{3}x^{3}=0\right)\right)\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $x^{k}$
+\end_inset
+
+ es una abreviatura para
+\begin_inset Formula $\underset{k\text{ veces}}{\text{ \ }\underbrace{x\cdot x\cdots x}}$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ El cuerpo de números complejos es algebraicamente cerrado.
+ El cuerpo de los racionales y de los reales no es algebraicamente cerrado.
+ El cuerpo de números algebraicos es algebraicamente cerrado.
+ Un número algebraico es es un número complejo que es raiz de un polinomio
+ con coeficientes racionales.
+ Por ejemplo 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+ e 
+\begin_inset Formula $i$
+\end_inset
+
+ son números algebraicos pues 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+ es raiz de 
+\begin_inset Formula $x^{2}-2$
+\end_inset
+
+ y 
+\begin_inset Formula $i$
+\end_inset
+
+ es raiz de 
+\begin_inset Formula $x^{2}+1.$
+\end_inset
+
+ El conjunto de los números reales es no numerable mientras que el conjunto
+ de los algebraicos es numerable.
+ La idea de la prueba es que el conjunto de todos los polinomios con coeficiente
+s racionales es numerable, y todo polinomio tiene solo una cantidad finita
+ de raices 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ La teoría 
+\begin_inset Formula $OF$
+\end_inset
+
+ de cuerpos ordenados es el resultado de adjuntar a la teoría de cuerpos
+ el símbolo de predicado de dos lugares 
+\begin_inset Formula $<,$
+\end_inset
+
+ los axiomas L1 a L3 de la teoría de conjuntos ordenados y los axiomas propios
+ siguientes
+\begin_inset Newline newline
+\end_inset
+
+ OF1.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(x<y\rightarrow x+z<y+z\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ OF2.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(x<y\wedge0<z\rightarrow xz<yz\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ Los números racionales y los reales son cuerpos ordenados con el significado
+ usual de 
+\begin_inset Formula $<.$
+\end_inset
+
+ El cuerpo de los números complejos no está ordenado porque no hay forma
+ de definir 
+\begin_inset Formula $<$
+\end_inset
+
+ tal que los axiomas de 
+\begin_inset Formula $OF$
+\end_inset
+
+ se mantengan.
+ Bosquejaremos una prueba.
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ es positivo en el sentido de 
+\begin_inset Formula $0<x.$
+\end_inset
+
+ En un cuerpo ordenado, el cuadrado de cualquier número no nulo, es positivo
+ y la suma de dos positivos es positiva.
+ Supongamos por contradicción que el cuerpo de los complejos es ordenado.
+ Entonces 
+\begin_inset Formula $1$
+\end_inset
+
+ y 
+\begin_inset Formula $-1$
+\end_inset
+
+ son positivos por porque 
+\begin_inset Formula $1$
+\end_inset
+
+ es el cuadrado de 
+\begin_inset Formula $1$
+\end_inset
+
+ y 
+\begin_inset Formula $-1$
+\end_inset
+
+ es el cuadrado de 
+\begin_inset Formula $i.$
+\end_inset
+
+ Entonces 
+\begin_inset Formula $1+\left(-1\right)$
+\end_inset
+
+ es positivo.
+ O sea que 
+\begin_inset Formula $0<0.$
+\end_inset
+
+ Pero por L1 
+\begin_inset Formula $\sim\left(0<0\right)$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ La teoría 
+\begin_inset Formula $RCF$
+\end_inset
+
+ de los cuerpos cerrados reales, es el resultado de adjuntar a la teoría
+ de cuerpos ordenados el axioma propio
+\begin_inset Newline newline
+\end_inset
+
+ RCF1.
+ 
+\begin_inset Formula $\forall x\left(0<x\rightarrow\exists y\left(y^{2}=x\right)\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ que dice que todo elemento positivo tiene una raiz cuadrada, y adjunta
+ para cada entero positivo impar 
+\begin_inset Formula $n,$
+\end_inset
+
+ el axioma propio que dice que el polinomio de grado 
+\begin_inset Formula $n$
+\end_inset
+
+ tiene una raiz.
+ El cuerpo de los reales es un cuerpo de cerradura real.
+ Los complejos no son de cerradura real pues no son ordenados y para los
+ racionales falla RCF1.
+ Por ejenplo el dos no tiene raiz cuadrada en los racionales.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ La teoría 
+\begin_inset Formula $DL$
+\end_inset
+
+ de los 
+\series bold
+conjuntos linealmente ordenados densos sin primer ni último elemento
+\series default
+ es el resultado de adjuntar a los axiomas propios de 
+\begin_inset Formula $L:$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ L4.
+ 
+\begin_inset Formula $\forall x\forall y\left(x<y\rightarrow\exists z\left(x<z\wedge z<y\right)\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ L5.
+ 
+\begin_inset Formula $\forall x\exists y\left(y<x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ L6.
+ 
+\begin_inset Formula $\forall x\exists y\left(x<y\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ Los racionales y los reales con el significado usual de 
+\begin_inset Formula $=$
+\end_inset
+
+ y 
+\begin_inset Formula $<$
+\end_inset
+
+ son conjuntos densos sin primer ni último elemento.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ El cálculo de predicados es une teoría de primer orden.
+ sus símbolos propios son todos los símbolos propios y no tiene axiomas
+ propios.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{example}
+\end_layout
+
+\end_inset
+
+ El conjunto de símbolos propios de la teoría 
+\begin_inset Formula $BA$
+\end_inset
+
+ de las algebras booleanas es 
+\begin_inset Formula $\left\{ =,\cup,\cap,^{\prime},0,1\right\} ,$
+\end_inset
+
+ donde 
+\begin_inset Formula $\cup$
+\end_inset
+
+ y 
+\begin_inset Formula $\cap$
+\end_inset
+
+ son los dos primeros simbolos de operaciones de dos lugares, 
+\begin_inset Formula $^{\prime}$
+\end_inset
+
+ es el primer símbolo de operación de un lugar, y 
+\begin_inset Formula $0$
+\end_inset
+
+ y 
+\begin_inset Formula $1$
+\end_inset
+
+ son los primeros dos símbolos de constante.
+ Los axiomas propios de 
+\begin_inset Formula $BA$
+\end_inset
+
+ son:
+\begin_inset Newline newline
+\end_inset
+
+ BA1.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(x\cup y\right)\cup z=x\cup\left(y\cup z\right)\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ BA2.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(x\cap y\right)\cap z=x\cap\left(y\cap z\right)\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ BA3.
+ 
+\begin_inset Formula $\forall x\forall y\left(x\cup y=y\cup x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ BA4.
+ 
+\begin_inset Formula $\forall x\forall y\left(x\cap y=y\cap x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ BA5.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(x\cup\left(y\cap z\right)=\left(x\cup y\right)\cap\left(x\cup z\right)\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ BA6.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(x\cap\left(y\cup z\right)=\left(x\cap y\right)\cup\left(x\cap z\right)\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ BA7.
+ 
+\begin_inset Formula $\forall x\left(x\cup0=x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ BA8.
+ 
+\begin_inset Formula $\forall x\left(x\cap1=x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ BA9.
+ 
+\begin_inset Formula $\forall x\left(x\cup x^{\prime}=1\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ BA10.
+ 
+\begin_inset Formula $\forall x\left(x\cap x^{\prime}=0\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ BA11.
+ 
+\begin_inset Formula $0\neq1$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ cualquier conjunto, y sea 
+\begin_inset Formula $D$
+\end_inset
+
+ el conjunto de todos los subcionjuntos de 
+\begin_inset Formula $A.$
+\end_inset
+
+Entonces 
+\begin_inset Formula $D$
+\end_inset
+
+ es un álgebra booleana con la siguiente interpretación de 
+\begin_inset Formula $=$
+\end_inset
+
+, 
+\begin_inset Formula $\cup,$
+\end_inset
+
+ 
+\begin_inset Formula $\cap,$
+\end_inset
+
+ 
+\begin_inset Formula $0,$
+\end_inset
+
+ 
+\begin_inset Formula $1.$
+\end_inset
+
+ 
+\begin_inset Formula $=$
+\end_inset
+
+ es la igualdad de conjuntos, 
+\begin_inset Formula $\cup$
+\end_inset
+
+ y 
+\begin_inset Formula $\cap$
+\end_inset
+
+ es la union y la intersección de conjuntos, 
+\begin_inset Formula $B^{\prime}=\left\{ x\in A\ |\ x\notin B\right\} ,$
+\end_inset
+
+ 
+\begin_inset Formula $0$
+\end_inset
+
+ es el conjunto vacío y 
+\begin_inset Formula $1$
+\end_inset
+
+ es 
+\begin_inset Formula $A.$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{example}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una teoría de primer orden está finitamente axiomatizada si y solo si su
+ conjunto de axiomas propios es finita
+\end_layout
+
+\begin_layout Standard
+Un conjunto 
+\begin_inset Formula $X$
+\end_inset
+
+ de proposiciones es decidible si y solo si hay in procedimiento efectivo
+ para decidir si un enunciado está o no, en 
+\begin_inset Formula $X.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cualquier conjunto finito es decidible y algunos conjuntos infinitos son
+ decidibles.
+ Por ejemplo, el conjunto de axiomas propios de la teoría de cuerpos de
+ clausura algebraicas es es decidible.
+\end_layout
+
+\begin_layout Standard
+Una teoría de primer orden es formal si y solo si, su conjunto de axiomas
+ propios es decidible.
+ Todos los ejemplos dados arriba son teorías formales.
+ Estamos interesados solamente en teorías formales, porque la noción de
+ prueba es efectiva para teorías de primer orden si y solo si la teoría
+ es formal.
+ Necesitamos considerar teorías no formales porque ellas entran en la prueba
+ de los principales teoremas acerca de las teorías de primer orden.
+\end_layout
+
+\begin_layout Standard
+Lo que distingue a una teoría de primer orden de una teoria de orden superior
+ es que en la interpretación, todas las variables recorren un dado dominio.
+ Un ejemplo de una fórmula de segundo orden es el siguiente enunciado de
+ la inducción matemática:
+\begin_inset Formula \[
+\forall M.0\in M\wedge\forall x\left(x\in M\rightarrow x+1\in M\right)\rightarrow\forall x\left(x\in M\right)\]
+
+\end_inset
+
+Aquí la variable 
+\begin_inset Formula $M$
+\end_inset
+
+ recorre conjuntos de números.
+ En la práctica, la teoría de grupos por ejemplo no trata solamente con
+ elementos de un grupo, sino con conjuntos de elementos y conjuntos de conjuntos
+ de elementos.
+ La contraparte formal es una teoría de tercer orden.
+\end_layout
+
+\begin_layout Standard
+Restringiremos nuestra atención a las teorías de primer orden por tres razones.
+ Primero, se conoce mas sobre las teorías de primer orden que sobre las
+ teorías de orden superior.
+ Segundo, la lógica de orden superior es esencialmente la misma que la de
+ primer orden.
+ O sea, los procedimientos fundamentales mantienen la remoción e inserción
+ de cuantificadores y el uso de enunciados de cálculo.
+ Tercero, todo lo que puede hacerse con cualquier teoría matemática puede
+ hacerse con la teoría de conjuntos, y la teoría de conjuntos puede enunciarse
+ como una teoría de primer orden.
+ Cualquier entidad matemática (función espacio secuencia, número, etc.) puede
+ ser construida de una forma u otra como un conjunto.
+ Luego, solamente una clase de variable es necesaria, porque un conjunto
+ de conjuntos es en si mismo un conjunto.
+ No solo se puede formular la teoría de conjuntos como una teoría de primer
+ orden, sino tambien como una teoría finitamente aximatizada.
+ No daremos detalles para no alejarnos del tema.
+\end_layout
+
+\begin_layout Standard
+Cualquier símbolo de operación de 
+\begin_inset Formula $n$
+\end_inset
+
+ lugares de una teoría de primer orden puede ser reemplazado por un predicado
+ de 
+\begin_inset Formula $n+1$
+\end_inset
+
+ lugares, y cualquier simbolo de constante por un símbolo de predicado de
+ un lugar.
+ Ilustraremos el procedimiento con 
+\begin_inset Formula $AG.$
+\end_inset
+
+ Sea 
+\begin_inset Formula $G$
+\end_inset
+
+ el primer símbolo de predicados de tres lugares y 
+\begin_inset Formula $H$
+\end_inset
+
+ el primer símbolo de predicado de un lugar.
+ Reemplacemos 
+\begin_inset Formula $+$
+\end_inset
+
+ por 
+\begin_inset Formula $G$
+\end_inset
+
+ y 
+\begin_inset Formula $0$
+\end_inset
+
+ por 
+\begin_inset Formula $H.$
+\end_inset
+
+ 
+\begin_inset Formula $G\left(r,s,t\right)$
+\end_inset
+
+ se interpreta como 
+\begin_inset Formula $r+s=t$
+\end_inset
+
+ y 
+\begin_inset Formula $H\left(r\right)$
+\end_inset
+
+ se interpreta como 
+\begin_inset Formula $r=0.$
+\end_inset
+
+ Necesitamos axiomas adicionales
+\begin_inset Formula \begin{eqnarray*}
+ &  & \forall x\forall y\exists!zG\left(x,y,z\right)\\
+ &  & \exists!xH\left(x\right)\end{eqnarray*}
+
+\end_inset
+
+los axiomas AG2 y AG1 se traqducen a
+\end_layout
+
+\begin_layout Standard
+AG2'.
+ 
+\begin_inset Formula $\forall x\forall y\left(H\left(y\right)\rightarrow G\left(x,y,x\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+AG3'.
+ 
+\begin_inset Formula $\forall x\forall z\left(H\left(z\right)\rightarrow\exists yG\left(x,y,x\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La traducción de AG1 y AG4 se deja como ejercicio.
+ La estructura del cálculo de predicados y las teorías de primer orden pueden
+ ser simplificadas descartando todos los simbolos de operaciones y de constantes.
+ Sin embargo, la formulación resultante de las teorías de primer orden se
+ separarían mucho de de la formulación familiar.
+\end_layout
+
+\begin_layout Subsection
+Deducción
+\end_layout
+
+\begin_layout Standard
+En esta sección mostraremos como las técnicas del cálculo de predicado recorren
+ las teorías de primer orden.
+ Comencemos con algunos teoremas de 
+\begin_inset Formula $AG.$
+\end_inset
+
+ Recordemos los axiomas propios de 
+\begin_inset Formula $AG:$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+AG1.
+ 
+\begin_inset Formula $\forall x\forall y\forall z\left(\left(x+y\right)+z=x+\left(y+z\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+AG2.
+ 
+\begin_inset Formula $\forall x\left(x+0=x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+AG3.
+ 
+\begin_inset Formula $\forall x\exists y\left(x+y=0\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+AG4.
+ 
+\begin_inset Formula $\forall x\forall y\left(x+y=y+x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\vdash_{AG}\exists!y\forall x\left(x+y=x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Primeramente daremos la prueba intuitiva.
+ Por AG2 hay un 
+\begin_inset Formula $y,$
+\end_inset
+
+ llamemosle 
+\begin_inset Formula $0,$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\forall x\left(x+y=x\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\forall x\left(x+y_{1}=x\right).$
+\end_inset
+
+ Entonces en particular, 
+\begin_inset Formula $y_{1}+y=y_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $y+y_{1}=y.$
+\end_inset
+
+ Entonces por la ley conmutativa (AG4) tenemos 
+\begin_inset Formula $y=y_{1}.$
+\end_inset
+
+Transformaremos esta prueba intuitiva en la siguiente prueba
+\begin_inset Formula \[
+\begin{tabular}{lll}
+ 1.  &  \ensuremath{\forall x\left(x+0=x\right)}  &  AG2 \\
+2.  &  \ensuremath{\forall x\exists y\left(x+y=x\right)}  &  \ensuremath{\exists} \\
+3.  &  \ \ \ \ensuremath{\forall x\left(x+y=x\right)\wedge\forall x\left(x+y_{1}=x\right)}  &  sup \\
+4.  &  \ \ \ \ensuremath{\forall x\left(x+y=x\right)}  &  CP \\
+5.  &  \ \ \ \ensuremath{y_{1}+y=y_{1}}  &  esp \\
+6.  &  \ \ \ \ensuremath{\forall x\left(x+y_{1}=x\right)}  &  CP,3 \\
+7.  &  \ \ \ \ensuremath{y+y_{1}=y}  &  esp \\
+8.  &  \ \ \ \ \ensuremath{\forall x\forall y\left(x+y=y+x\right)}  &  AG4 \\
+9.  &  \ensuremath{\ \ \ \ \ y_{1}+y=y+y_{1}}  &  esp \\
+10.  &  \ \ \ \ \ensuremath{y=y_{1}}  &  \ensuremath{=,7,9,5} \\
+11.  &  \ensuremath{\forall y\forall y_{1}.\forall x\left(x+y=x\right)\wedge\forall x\left(x+y_{1}=x\right)\rightarrow y=y_{1}}  &  TD,3-10, y gen \\
+12.  &  \ensuremath{\exists!y\forall x\left(x+y=x\right)}  &  CP,2,11\end{tabular}\]
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

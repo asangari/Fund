@@ -1,0 +1,321 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\newcommand{\gr}{\longrightarrow}
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Ejemplo}[Teorema]{Ejemplo}
+\newtheorem{Corolario}[Teorema]{Corolario}
+\newtheorem{Caso}{Caso}
+\newenvironment{Prueba}[1][Prueba]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-std
+\end_modules
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Teorema de la recursión
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $S$
+\end_inset
+
+ es un conjunto, 
+\begin_inset Formula $a\in S$
+\end_inset
+
+ y para cada 
+\begin_inset Formula $n\in N$
+\end_inset
+
+, 
+\begin_inset Formula $f_{n}:S\rightarrow S$
+\end_inset
+
+ es una función, entonces hay una única función 
+\begin_inset Formula $\Phi:N\rightarrow S$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\Phi\left(0\right)=a$
+\end_inset
+
+ y 
+\begin_inset Formula $\Phi\left(n+1\right)=f_{n}\left(\Phi\left(n\right)\right)$
+\end_inset
+
+ para cualquier 
+\begin_inset Formula $n\in N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\noun on
+Prueba
+\end_layout
+
+\begin_layout Standard
+Construiremos una relación 
+\begin_inset Formula $R$
+\end_inset
+
+ sobre 
+\begin_inset Formula $N\times S$
+\end_inset
+
+ que es el gráfico de la función 
+\begin_inset Formula $\Phi$
+\end_inset
+
+con las propiedades deseadas.
+ Sea 
+\begin_inset Formula $G$
+\end_inset
+
+ el conjunto de todos los subconjuntos 
+\begin_inset Formula $Y$
+\end_inset
+
+ de 
+\begin_inset Formula $N\times S$
+\end_inset
+
+ tal que 
+\begin_inset Formula \[
+\left(0,a\right)\in Y;\,\,\wedge\,\,\left(n,x\right)\in Y\rightarrow\left(n+1,f_{n}\left(x\right)\right)\in Y\]
+
+\end_inset
+
+ para todo 
+\begin_inset Formula $N$
+\end_inset
+
+ .
+ Entonces 
+\begin_inset Formula $G\neq\emptyset$
+\end_inset
+
+ ya que 
+\begin_inset Formula $N\times S$
+\end_inset
+
+ está en 
+\begin_inset Formula $G.$
+\end_inset
+
+ Sea 
+\begin_inset Formula $R=\bigcap_{Y\in G}Y$
+\end_inset
+
+; 
+\begin_inset Formula $R$
+\end_inset
+
+ está en 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $M$
+\end_inset
+
+ el subconjunto de 
+\begin_inset Formula $N$
+\end_inset
+
+ consistente de aquellos 
+\begin_inset Formula $n\in N$
+\end_inset
+
+ para los cuales existe un único 
+\begin_inset Formula $x_{n}\in S$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left(n,x_{n}\right)\in R$
+\end_inset
+
+.
+ Probaremos 
+\begin_inset Formula $M=N$
+\end_inset
+
+ por inducción.
+ Si 
+\begin_inset Formula $0\notin M,$
+\end_inset
+
+ entonces existe 
+\begin_inset Formula $\left(0,b\right)\in R$
+\end_inset
+
+ con 
+\begin_inset Formula $a\neq b$
+\end_inset
+
+ y el conjunto 
+\begin_inset Formula $R-\left\{ \left(0,b\right)\right\} \subset N\times S$
+\end_inset
+
+ está en 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Consecuentemente 
+\begin_inset Formula $R=\bigcap_{Y\in G}\subset R-\left\{ \left(0,b\right)\right\} $
+\end_inset
+
+, que es una contradicción.
+ Entonces, 
+\begin_inset Formula $0\in M$
+\end_inset
+
+.
+ Suponga inductivamente que 
+\begin_inset Formula $n\in M$
+\end_inset
+
+ (que es, 
+\begin_inset Formula $\left(n,x_{n}\right)\in R$
+\end_inset
+
+ para un único 
+\begin_inset Formula $x_{n}\in S$
+\end_inset
+
+) Entonces 
+\begin_inset Formula $\left(n+1,f_{n}\left(x\right)\right)\in R$
+\end_inset
+
+ también.
+ Si 
+\begin_inset Formula $\left(n+1,c\right)\in R$
+\end_inset
+
+ con 
+\begin_inset Formula $c\notin f_{n}\left(x_{n}\right)$
+\end_inset
+
+ entonces 
+\begin_inset Formula $R-\left\{ n+1,c\right\} \in R$
+\end_inset
+
+ que es una contradicción.
+ Entonces, 
+\begin_inset Formula $x_{n+1}=f_{n}\left(x_{n}\right)$
+\end_inset
+
+ es el único elemento de 
+\begin_inset Formula $S$
+\end_inset
+
+ tal que 
+\begin_inset Formula $\left(n+1,x_{n+1}\right)\in R$
+\end_inset
+
+ Entonces por inducción 
+\begin_inset Formula $N=M,$
+\end_inset
+
+ y la asignación 
+\begin_inset Formula $n\mapsto x_{n}$
+\end_inset
+
+ define una función 
+\begin_inset Formula $\Phi:N\longrightarrow S$
+\end_inset
+
+ con grafo 
+\begin_inset Formula $R.$
+\end_inset
+
+ Ya que 
+\begin_inset Formula $\left(0,a\right)\in R$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula $\Phi\left(0\right)=a$
+\end_inset
+
+.
+ Para cada 
+\begin_inset Formula $n\in N$
+\end_inset
+
+, 
+\begin_inset Formula $\left(n,x_{n}\right)=\left(n,\Phi\left(n\right)\right)\in R$
+\end_inset
+
+ y entonces 
+\begin_inset Formula $\left(n+1,f_{n}\left(\Phi\left(n\right)\right)\right)\in R$
+\end_inset
+
+ ya que 
+\begin_inset Formula $R\in G.$
+\end_inset
+
+ Pero 
+\begin_inset Formula $\left(n+1,x_{n+1}\right)\in R$
+\end_inset
+
+ y la unicidad de 
+\begin_inset Formula $x_{n+1}$
+\end_inset
+
+implica que 
+\begin_inset Formula $\Phi\left(n+1\right)=x_{n+1}=f_{n}\left(\Phi\left(n\right)\right).$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

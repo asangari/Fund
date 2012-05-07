@@ -1,0 +1,331 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\newcommand{\gr}{\longrightarrow}
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Ejemplo}[Teorema]{Ejemplo}
+\newtheorem{Corolario}[Teorema]{Corolario}
+\newtheorem{Caso}{Caso}
+\newenvironment{Prueba}[1][Prueba]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-std
+\end_modules
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Los racionales
+\end_layout
+
+\begin_layout Enumerate
+Sea la relación 
+\begin_inset Formula \[
+V=\left\{ \left(\left(a,b\right),\left(a',b'\right)\right):\left(a,b\right),\left(a',b'\right)\in Z\times Z-\left\{ 0\right\} \wedge ab'=a'b\right\} \]
+
+\end_inset
+
+donde 
+\begin_inset Formula $Z$
+\end_inset
+
+ son los enteros.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Demostrar que 
+\begin_inset Formula $V$
+\end_inset
+
+ es una relación de equivalencia
+\end_layout
+
+\begin_layout Enumerate
+Dar 2 elementos que pertenezcan a la clase del 
+\begin_inset Formula $\left(1,5\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $W$
+\end_inset
+
+ el conjunto cociente inducido por 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Definamos sobre 
+\begin_inset Formula $W$
+\end_inset
+
+ suma 
+\begin_inset Formula $\oplus$
+\end_inset
+
+ como
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Denotemos las clases de equivalencia por un representante
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula \[
+\left(a,b\right)\oplus\left(c,d\right)=\left(a.d+b.c,b.d\right)\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Demuestre que esta suma está bien definida
+\end_layout
+
+\begin_layout Enumerate
+Muestre que 
+\begin_inset Formula $\left(W,\oplus,0\right)$
+\end_inset
+
+ es un grupo abeliano (encuentre un representante del 0)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sobre el conjunto cociente inducido por 
+\begin_inset Formula $W$
+\end_inset
+
+ definamos el producto 
+\begin_inset Formula $\otimes$
+\end_inset
+
+ como
+\begin_inset Formula \[
+\left(a,b\right)\otimes\left(c,d\right)=\left(a.c,b.d\right)\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Demuestre que este producto está bien definido
+\end_layout
+
+\begin_layout Enumerate
+Muestre que 
+\begin_inset Formula $\left(W,\otimes,1\right)$
+\end_inset
+
+ es un monoide conmutativo (encuentre un representante del 1)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Muestre que 
+\begin_inset Formula $D=\left(W,\oplus,\otimes,0,1\right)$
+\end_inset
+
+ es un cuerpo 
+\end_layout
+
+\begin_layout Enumerate
+Sea una función 
+\begin_inset Formula $G:Z\longrightarrow W$
+\end_inset
+
+ de tal manera que 
+\begin_inset Formula $a\mapsto\left(a,1\right)$
+\end_inset
+
+.
+ Mostrar que 
+\begin_inset Formula $G$
+\end_inset
+
+ es un monomorfismo de dominios de integridad.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Denotemos a las clases 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+ por 
+\begin_inset Formula $a/b$
+\end_inset
+
+ y les llamemos cocientes 
+\begin_inset Formula $a/b$
+\end_inset
+
+.
+ Definamos el conjunto de los elementos positivos sigue: Sea 
+\begin_inset Formula $Pos$
+\end_inset
+
+ consistente de todos los cocientes 
+\begin_inset Formula $a/b$
+\end_inset
+
+ en 
+\begin_inset Formula $W$
+\end_inset
+
+ para los cuales 
+\begin_inset Formula $a,b\in W$
+\end_inset
+
+ y 
+\begin_inset Formula $0<a.b$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Escriba dos representantes de la clase de 
+\begin_inset Formula $3/\left(-1\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Mostrar que si 
+\begin_inset Formula $\left(a,b\right),\left(c,d\right)\in Z\times Z^{*}$
+\end_inset
+
+ y 
+\begin_inset Formula $a/b=c/d$
+\end_inset
+
+ entonces 
+\begin_inset Formula $0<a.b$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $0<c.d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Considerar 
+\begin_inset Formula $a=a/1.$
+\end_inset
+
+ Probar que si 
+\begin_inset Formula $a\in D$
+\end_inset
+
+ entonces 
+\begin_inset Formula $a\in Pos$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $0<a$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Mostrar que si 
+\begin_inset Formula $x,y\in Pos$
+\end_inset
+
+ entonces 
+\begin_inset Formula $x+y\in Pos$
+\end_inset
+
+ y 
+\begin_inset Formula $x.y\in Pos$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Mostrar que solamente uno de los siguientes tres casos se cumple
+\begin_inset Formula \[
+x\in Pos,\,\,\,\, x=0,\,\,\,\,,-x\in Pos\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Definir la relación de orden en 
+\begin_inset Formula $W$
+\end_inset
+
+ por 
+\begin_inset Formula \[
+x<y\Longleftrightarrow x-y\in Pos\]
+
+\end_inset
+
+Verificar que efectivamente es de orden estricto
+\end_layout
+
+\end_body
+\end_document

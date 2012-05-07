@@ -1,0 +1,3488 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass amsart
+\options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman lmodern
+\font_sans lmss
+\font_typewriter lmtt
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry true
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 0
+\branch chapter-1
+\selected 1
+\filename_suffix 0
+\color #ffaa00
+\end_branch
+\branch chapter-2
+\selected 1
+\filename_suffix 0
+\color #55aaff
+\end_branch
+\branch Summary
+\selected 1
+\filename_suffix 0
+\color #7f7f7f
+\end_branch
+\branch Acknowledgments
+\selected 1
+\filename_suffix 0
+\color #ffff00
+\end_branch
+\branch Appendix
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 1cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Igualdad
+\end_layout
+
+\begin_layout Standard
+Escribimos el primer símbolo de predicado de dos lugares como 
+\begin_inset Formula $=$
+\end_inset
+
+ , y para todos los términos 
+\begin_inset Formula $r$
+\end_inset
+
+ y 
+\begin_inset Formula $s$
+\end_inset
+
+, escribimos 
+\begin_inset Formula $\left(r=s\right)$
+\end_inset
+
+ para 
+\begin_inset Formula $=\left(r,s\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $r\neq s$
+\end_inset
+
+ para 
+\begin_inset Formula $\sim\left(r=s\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El cálculo de predicados con igualdad es el resultar al cálculo de predicados
+ los siguientes axiomas, que llamamos los axiomas de igualdad.
+\end_layout
+
+\begin_layout Standard
+E1.
+ 
+\begin_inset Formula $\forall x\left(x=x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+E2.
+ 
+\begin_inset Formula $\forall x_{1}\cdots\forall x_{n}\forall y_{1}\cdots\forall y_{n}\left(x_{1}=y_{1}\wedge\cdots\wedge x_{n}=y_{n}\right).\rightarrow.G\left(x_{1},\dots,x_{n}\right)\leftrightarrow G\left(y_{1},\dots,y_{n}\right)$
+\end_inset
+
+ (un axioma para cada símbolo de predicados 
+\begin_inset Formula $G$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+E3.
+ 
+\begin_inset Formula $\forall x_{1}\cdots\forall x_{n}\forall y_{1}\cdots\forall y_{n}\left(x_{1}=y_{1}\wedge\cdots\wedge x_{n}=y_{n}\right).\rightarrow.F\left(x_{1},\dots,x_{n}\right)\leftrightarrow F\left(y_{1},\dots,y_{n}\right)$
+\end_inset
+
+ (un axioma para cada símbolo de operación 
+\begin_inset Formula $G$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+E1 es un axioma individual.
+ 
+\begin_inset Formula $E2$
+\end_inset
+
+ y 
+\begin_inset Formula $E3$
+\end_inset
+
+ son esquemas de axiomas.
+\end_layout
+
+\begin_layout Standard
+Notamos que 
+\begin_inset Formula 
+\[
+\forall x_{1}\forall x_{2}\forall y_{1}\forall y_{2}\left(x_{1}=y_{1}\wedge x_{2}=y_{2}\right).\rightarrow.x_{1}=x_{2}\leftrightarrow y_{1}=y_{2}
+\]
+
+\end_inset
+
+es un axioma, siendo está una instancia de E2 en la cual 
+\begin_inset Formula $G$
+\end_inset
+
+ es 
+\begin_inset Formula $=$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:simetría"
+
+\end_inset
+
+
+\begin_inset Formula $\vdash\forall x\forall y\left(x=y\rightarrow y=x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall x_{1}\forall x_{2}\forall y_{1}\forall y_{2}\left(x_{1}=y_{1}\wedge x_{2}=y_{2}\right).\rightarrow.x_{1}=x_{2}\leftrightarrow y_{1}=y_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y=y\wedge x=y.\rightarrow.y=x\leftrightarrow y=y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall x\left(x=x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y=y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x=y\rightarrow y=x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SC, 2,4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall x\forall y\left(x=y\rightarrow y=x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+gen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:transitividad"
+
+\end_inset
+
+
+\begin_inset Formula $\vdash\forall x\forall y\forall z\left(x=y\wedge y=z\rightarrow x=z\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall x_{1}\forall x_{2}\forall y_{1}\forall y_{2}\left(x_{1}=y_{1}\wedge x_{2}=y_{2}\right).\rightarrow.x_{1}=x_{2}\leftrightarrow y_{1}=y_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x=y\wedge z=z.\rightarrow.x=z\leftrightarrow y=z$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall x\left(x=x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $z=z$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+spec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x=y\wedge y=z\rightarrow x=z$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SC, 2,4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall x\forall y\forall z\left(x=y\wedge y=z\rightarrow x=z\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+gen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los teoremas 1 y 2 nos permiten colapsar cualquier cadena de igualdades.
+ En un esbozo de prueba, indicamos por 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $=$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ una o más aplicaciones de E1, Teorema 1 y El teorema 2.
+\end_layout
+
+\begin_layout Example
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+1.
+ 
+\begin_inset Formula $x+y=z\wedge x+y=z_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2.
+ 
+\begin_inset Formula $z=z_{1}$
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+El cálculo de proposiciones aplicado al paso 1 da 
+\begin_inset Formula $x+y=z$
+\end_inset
+
+ y 
+\begin_inset Formula $x+y=z_{1}$
+\end_inset
+
+.
+ El teorema 1 aplicado a 
+\begin_inset Formula $x+y=z$
+\end_inset
+
+ da 
+\begin_inset Formula $z=x+y.$
+\end_inset
+
+ Entonces el teorema 2 aplicado a 
+\begin_inset Formula $z=x+y$
+\end_inset
+
+ y 
+\begin_inset Formula $x+y=z_{1}$
+\end_inset
+
+ da 
+\begin_inset Formula $z=z_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0+0=0+0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0+y=y+0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y'+0=y+0'$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y+0'=\left(y+0\right)'$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y+0'=\left(0+y\right)'$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0+y'=\left(0+y\right)'$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0+y'=y'+0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=,$
+\end_inset
+
+ 6,5,3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+El paso 1 es una aplicación de 
+\begin_inset Formula $E1$
+\end_inset
+
+, o sea, es el resultado de aplicar spec a E1.
+ El paso 7 viene de los pasos 6, 5, y 3 por teoremas 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:simetría"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:transitividad"
+
+\end_inset
+
+.
+ El teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:simetría"
+
+\end_inset
+
+ aplicado al paso 5 da 
+\begin_inset Formula $\left(0+y\right)'=y+0'$
+\end_inset
+
+ .
+ Entonces el teorema 2 aplicado a 
+\begin_inset Formula $0+y'=\left(0+y\right)'$
+\end_inset
+
+ (paso 6) y a 
+\begin_inset Formula $\left(0+y\right)'=y+0'$
+\end_inset
+
+, da 
+\begin_inset Formula $0+y'=y+0'$
+\end_inset
+
+.
+ Entonces el teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:simetría"
+
+\end_inset
+
+ aplicado al paso 3 da 
+\begin_inset Formula $y+0'=y'+0$
+\end_inset
+
+.
+ Entonces el teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:transitividad"
+
+\end_inset
+
+ aplicado a 
+\begin_inset Formula $0+y'=y+0'$
+\end_inset
+
+ y a 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $y+0'=y'+0$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+da
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+
+\begin_inset Formula $0+y'=y'+0$
+\end_inset
+
+ (paso 7).
+ Brevemente, la cadena 
+\begin_inset Formula $0+y'=\left(0+y\right)'$
+\end_inset
+
+, 
+\begin_inset Formula $y+0'=\left(0+y\right)'$
+\end_inset
+
+ y 
+\begin_inset Formula $y'+0=y+0'$
+\end_inset
+
+ de pasos 6, 5, y 3 se colapsan para dar 
+\begin_inset Formula $0+y'=y+0'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Probamos ahora algunas propiedades de la igualdad
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:subs"
+
+\end_inset
+
+
+\begin_inset Formula $\vdash r=s\rightarrow t_{r}=t_{s}$
+\end_inset
+
+, donde 
+\begin_inset Formula $r$
+\end_inset
+
+, 
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $t_{r}$
+\end_inset
+
+, y 
+\begin_inset Formula $t_{s}$
+\end_inset
+
+ son términos, 
+\begin_inset Formula $r$
+\end_inset
+
+ ocurre en 
+\begin_inset Formula $t_{r}$
+\end_inset
+
+ y 
+\begin_inset Formula $t_{s}$
+\end_inset
+
+ es el resultado de reemplazar una o más especificadas ocurrencias (pero
+ no necesariamente todas) de 
+\begin_inset Formula $r$
+\end_inset
+
+ en 
+\begin_inset Formula $t_{r}$
+\end_inset
+
+ por ocurrencias de 
+\begin_inset Formula $s$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Por inducción del número 
+\begin_inset Formula $n$
+\end_inset
+
+ de ocurrencias de símbolos de predicados en 
+\begin_inset Formula $t_{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Base: Si 
+\begin_inset Formula $n=0$
+\end_inset
+
+, entonces 
+\begin_inset Formula $t_{r}$
+\end_inset
+
+ es una variable o un símbolo de constante.
+ En cualquier caso, 
+\begin_inset Formula $t_{r}$
+\end_inset
+
+ es 
+\begin_inset Formula $r$
+\end_inset
+
+ y 
+\begin_inset Formula $t_{s}$
+\end_inset
+
+ es 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $r=s\rightarrow r=s$
+\end_inset
+
+ es un teorema pues es una tautología.
+ 
+\end_layout
+
+\begin_layout Proof
+Paso inductivo: Supongamos en teorema para cualquier 
+\begin_inset Formula $t_{r}$
+\end_inset
+
+ con 
+\begin_inset Formula $n$
+\end_inset
+
+ o menos símbolos y consideremos 
+\begin_inset Formula $t_{r}$
+\end_inset
+
+ con 
+\begin_inset Formula $n+1$
+\end_inset
+
+ símbolos.
+ Entonces 
+\begin_inset Formula $t_{r}$
+\end_inset
+
+ es 
+\begin_inset Formula $F\left(t_{1},\dots,t_{k}\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $F$
+\end_inset
+
+ es un símbolo de operación y 
+\begin_inset Formula $t_{1},\dots,t_{k}$
+\end_inset
+
+ son términos con 
+\begin_inset Formula $n$
+\end_inset
+
+ o menos símbolos.
+ Entonces 
+\begin_inset Formula $t_{s}$
+\end_inset
+
+ es 
+\begin_inset Formula $F\left(t'_{1},\dots,t'_{k}\right)$
+\end_inset
+
+, donde cada 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $t'_{i}$
+\end_inset
+
+ es el
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+ resultado de reemplazar las ocurrencias especificadas de 
+\begin_inset Formula $r$
+\end_inset
+
+ en 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ por ocurrencias de 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ Por la hipótesis inductiva, 
+\begin_inset Formula $\vdash r=s\rightarrow t_{i}=t'_{i}$
+\end_inset
+
+ para 
+\begin_inset Formula $1\leq i\leq k$
+\end_inset
+
+.
+ E3 y spec dan 
+\begin_inset Formula $\vdash t_{1}=t'_{1}\wedge\cdots\wedge t_{k}=t'_{k}\rightarrow F\left(t_{1},\dots,t_{k}\right)=F\left(t'_{1},\dots,t'_{k}\right)$
+\end_inset
+
+.
+ Entonces el cálculo de proposiciones da 
+\begin_inset Formula $\vdash r=s\rightarrow F\left(t_{1},\dots,t_{k}\right)=F\left(t'_{1},\dots,t'_{k}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:subs"
+
+\end_inset
+
+Si 
+\begin_inset Formula $\Delta\vdash r=s$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\Delta\vdash t_{r}=t_{s}$
+\end_inset
+
+, donde 
+\begin_inset Formula $r$
+\end_inset
+
+, 
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $t_{r}$
+\end_inset
+
+, y 
+\begin_inset Formula $t_{s}$
+\end_inset
+
+ son como en el teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:subs"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:subs"
+
+\end_inset
+
+ y Modus Ponens.
+\end_layout
+
+\begin_layout Standard
+Por teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:simetría"
+
+\end_inset
+
+, podemos variar corolario 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:subs"
+
+\end_inset
+
+ por reemplazar 
+\begin_inset Formula $\Delta\vdash r=s$
+\end_inset
+
+ por 
+\begin_inset Formula $\Delta\vdash s=r$
+\end_inset
+
+, o por reemplazar 
+\begin_inset Formula $\Delta\vdash t_{r}=t_{s}$
+\end_inset
+
+ por 
+\begin_inset Formula $\Delta\vdash t_{s}=t_{r}$
+\end_inset
+
+ .
+ Indicaremos una aplicación del teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:subs"
+
+\end_inset
+
+ o corolario 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:subs"
+
+\end_inset
+
+ en un esbozo de prueba por 
+\begin_inset Quotes eld
+\end_inset
+
+sub
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+1.
+ 
+\begin_inset Formula $y=z+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+2.
+ 
+\begin_inset Formula $\left(x\left(z+1\right)+y\right)+\left(z+1\right)=\left(xy+y\right)+y$
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+sub, 1
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+En 
+\lang spanish
+este
+\lang english
+ 
+\lang spanish
+ejemplo
+\lang english
+ 
+\begin_inset Formula $r$
+\end_inset
+
+ es 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $s$
+\end_inset
+
+ es 
+\begin_inset Formula $z+1$
+\end_inset
+
+, 
+\begin_inset Formula $t_{y}$
+\end_inset
+
+ es 
+\begin_inset Formula $\left(xy+y\right)+y$
+\end_inset
+
+ y 
+\begin_inset Formula $t_{z+1}$
+\end_inset
+
+ es 
+\lang spanish
+
+\begin_inset Formula $\left(x\left(z+1\right)+y\right)+\left(z+1\right)$
+\end_inset
+
+.
+ Note como solamente dos de las tres ocurrencias de 
+\begin_inset Formula $y$
+\end_inset
+
+ en 
+\begin_inset Formula $t_{y}$
+\end_inset
+
+ son ocurrencias especificadas.
+ 
+\end_layout
+
+\begin_layout Theorem
+
+\lang english
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:SubEnForm"
+
+\end_inset
+
+
+\begin_inset Formula $\vdash r=s.\rightarrow.P_{r}\leftrightarrow P_{s}$
+\end_inset
+
+ 
+\lang spanish
+donde 
+\begin_inset Formula $P_{r}$
+\end_inset
+
+ y 
+\begin_inset Formula $P_{s}$
+\end_inset
+
+ son fórmulas, 
+\begin_inset Formula $r$
+\end_inset
+
+, 
+\begin_inset Formula $s$
+\end_inset
+
+, son términos, 
+\begin_inset Formula $r$
+\end_inset
+
+ ocurre en 
+\begin_inset Formula $P_{r}$
+\end_inset
+
+ y 
+\begin_inset Formula $P_{s}$
+\end_inset
+
+ es el resultado de reemplazar una o más especificadas ocurrencias (pero
+ no necesariamente todas) de 
+\begin_inset Formula $r$
+\end_inset
+
+ en 
+\begin_inset Formula $P_{r}$
+\end_inset
+
+ por ocurrencias de 
+\begin_inset Formula $s$
+\end_inset
+
+, supuesto que no hay variables que ocurren en 
+\begin_inset Formula $r$
+\end_inset
+
+ o 
+\begin_inset Formula $s$
+\end_inset
+
+ que son variables acotadas en 
+\begin_inset Formula $P_{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Por inducción sobre el número 
+\begin_inset Formula $n$
+\end_inset
+
+ de símbolos en 
+\begin_inset Formula $P_{r}$
+\end_inset
+
+, contando cada ocurrencia de 
+\begin_inset Formula $\sim,$
+\end_inset
+
+ 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+, o 
+\begin_inset Formula $\forall$
+\end_inset
+
+ como un símbolo.
+\end_layout
+
+\begin_layout Proof
+Base: Si 
+\begin_inset Formula $n=0$
+\end_inset
+
+, entonces 
+\begin_inset Formula $P_{r}$
+\end_inset
+
+ es una fórmula atómica 
+\begin_inset Formula $G\left(t_{1},\dots,t_{k}\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $G$
+\end_inset
+
+ es un símbolo de predicado y 
+\begin_inset Formula $t_{1},\dots,t_{k}$
+\end_inset
+
+ son términos.
+ Entonces 
+\begin_inset Formula $P_{s}$
+\end_inset
+
+ es 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $G\left(t'_{1},\dots,t'_{k}\right)$
+\end_inset
+
+,
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+ donde cada 
+\begin_inset Formula $t'_{i}$
+\end_inset
+
+ es el resultado de de reemplazar las ocurrencias especificadas de 
+\begin_inset Formula $r$
+\end_inset
+
+ en 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ por ocurrencias de 
+\begin_inset Formula $s.$
+\end_inset
+
+ Por teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:subs"
+
+\end_inset
+
+, 
+\begin_inset Formula $\vdash r=s\rightarrow t_{i}=t'_{i}$
+\end_inset
+
+ por 
+\begin_inset Formula $1\leq i\leq k$
+\end_inset
+
+.
+ E2 y spec dan 
+\begin_inset Formula 
+\[
+\vdash t_{1}=t'_{1}\wedge\cdots\wedge t_{k}=t'_{k}\rightarrow G\left(t_{1},\dots,t_{k}\right)\leftrightarrow G\left(t'_{1},\dots,t'_{k}\right)
+\]
+
+\end_inset
+
+Entonces
+\lang english
+ 
+\lang spanish
+el cálculo de proposiciones da 
+\begin_inset Formula $\vdash r=s\rightarrow G\left(t_{1},\dots,t_{k}\right)\leftrightarrow G\left(t'_{1},\dots,t'_{k}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Paso inductivo: Suponga el teorema para cualquier 
+\begin_inset Formula $P_{r}$
+\end_inset
+
+ con 
+\begin_inset Formula $n$
+\end_inset
+
+ o menos símbolos, y considere a 
+\begin_inset Formula $P_{r}$
+\end_inset
+
+ con 
+\begin_inset Formula $n+1$
+\end_inset
+
+ símbolos.
+\end_layout
+
+\begin_layout Proof
+Caso 1.
+ 
+\begin_inset Formula $P_{r}$
+\end_inset
+
+ es 
+\begin_inset Formula $\sim Q_{r}$
+\end_inset
+
+ para algún 
+\begin_inset Formula $Q_{r}$
+\end_inset
+
+.
+ La hipótesis inductiva da 
+\lang english
+
+\begin_inset Formula $\vdash r=s.\rightarrow.Q_{r}\leftrightarrow Q_{s}$
+\end_inset
+
+.
+ 
+\lang spanish
+Entonces el cálculo de proposiciones da 
+\begin_inset Formula 
+\[
+\vdash r=s.\rightarrow.\sim Q{}_{r}\leftrightarrow\sim Q_{s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Caso 2.
+ 
+\begin_inset Formula $P_{r}$
+\end_inset
+
+ es 
+\begin_inset Formula $Q_{r}\rightarrow R_{r}$
+\end_inset
+
+ para algún 
+\begin_inset Formula $Q_{r}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{r}$
+\end_inset
+
+.
+ La hipótesis inductiva da 
+\begin_inset Formula $\vdash r=s.\rightarrow.Q_{r}\leftrightarrow Q_{s}$
+\end_inset
+
+ y 
+\begin_inset Formula $\vdash r=s.\rightarrow.R_{r}\leftrightarrow R_{s}$
+\end_inset
+
+.
+ Entonces el cálculo de proposiciones da 
+\begin_inset Formula $\vdash r=s.\rightarrow.Q_{r}\rightarrow R_{r}\leftrightarrow Q_{s}\rightarrow R_{s}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Caso 3.
+ 
+\begin_inset Formula $P_{r}$
+\end_inset
+
+ es 
+\begin_inset Formula $\forall vQ_{r}$
+\end_inset
+
+ para algún 
+\begin_inset Formula $v$
+\end_inset
+
+ y 
+\begin_inset Formula $Q_{r}$
+\end_inset
+
+.
+ La hipótesis de inducción da 
+\begin_inset Formula $\vdash r=s.\rightarrow.Q_{r}\leftrightarrow Q_{s}$
+\end_inset
+
+.
+ Entonces gen da 
+\begin_inset Formula $\vdash\forall v\left(r=s.\rightarrow.Q_{r}\leftrightarrow Q_{s}\right)$
+\end_inset
+
+.
+ Ya que 
+\begin_inset Formula $v$
+\end_inset
+
+ es una variable acotada de 
+\begin_inset Formula $P_{r}$
+\end_inset
+
+, 
+\begin_inset Formula $v$
+\end_inset
+
+ no es libre en 
+\begin_inset Formula $r=s$
+\end_inset
+
+.
+ Entonces el esquema de teoremas 21 y el Cálculo de proposiciones da
+\begin_inset Formula 
+\[
+\vdash r=s.\rightarrow.\forall v\left(Q_{r}\leftrightarrow Q_{s}\right)
+\]
+
+\end_inset
+
+Entonces un teorema de la sección de equivalencia y el cálculo de proposiciones
+ da
+\lang english
+ 
+\begin_inset Formula 
+\[
+\vdash r=s.\rightarrow.\forall vQ_{r}\leftrightarrow\forall vQ_{s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+\begin_inset CommandInset label
+LatexCommand label
+name "cor:SubEnForm"
+
+\end_inset
+
+Si 
+\begin_inset Formula $\Delta\vdash r=s$
+\end_inset
+
+ y 
+\begin_inset Formula $\Delta\vdash P_{r}$
+\end_inset
+
+, entonces
+\lang english
+ 
+\begin_inset Formula $\Delta\vdash P_{s}$
+\end_inset
+
+ 
+\lang spanish
+donde 
+\begin_inset Formula $r$
+\end_inset
+
+, 
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $P_{r}$
+\end_inset
+
+, y 
+\begin_inset Formula $P_{s}$
+\end_inset
+
+ son como en el teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:SubEnForm"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:SubEnForm"
+
+\end_inset
+
+ y el cálculo de proposiciones.
+\end_layout
+
+\begin_layout Standard
+Por teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:simetría"
+
+\end_inset
+
+, podemos variar corolario 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:SubEnForm"
+
+\end_inset
+
+ por reemplazar 
+\begin_inset Formula $\Delta\vdash r=s$
+\end_inset
+
+ por 
+\begin_inset Formula $\Delta\vdash s=r$
+\end_inset
+
+.
+ Usamos de nuevo 
+\begin_inset Quotes eld
+\end_inset
+
+sub
+\begin_inset Quotes erd
+\end_inset
+
+ para indicar una aplicación del teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:SubEnForm"
+
+\end_inset
+
+ o del corolario 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:SubEnForm"
+
+\end_inset
+
+ o sus variantes en un esbozo de prueba.
+\end_layout
+
+\begin_layout Example
+
+\lang english
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+6.
+ 
+\begin_inset Formula $x<y\wedge y<z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+9.
+ 
+\lang english
+
+\begin_inset Formula $y=y_{1}+y_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+14.
+ 
+\begin_inset Formula $x<y_{1}+y_{2}\wedge y<z$
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+sub, 9, 6
+\end_layout
+
+\begin_layout Standard
+Aquí
+\lang english
+ 
+\begin_inset Formula $r$
+\end_inset
+
+ es 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $s$
+\end_inset
+
+ es 
+\begin_inset Formula $y_{1}+y_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $P_{y}$
+\end_inset
+
+ es 
+\begin_inset Formula $x<y\wedge y<z$
+\end_inset
+
+, y 
+\begin_inset Formula $P_{y_{1}+y_{2}}$
+\end_inset
+
+ es 
+\begin_inset Formula $x<y_{1}+y_{2}\wedge y<z$
+\end_inset
+
+.
+ La 
+\lang spanish
+primera ocurrencia de 
+\begin_inset Formula $y$
+\end_inset
+
+ en 
+\begin_inset Formula $P_{y}$
+\end_inset
+
+ es la ocurrencia especificada.
+\end_layout
+
+\begin_layout Example
+En corolario 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:SubEnForm"
+
+\end_inset
+
+, la restricción a que no haya variables acotadas en 
+\begin_inset Formula $P_{r}$
+\end_inset
+
+ que puedan ocurrir en 
+\begin_inset Formula $r$
+\end_inset
+
+ o 
+\begin_inset Formula $s$
+\end_inset
+
+ puede ser eludidas por cambio de variable acotada.
+ Suponga 
+\begin_inset Formula $\Delta\vdash x=y+7$
+\end_inset
+
+ y 
+\begin_inset Formula $\Delta\vdash\exists y\left(y=x+2\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $r$
+\end_inset
+
+ es 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $s$
+\end_inset
+
+ es 
+\begin_inset Formula $y+7$
+\end_inset
+
+, y 
+\begin_inset Formula $P_{x}$
+\end_inset
+
+ es 
+\lang english
+
+\begin_inset Formula $\exists y\left(y=x+2\right)$
+\end_inset
+
+.
+ El 
+\lang spanish
+corolario 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cor:SubEnForm"
+
+\end_inset
+
+ no puede aplicarse porque la variable 
+\begin_inset Formula $y$
+\end_inset
+
+ es acotada en 
+\begin_inset Formula $P_{x}$
+\end_inset
+
+ y ocurre en 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ Observando que 
+\begin_inset Formula $P_{y+7}$
+\end_inset
+
+ es 
+\begin_inset Formula $\exists y\left(y=\left(y+7\right)+2\right)$
+\end_inset
+
+ vemos que hay buenas razones para la restricción.
+ Podemos, sin embargo, seguir con la sustitución después de un cambio de
+ variable acotada 
+\begin_inset Formula $y$
+\end_inset
+
+ en 
+\begin_inset Formula $P_{x}$
+\end_inset
+
+ por 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+.
+ Entonces, de 
+\begin_inset Formula $\Delta\vdash x=y+7$
+\end_inset
+
+ y 
+\begin_inset Formula $\Delta\vdash\exists y_{1}\left(y_{1}=x+2\right)$
+\end_inset
+
+ concluimos que 
+\begin_inset Formula $\Delta\vdash\exists y_{1}\left(y_{1}=\left(y+7\right)+2\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Los enunciados de las siguientes formas son muy comunes en matemáticas:
+\end_layout
+
+\begin_layout Standard
+Hay una y solo una 
+\begin_inset Formula $u$
+\end_inset
+
+ tal que 
+\begin_inset Formula $P\left(u\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hay exactamente una 
+\begin_inset Formula $u$
+\end_inset
+
+ tal que 
+\begin_inset Formula $P\left(u\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hay una única 
+\begin_inset Formula $u$
+\end_inset
+
+ tal que 
+\begin_inset Formula $P\left(u\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hay al menos una 
+\begin_inset Formula $u$
+\end_inset
+
+ y a lo sumo una 
+\begin_inset Formula $u$
+\end_inset
+
+ tal que 
+\begin_inset Formula $P\left(u\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Traduciremos cada una de ellas como 
+\begin_inset Formula 
+\begin{equation}
+\exists uP\left(u\right)\wedge\forall u\forall v\left(P\left(u\right)\wedge P\left(v\right)\rightarrow u=v\right)\label{eq:UnaYsoloUna}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $P\left(v\right)$
+\end_inset
+
+ es 
+\begin_inset Formula $P\left(v/u\right)$
+\end_inset
+
+, y 
+\begin_inset Formula $v$
+\end_inset
+
+ es ka primera variable en la lista alfabética de variables que no ocurren
+ en 
+\begin_inset Formula $P\left(u\right).$
+\end_inset
+
+ Entonces abreviaremos (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:UnaYsoloUna"
+
+\end_inset
+
+) como 
+\begin_inset Formula 
+\begin{equation}
+\exists!uP\left(u\right)\label{eq:abrevUySU}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Elegimos 
+\begin_inset Formula $v$
+\end_inset
+
+ en (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:UnaYsoloUna"
+
+\end_inset
+
+) como una variable especificada para estar seguro que (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:abrevUySU"
+
+\end_inset
+
+) tendrá una única des abreviatura.
+ En la práctica, 
+\begin_inset Formula $v$
+\end_inset
+
+ puede ser cualquier variable tal que 
+\begin_inset Formula $P\left(u\right)$
+\end_inset
+
+sea similar a 
+\begin_inset Formula $P\left(v\right)$
+\end_inset
+
+.
+ En (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:UnaYsoloUna"
+
+\end_inset
+
+) 
+\begin_inset Formula $\exists uP\left(u\right)$
+\end_inset
+
+ dice que hay al menos una 
+\begin_inset Formula $u$
+\end_inset
+
+ tal que 
+\begin_inset Formula $P\left(u\right)$
+\end_inset
+
+, y 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\forall u\forall v\left(P\left(u\right)\wedge P\left(v\right)\rightarrow u=v\right)$
+\end_inset
+
+ dice 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+que hay a lo sumo una 
+\begin_inset Formula $u$
+\end_inset
+
+ tal que 
+\begin_inset Formula $P\left(u\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\vdash\forall x\exists!y\left(y=x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x=x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+=
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\exists y\left(y=x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\exists$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $y=x\wedge z=x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+as
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $y=x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+=,3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y=x\wedge z=x\rightarrow y=x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DT, 3-4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall y\forall z\left(y=x\wedge z=x\rightarrow y=x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+gen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\exists!y\left(y=x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SC, 2,6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall x\exists!y\left(y=x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+gen
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una prueba de 
+\begin_inset Formula $\exists!uP\left(u\right)$
+\end_inset
+
+ se parte en dos partes, la parte de existencia 
+\begin_inset Formula $\exists uP\left(u\right)$
+\end_inset
+
+ y la parte de unicidad 
+\begin_inset Formula $\forall u\forall v\left(P\left(u\right)\wedge P\left(v\right)\rightarrow u=v\right)$
+\end_inset
+
+.
+ Para la parte de unicidad, 
+\begin_inset Formula $u=v$
+\end_inset
+
+ se deduce de la suposición 
+\begin_inset Formula $P\left(u\right)\wedge P\left(v\right),$
+\end_inset
+
+ y por el teorema de la deducción y gen da
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula 
+\[
+\forall u\forall v\left(P\left(u\right)\wedge P\left(v\right)\rightarrow u=v\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Grupos Abelianos.
+ 
+\begin_inset Formula $\vdash\forall x\forall y\exists!z\left(x+y=z\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x+y=x+y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+=
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\exists z\left(x+y=z\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\exists$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $x+y=z\wedge x+y=z_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $as$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $z=z_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $=,3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $5.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x+y=z\wedge x+y=z_{1}\rightarrow z=z_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $DT,3-4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $6.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall z\forall z_{1}\left(x+y=z\wedge x+y=z_{1}\rightarrow z=z_{1}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $gen$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $7.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\exists!z\left(x+y=z\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $SC,2,6$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\forall x\forall y\exists!z\left(x+y=z\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $gen$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En algunas formulaciones de la teoría de los grupos abelianos, 
+\begin_inset Formula $\forall x\forall y\exists!z\left(x+y=z\right)$
+\end_inset
+
+ es un axioma.
+ No hay necesidad para esto, porque informalmente esto solamente dice de
+ nuevo que 
+\begin_inset Formula $+$
+\end_inset
+
+ es una operación binaria, y formalmente esto puede ser probado.
+\end_layout
+
+\begin_layout Subsection*
+Ejercicios
+\end_layout
+
+\begin_layout Enumerate
+Probar: Si 
+\begin_inset Formula $P\left(u\right)$
+\end_inset
+
+ es similar a 
+\begin_inset Formula $P\left(v\right),$
+\end_inset
+
+ entonces 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\vdash\forall u.P\left(u\right)\leftrightarrow\exists v\left(v=u\wedge P\left(v\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\vdash\forall u.P\left(u\right)\leftrightarrow\forall v\left(v=u\rightarrow P\left(v\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar (donde 
+\begin_inset Formula $v$
+\end_inset
+
+ es la primera variable que no ocurre en 
+\begin_inset Formula $P\left(u\right)$
+\end_inset
+
+):
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\vdash\exists!u.P\left(u\right)\leftrightarrow\exists u\forall v\left(v=u\leftrightarrow P\left(v\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\vdash\exists!u.P\left(u\right)\leftrightarrow\exists u\left(P\left(u\right)\wedge\forall v\left(P\left(v\right)\rightarrow u=v\right)\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Traducir lo siguiente en la forma simbólica
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\lang english
+Hay 
+\lang spanish
+al menos dos 
+\begin_inset Formula $u$
+\end_inset
+
+'s tal que 
+\begin_inset Formula $P\left(u\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+Hay a lo sumo dos 
+\lang spanish
+
+\begin_inset Formula $u$
+\end_inset
+
+'s tal que 
+\begin_inset Formula $P\left(u\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Hay exactamente dos 
+\begin_inset Formula $u$
+\end_inset
+
+'s tal que 
+\begin_inset Formula $P\left(u\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+Hay 
+\lang spanish
+exactamente
+\lang english
+ 
+\lang spanish
+tres
+\lang english
+ 
+\begin_inset Formula $u$
+\end_inset
+
+' s 
+\lang spanish
+tal
+\lang english
+ 
+\lang spanish
+que
+\lang english
+ 
+\begin_inset Formula $P\left(u\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+En teoría de números probar
+\begin_inset Formula 
+\[
+\vdash\forall x\forall y\forall z\forall y_{1}\left(x+y=z\wedge x+y_{1}\neq z.\rightarrow.y\neq y_{1}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

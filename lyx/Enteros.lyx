@@ -1,0 +1,231 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\newcommand{\gr}{\longrightarrow}
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Ejemplo}[Teorema]{Ejemplo}
+\newtheorem{Corolario}[Teorema]{Corolario}
+\newtheorem{Caso}{Caso}
+\newenvironment{Prueba}[1][Prueba]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-std
+\end_modules
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Los enteros
+\end_layout
+
+\begin_layout Enumerate
+Sea la relación 
+\begin_inset Formula \[
+V=\left\{ \left(\left(n,m\right),\left(n',m'\right)\right):\left(n,m\right),\left(n',m'\right)\in P\times P'\wedge n+m'=n'+m\right\} \]
+
+\end_inset
+
+donde 
+\begin_inset Formula $P$
+\end_inset
+
+ son los enteros positivos.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Demostrar que 
+\begin_inset Formula $V$
+\end_inset
+
+ es una relación de equivalencia
+\end_layout
+
+\begin_layout Enumerate
+Dar 2 elementos que pertenezcan a la clase del 
+\begin_inset Formula $\left(1,5\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $W$
+\end_inset
+
+ el conjunto cociente inducido por 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ Definamos sobre 
+\begin_inset Formula $W$
+\end_inset
+
+ la suma 
+\begin_inset Formula $\oplus$
+\end_inset
+
+ como
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Denotemos las clases de equivalencia por un representante
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula \[
+\left(n,m\right)\oplus\left(p,q\right)=\left(n+p,m+q\right)\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Demuestre que esta suma está bien definida
+\end_layout
+
+\begin_layout Enumerate
+Muestre que 
+\begin_inset Formula $\left(W,\oplus,0\right)$
+\end_inset
+
+ es un grupo abeliano (encuentre un representante del 0)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sobre 
+\begin_inset Formula $W$
+\end_inset
+
+ definamos la relación de orden 
+\begin_inset Formula $\prec$
+\end_inset
+
+ como
+\begin_inset Formula \[
+\left(n,m\right)\prec\left(p,q\right)\longleftrightarrow n+q<m+p\]
+
+\end_inset
+
+Demuestre que este orden está bien definido
+\end_layout
+
+\begin_layout Enumerate
+Sobre el conjunto cociente inducido por 
+\begin_inset Formula $W$
+\end_inset
+
+ definamos el producto 
+\begin_inset Formula $\otimes$
+\end_inset
+
+ como
+\begin_inset Formula \[
+\left(n,m\right)\otimes\left(p,q\right)=\left(np+mq,nq+mp\right)\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Demuestre que este producto está bien definido
+\end_layout
+
+\begin_layout Enumerate
+Muestre que 
+\begin_inset Formula $\left(W,\otimes,1\right)$
+\end_inset
+
+ es un monoide conmutativo (encuentre un representante del 1)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Muestre que 
+\begin_inset Formula $D=\left(W,\oplus,\otimes,0,1\right)$
+\end_inset
+
+ es un dominio de integridad linealmente ordenado 
+\end_layout
+
+\begin_layout Enumerate
+Muestre que para todo 
+\begin_inset Formula $X\in D,$
+\end_inset
+
+ o hay un 
+\begin_inset Formula $n\in P$
+\end_inset
+
+ con 
+\begin_inset Formula $X=n1$
+\end_inset
+
+ o 
+\begin_inset Formula $X=0$
+\end_inset
+
+ o hay un 
+\begin_inset Formula $n\in P$
+\end_inset
+
+ con 
+\begin_inset Formula $X=-n1$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

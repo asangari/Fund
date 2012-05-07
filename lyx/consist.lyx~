@@ -1,0 +1,1237 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options false
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Consistencia y completitud
+\end_layout
+
+\begin_layout Standard
+Una teoría de primer orden 
+\begin_inset Formula $T$
+\end_inset
+
+ es consistente negativamente si y solo si no hay una fórmula 
+\begin_inset Formula $Q$
+\end_inset
+
+ tal que tanto 
+\begin_inset Formula $Q$
+\end_inset
+
+ como 
+\begin_inset Formula $\sim Q$
+\end_inset
+
+ son teoremas de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Una teoría de primer orden es absolutamente consistente si hay al menos
+ una fórmula de 
+\begin_inset Formula $T$
+\end_inset
+
+ que no es teorema de 
+\begin_inset Formula $T.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Una teoría de primer orden es consistente negativamente si y solo si es
+ absolutamente consistente
+\end_layout
+
+\begin_layout Proof
+Usemos la contrarecíproca.
+ Supongamos que 
+\begin_inset Formula $T$
+\end_inset
+
+ es inconsistente negativamente.
+ O sea, que hay una fórmula 
+\begin_inset Formula $Q$
+\end_inset
+
+ de 
+\begin_inset Formula $T,$
+\end_inset
+
+ tal que tanto 
+\begin_inset Formula $Q$
+\end_inset
+
+ como 
+\begin_inset Formula $\sim Q$
+\end_inset
+
+ son teoremas de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Sea 
+\begin_inset Formula $P$
+\end_inset
+
+ una fórmula de 
+\begin_inset Formula $T.$
+\end_inset
+
+ 
+\begin_inset Formula $\sim Q.\rightarrow.Q\rightarrow P$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T,$
+\end_inset
+
+ pues es una tautología.
+ Por dos aplicaciones del modus ponens, 
+\begin_inset Formula $P$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Debido a que 
+\begin_inset Formula $P$
+\end_inset
+
+ es arbitrario, cualquier fórmula de 
+\begin_inset Formula $T$
+\end_inset
+
+ es un teorema.
+ Entonces 
+\begin_inset Formula $T$
+\end_inset
+
+ es absolutamente inconsistente.
+ Supongamos ahora que 
+\begin_inset Formula $T$
+\end_inset
+
+ es absolutamente inconsistente.
+ Sea 
+\begin_inset Formula $Q$
+\end_inset
+
+ cualquier fórmula de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Entonces 
+\begin_inset Formula $\sim Q$
+\end_inset
+
+ es también una fórmula de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Ya que cualquier fórmula de 
+\begin_inset Formula $T$
+\end_inset
+
+ es teorema, tanto 
+\begin_inset Formula $Q,$
+\end_inset
+
+ como 
+\begin_inset Formula $\sim Q$
+\end_inset
+
+ son teoremas de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Por esto es negativamente inconsistente- 
+\end_layout
+
+\begin_layout Standard
+Este teorema nos permite decir consistente o inconsistente sin calificación
+ para teorías de primer orden.
+\end_layout
+
+\begin_layout Theorem
+El cálculo proposicional es consistente
+\end_layout
+
+\begin_layout Proof
+La fórmula 
+\begin_inset Formula $A\left(x\right)$
+\end_inset
+
+ no es un teorema del cálculo de proposiciones porque no es una tautología.
+\end_layout
+
+\begin_layout Theorem
+El cálculo de predicados es consistente
+\end_layout
+
+\begin_layout Proof
+Para cada fórmula 
+\begin_inset Formula $P$
+\end_inset
+
+ asignamos una fórmula 
+\begin_inset Formula $P^{\prime},$
+\end_inset
+
+ llamada la transformada de 
+\begin_inset Formula $P,$
+\end_inset
+
+ como sigue.
+ Primero, cualquier ocurrencia de 
+\begin_inset Formula $\forall v,$
+\end_inset
+
+ para cualquier variable 
+\begin_inset Formula $v$
+\end_inset
+
+, se borra.
+ Luego, cualquier ocurrencia de cualquier término se reemplaza por una ocurrenci
+a de 
+\begin_inset Formula $x.$
+\end_inset
+
+ Finalmente, cada ocurrencia de 
+\begin_inset Formula $x=x$
+\end_inset
+
+ se reemplaza por una ocurrencia de 
+\begin_inset Formula $x=x\rightarrow x=x.$
+\end_inset
+
+ Mostraremos abajo que el transformado de cualquier axioma del cálculo de
+ predicados es una tautología.
+ Ya que el modus ponens aplicado a dos tautologías es una tautología el
+ transformado de cualquier teorema del cálculo de predicados es una tautología.
+ 
+\begin_inset Formula $A\left(x\right)$
+\end_inset
+
+ es su propio transformado y no es una tautología.
+ De aquí que 
+\begin_inset Formula $A\left(x\right)$
+\end_inset
+
+ no es una tautología y por lo tanto no es un teorema del cálculo de predicados,
+ y el cálculo de predicados es consistente.
+ Cualquier axioma tiene una de las siguientes fórmas, precedido por un número
+ finito de cuantificadores universales dados por el axioma Gen:
+\begin_inset Newline newline
+\end_inset
+
+ A1
+\begin_inset Formula $\ P\rightarrow.Q\rightarrow P$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ A2.
+ 
+\begin_inset Formula $S\rightarrow.P\rightarrow Q:\rightarrow:S\rightarrow P.\rightarrow.S\rightarrow Q$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ A3.
+ 
+\begin_inset Formula $\sim Q\rightarrow\sim P.\rightarrow.P\rightarrow Q$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ A4.
+ 
+\begin_inset Formula $\forall v\left(P\rightarrow Q\right).\rightarrow.\forall vP\rightarrow\forall vQ$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ A5.
+ 
+\begin_inset Formula $\forall vP\rightarrow P\left(t/v\right)$
+\end_inset
+
+ si 
+\begin_inset Formula $P$
+\end_inset
+
+ admite 
+\begin_inset Formula $t$
+\end_inset
+
+ para 
+\begin_inset Formula $v$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ A6.
+ 
+\begin_inset Formula $P\rightarrow\forall vP$
+\end_inset
+
+ si 
+\begin_inset Formula $v$
+\end_inset
+
+ no es libre en 
+\begin_inset Formula $P$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ E1
+\begin_inset Formula $\ \forall x\left(x=x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ E2
+\begin_inset Formula $.\forall x_{1}\cdots\forall x_{n}\forall y_{1}\cdots\forall y_{n}\left(x_{1}=y_{1}\wedge\cdots\wedge x_{n}=y_{n}.\rightarrow.G\left(x_{1},\cdots,x_{n}\right)\longleftrightarrow G\left(y_{1},\cdots,y_{n}\right)\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ E3.
+ 
+\begin_inset Formula $\forall x_{1}\cdots\forall x_{n}\forall y_{1}\cdots\forall y_{n}\left(x_{1}=y_{1}\wedge\cdots\wedge x_{n}=y_{n}\rightarrow F\left(x_{1},\cdots,x_{n}\right)=F\left(y_{1,}\cdots,y_{n}\right)\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ Las transformamos como sigue
+\begin_inset Newline newline
+\end_inset
+
+ A1'.
+ 
+\begin_inset Formula $P^{\prime}\rightarrow.Q^{\prime}\rightarrow P'$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ A2'.
+ 
+\begin_inset Formula $S^{\prime}\rightarrow.P^{\prime}\rightarrow Q^{\prime}:\rightarrow:S^{\prime}\rightarrow P^{\prime}.\rightarrow.S^{\prime}\rightarrow Q^{\prime}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ A3'.
+ 
+\begin_inset Formula $\sim\left(Q^{\prime}\right)\rightarrow\sim\left(P^{\prime}\right).\rightarrow.P^{\prime}\rightarrow Q^{\prime}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ A4'.
+ 
+\begin_inset Formula $P^{\prime}\rightarrow Q^{\prime}.\rightarrow.P^{\prime}\rightarrow Q^{\prime}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ A5'.
+ 
+\begin_inset Formula $P^{\prime}\rightarrow P^{\prime}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ A6'.
+ 
+\begin_inset Formula $P^{\prime}\rightarrow P^{\prime}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ E1'.
+ 
+\begin_inset Formula $x=x\rightarrow x=x$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ E2'.
+ 
+\begin_inset Formula $\left(x=x\rightarrow x=x\right)\wedge\cdots\wedge\left(x=x\rightarrow x=x\right).\rightarrow.G\left(x,\cdots,x\right)\longleftrightarrow G\left(x,\cdots,x\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ E3'.
+ 
+\begin_inset Formula $\left(x=x\rightarrow x=x\right)\wedge\cdots\wedge\left(x=x\rightarrow x=x\right)\rightarrow\left(x=x\rightarrow x=x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Usaremos los siguientes tres teoremos frecuentemente
+\end_layout
+
+\begin_layout Theorem
+Una teoría de primer orden 
+\begin_inset Formula $T$
+\end_inset
+
+ es consistente si y solo si no hay una fórmula 
+\begin_inset Formula $Q$
+\end_inset
+
+ tal que 
+\begin_inset Formula $Q\wedge\sim Q$
+\end_inset
+
+ sea un teorema de 
+\begin_inset Formula $T.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Supongamos que 
+\begin_inset Formula $Q\wedge\sim Q$
+\end_inset
+
+ sea un teorema de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Sea 
+\begin_inset Formula $P$
+\end_inset
+
+ cualquier fórmula de 
+\begin_inset Formula $T.$
+\end_inset
+
+ 
+\begin_inset Formula $Q\wedge\sim Q\rightarrow P$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T$
+\end_inset
+
+ pues es una tautología.
+ Entonces 
+\begin_inset Formula $P$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T$
+\end_inset
+
+ por modus ponens.
+ Luego 
+\begin_inset Formula $T$
+\end_inset
+
+ es inconsistente.
+ Suppongamos ahora que 
+\begin_inset Formula $T$
+\end_inset
+
+ es inconsistente.
+ Sea 
+\begin_inset Formula $Q$
+\end_inset
+
+ una fórmula de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Entonces 
+\begin_inset Formula $Q\wedge\sim Q$
+\end_inset
+
+ es una fórmula de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Luego 
+\begin_inset Formula $Q\wedge\sim Q$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "adjuntar S"
+
+\end_inset
+
+Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ una teoría de primer orden, y sea 
+\begin_inset Formula $P$
+\end_inset
+
+ una proposición de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Sea 
+\begin_inset Formula $T^{\prime}$
+\end_inset
+
+ el resultado de adjuntar 
+\begin_inset Formula $P$
+\end_inset
+
+ a 
+\begin_inset Formula $T$
+\end_inset
+
+ como un axioma propio.
+ Si 
+\begin_inset Formula $T^{\prime}$
+\end_inset
+
+ es inconsistente, entonces 
+\begin_inset Formula $\sim P$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Supongamos que 
+\begin_inset Formula $T^{\prime}$
+\end_inset
+
+ es inconsistente.
+ entonces 
+\begin_inset Formula $\vdash_{T^{\prime}}\sim P.$
+\end_inset
+
+ Sea 
+\begin_inset Formula $S_{1},\cdots,S_{n}$
+\end_inset
+
+ una prueba de 
+\begin_inset Formula $\sim P$
+\end_inset
+
+ en 
+\begin_inset Formula $T^{\prime}.$
+\end_inset
+
+ Nombremos cada paso que en el que está 
+\begin_inset Formula $P$
+\end_inset
+
+ como una suposición.
+ Entonces 
+\begin_inset Formula $S_{1},\cdots,S_{n}$
+\end_inset
+
+ es una deducción en 
+\begin_inset Formula $T$
+\end_inset
+
+ de 
+\begin_inset Formula $\sim P$
+\end_inset
+
+ de 
+\begin_inset Formula $P,$
+\end_inset
+
+ o sea, 
+\begin_inset Formula $P\vdash_{T}\sim P.$
+\end_inset
+
+ Entonces 
+\begin_inset Formula $\vdash_{T}P\rightarrow\sim P.$
+\end_inset
+
+ por el teorema de deducción.
+ 
+\begin_inset Formula $\left(P\rightarrow\sim P\right)\rightarrow\sim P$
+\end_inset
+
+ es una tautología y entonces un teorema de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Entonces, por modus ponens da 
+\begin_inset Formula $\vdash_{T}\sim P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ una teoría de primer orden.
+ Sea 
+\begin_inset Formula $P$
+\end_inset
+
+ una fórmula de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Y sea 
+\begin_inset Formula $P^{\ast}$
+\end_inset
+
+ la clausura de 
+\begin_inset Formula $P.$
+\end_inset
+
+ Entonces 
+\begin_inset Formula $\vdash_{T}P$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $\vdash_{T}P^{\ast}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Si 
+\begin_inset Formula $\vdash_{T}P$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\vdash_{T}P^{\ast}$
+\end_inset
+
+ por gen.
+ Si 
+\begin_inset Formula $\vdash_{T}P^{\ast}$
+\end_inset
+
+ entonces 
+\begin_inset Formula $\vdash_{T}P$
+\end_inset
+
+ por spec.
+ 
+\end_layout
+
+\begin_layout Standard
+Una teoría de primer orden 
+\begin_inset Formula $T$
+\end_inset
+
+ es negativamente completa si y solo si para cualquier proposición 
+\begin_inset Formula $S$
+\end_inset
+
+ de 
+\begin_inset Formula $T,$
+\end_inset
+
+ o 
+\begin_inset Formula $S$
+\end_inset
+
+ o 
+\begin_inset Formula $\sim S$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la definición de arriba, proposición no puede ser reemplazada por fórmula.
+ Suponga, por ejemplo, que pedimos de la teoría de números que 
+\begin_inset Formula $x<2$
+\end_inset
+
+ o que 
+\begin_inset Formula $\sim\left(x<2\right)$
+\end_inset
+
+ sea un teorema entonces por gen 
+\begin_inset Formula $\forall x\left(x<2\right)$
+\end_inset
+
+ o 
+\begin_inset Formula $\forall x\sim\left(x<2\right)$
+\end_inset
+
+ será un teorema.
+ Pero tanto 
+\begin_inset Formula $\forall x\left(x<2\right)$
+\end_inset
+
+ como 
+\begin_inset Formula $\forall x\sim\left(x<2\right)$
+\end_inset
+
+ son falsas, no queremos ni deseamos que eso sea probable.
+\end_layout
+
+\begin_layout Standard
+Una teoría de primer orden es absolutamente completa si y solo si para cualquier
+ porposición 
+\begin_inset Formula $S$
+\end_inset
+
+ de 
+\begin_inset Formula $T,$
+\end_inset
+
+ que no es un teorema de 
+\begin_inset Formula $T,$
+\end_inset
+
+ el resultado de adjuntar 
+\begin_inset Formula $S$
+\end_inset
+
+ a 
+\begin_inset Formula $T$
+\end_inset
+
+ como axioma propio es inconsistente.
+\end_layout
+
+\begin_layout Standard
+Una teoría absolutamente completa es como una pelota llena a su máxima capacidad
+: cualquier intento de llenarla más la hace explotar.
+ Notemos que una teoría inconsistente es trivialmente negativamente completa
+ y absolutamente completa
+\end_layout
+
+\begin_layout Theorem
+Una teoría de primer orden es de negación completa si y solo si es absolutamente
+ completa
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ una teoría de primer orden.
+ Si 
+\begin_inset Formula $T$
+\end_inset
+
+ es inconsistente, entonces 
+\begin_inset Formula $T$
+\end_inset
+
+ es tanto absolutamente completa como negativamente completa.
+ Por esto, supongamos que 
+\begin_inset Formula $T$
+\end_inset
+
+ es consistente.
+ Supongamos que 
+\begin_inset Formula $T$
+\end_inset
+
+ negativamente completa.
+ Supongamos que 
+\begin_inset Formula $S$
+\end_inset
+
+ es cualquier proposición de 
+\begin_inset Formula $T$
+\end_inset
+
+ que no es teorema de 
+\begin_inset Formula $T,$
+\end_inset
+
+ y sea 
+\begin_inset Formula $T^{\prime}$
+\end_inset
+
+ el resultado de adjuntar 
+\begin_inset Formula $S$
+\end_inset
+
+ como axioma propio de 
+\begin_inset Formula $T.$
+\end_inset
+
+ 
+\begin_inset Formula $\sim S$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T$
+\end_inset
+
+ ya que es negativamente completa y 
+\begin_inset Formula $S$
+\end_inset
+
+ no es un teorema de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Ya que cualquier teorema de 
+\begin_inset Formula $T,$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T^{\prime},$
+\end_inset
+
+ 
+\begin_inset Formula $\sim S$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T^{\prime}$
+\end_inset
+
+ y por lo tanto 
+\begin_inset Formula $T^{\prime}$
+\end_inset
+
+ es inconsistente.
+ Luego 
+\begin_inset Formula $T$
+\end_inset
+
+ es absolutamente completa.
+ Para la recíproca supongamos que 
+\begin_inset Formula $T$
+\end_inset
+
+ es absolutamente completa.
+ Sea 
+\begin_inset Formula $S$
+\end_inset
+
+ cualquier proposición de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Si 
+\begin_inset Formula $S$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T,$
+\end_inset
+
+ no hay nada que hacer.
+ Supongamos que 
+\begin_inset Formula $S$
+\end_inset
+
+ no es un teorema de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Ya que 
+\begin_inset Formula $T$
+\end_inset
+
+ es absolutamente completa, el resultado de adjuntar a 
+\begin_inset Formula $S$
+\end_inset
+
+ como un axioma propio de 
+\begin_inset Formula $T$
+\end_inset
+
+ es inconsistente.
+ De aquí 
+\begin_inset Formula $\sim S$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T,$
+\end_inset
+
+ por teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "adjuntar S"
+
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $T$
+\end_inset
+
+ es negativamente completa 
+\end_layout
+
+\begin_layout Standard
+El teorema anterior nos permite decir completa o incompleta sin calificación,
+ para una teoría de primer orden.
+\end_layout
+
+\begin_layout Standard
+Observe que una teoría es consistente si no tiene demasiados teoremas y
+ es completa si no tiene pocos teoremas.
+ Hay otras definiciones de consistencia y completitud que las dadas arriba.
+ La siguiente definición es especialmente aplicable a el cálculo de proposicione
+s y al cálculo de predicados.
+ Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ una teoría (de primer orden o no).
+ Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ un conjunto de fórmulas de 
+\begin_inset Formula $T.$
+\end_inset
+
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ es consistente relativa a 
+\begin_inset Formula $X$
+\end_inset
+
+ si y solo si cualquier teorema de 
+\begin_inset Formula $T$
+\end_inset
+
+ está en 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ es completa relativa a 
+\begin_inset Formula $X$
+\end_inset
+
+ si y solo si cualquier fórmula en 
+\begin_inset Formula $X$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T.$
+\end_inset
+
+ Por ejemplo, el cálculo proposicional es consistente y completo relativo
+ al conjunto de tautologías.
+ Posteriormente definiremos fórmulas válidas y probaremos que el cálculo
+ de predicados es completo y consistente relativo al conjunto de fórmulas
+ válidas.
+\end_layout
+
+\begin_layout Section*
+Ejercicios
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ una teoría de primer orden, y sea 
+\begin_inset Formula $P$
+\end_inset
+
+ una proposición de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $T'$
+\end_inset
+
+ el resultado de adjuntar 
+\begin_inset Formula $\sim P$
+\end_inset
+
+ a 
+\begin_inset Formula $T$
+\end_inset
+
+ como axioma propio.
+ Probar que 
+\begin_inset Formula $T'$
+\end_inset
+
+ es incosistente si y solo si es un teorema de 
+\begin_inset Formula $T$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Una teoría formal expresa:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+si 
+\begin_inset Formula $P$
+\end_inset
+
+ y 
+\begin_inset Formula $Q$
+\end_inset
+
+ son proposiciones, entonces 
+\begin_inset Formula $P\rightarrow Q$
+\end_inset
+
+ es también una proposición
+\end_layout
+
+\begin_layout Enumerate
+cualquier proposición de la forma 
+\begin_inset Formula $P\rightarrow Q$
+\end_inset
+
+ es un axioma
+\end_layout
+
+\begin_layout Enumerate
+modus ponens es una de las reglas de inferencia
+\begin_inset Newline newline
+\end_inset
+
+Discutir la consistencia
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar que una teoría de primer orden 
+\begin_inset Formula $T$
+\end_inset
+
+ es consistente y completa si y solo si para cualquier proposición 
+\begin_inset Formula $S$
+\end_inset
+
+ de 
+\begin_inset Formula $T$
+\end_inset
+
+, exactamente una del par 
+\begin_inset Formula $\left\{ S,\sim S\right\} $
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Una cierta teoría tiene como sus teoremas precisamente aquellas fórmulas
+ del cálculo de predicados que no son tautologías ni contradiciones
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+¿Es una teoría de negación consistente? ¿Por qué?
+\end_layout
+
+\begin_layout Enumerate
+¿Es absolutamente consistente? ¿Por qué?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ una teoría de primer orden cuyos axiomas propios están en la sucesión infinita
+ 
+\begin_inset Formula $P_{1},\, P_{2},\dots,$
+\end_inset
+
+ de proposiciones tal que 
+\begin_inset Formula $\vdash P_{n}\rightarrow P_{m}$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $n\geq m$
+\end_inset
+
+.
+ Probar que 
+\begin_inset Formula $T$
+\end_inset
+
+ es consistente.
+\end_layout
+
+\begin_layout Enumerate
+Probar que ni el cálculo de predicados, ni el de proposiciones es ni de
+ negación completa o absolutamente completa.
+\end_layout
+
+\begin_layout Enumerate
+Probar que una teoría de primer orden 
+\begin_inset Formula $T$
+\end_inset
+
+ es completa si y solo si para todas las proposiciones 
+\begin_inset Formula $P$
+\end_inset
+
+ y 
+\begin_inset Formula $Q$
+\end_inset
+
+ de 
+\begin_inset Formula $T$
+\end_inset
+
+ si 
+\begin_inset Formula $\vdash_{T}P\vee Q$
+\end_inset
+
+ , entonces 
+\begin_inset Formula $\vdash_{T}P$
+\end_inset
+
+ o 
+\begin_inset Formula $\vdash_{T}Q$
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document

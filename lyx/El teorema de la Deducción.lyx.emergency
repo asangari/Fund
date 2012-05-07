@@ -1,0 +1,3187 @@
+#LyX 1.6.4 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\newcommand{\gr}{\longrightarrow}
+\newtheorem{Teorema}{Teorema}
+\newtheorem{Ejemplo}[Teorema]{Ejemplo}
+\newtheorem{Caso}{Caso}
+\newenvironment{Prueba}[1][Prueba]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+El Teorema de la Deducción
+\end_layout
+
+\begin_layout Standard
+Escribiremos 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\Delta,$
+\end_inset
+
+ 
+\begin_inset Formula $P\vdash Q$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ para 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\Delta\cup\left\{ P\right\} \vdash Q$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ El teorema de la deducción es
+\begin_inset Formula \[
+\Delta,\, P\vdash Q,\mbox{ entonces }\Delta\vdash P\gr Q\]
+
+\end_inset
+
+ Antes de probar el teorema daremos algunos ejemplos
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un teorema de la sección de cálculo de proposiciones dice 
+\begin_inset Formula $\sim A\left(x\right)\vdash A\left(x\right)\gr B\left(y\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ el conjunto vacío, 
+\begin_inset Formula $P$
+\end_inset
+
+, 
+\begin_inset Formula $\sim A\left(x\right),$
+\end_inset
+
+ y 
+\begin_inset Formula $Q$
+\end_inset
+
+, 
+\begin_inset Formula $A\left(x\right)\gr B\left(y\right)$
+\end_inset
+
+.
+ Entonces el teorema de la Deducción aplicado a este teorema da 
+\begin_inset Formula $\vdash\sim A\left(x\right)\gr A\left(x\right)\gr B\left(y\right)$
+\end_inset
+
+, que es otro teorema de la sección de formulación
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un teorema de la sección de cálculo de proposiciones dice 
+\begin_inset Formula $A\left(x\right)\gr B\left(y\right),\, B\left(y\right)\gr C\left(z\right),\, A\left(x\right)\vdash C\left(z\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $\Delta=\left\{ A\left(x\right)\gr B\left(y\right),\, B\left(y\right)\gr C\left(z\right)\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $P$
+\end_inset
+
+, 
+\begin_inset Formula $A\left(x\right),$
+\end_inset
+
+ y 
+\begin_inset Formula $Q$
+\end_inset
+
+, 
+\begin_inset Formula $C\left(z\right)$
+\end_inset
+
+.
+ Entonces el teorema de la Deducción aplicado a este teorema da
+\begin_inset Formula \begin{equation}
+A\left(x\right)\gr B\left(y\right),\, B\left(y\right)\gr C\left(z\right)\vdash A\left(x\right)\gr C\left(z\right)\label{eq: prim aplic}\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora sea 
+\begin_inset Formula $\Delta=\left\{ A\left(x\right)\gr B\left(y\right)\right\} $
+\end_inset
+
+ , 
+\begin_inset Formula $P$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $B\left(y\right)\gr C\left(z\right)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+ y 
+\begin_inset Formula $Q$
+\end_inset
+
+, 
+\begin_inset Formula $A\left(x\right)\gr C\left(z\right)$
+\end_inset
+
+.
+ Entonces el teorema de la Deducción aplicado (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: prim aplic"
+
+\end_inset
+
+) da
+\begin_inset Formula \[
+A\left(x\right)\gr B\left(y\right)\vdash B\left(y\right)\gr C\left(z\right).\gr.A\left(x\right)\gr C\left(z\right)\]
+
+\end_inset
+
+Ahora sea 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ el conjunto vacío, 
+\begin_inset Formula $P$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $A\left(x\right)\gr B\left(y\right)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+ y 
+\begin_inset Formula $Q$
+\end_inset
+
+, 
+\begin_inset Formula $B\left(y\right)\gr C\left(z\right).\gr.A\left(x\right)\gr C\left(z\right)$
+\end_inset
+
+.
+ Entonces el teorema de la Deducción aplicado (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: prim aplic"
+
+\end_inset
+
+) da
+\begin_inset Formula \[
+\vdash A\left(x\right)\gr B\left(y\right):\gr:B\left(y\right)\gr C\left(z\right).\gr.A\left(x\right)\gr C\left(z\right)\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando 
+\begin_inset Formula $\Delta$
+\end_inset
+
+es el conjunto vacío, el teorema de la deducción se convierte en 
+\begin_inset Formula \begin{equation}
+\mbox{Si \ensuremath{P\vdash Q,}entonces \ensuremath{\vdash P\gr Q}}\label{eq: vacio DT}\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La forma usual de probar 
+\begin_inset Formula $P\gr Q$
+\end_inset
+
+ en matemáticas es suponer 
+\begin_inset Formula $P$
+\end_inset
+
+ y deducir 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ Ahora una deducción de 
+\begin_inset Formula $Q$
+\end_inset
+
+ desde 
+\begin_inset Formula $P$
+\end_inset
+
+ no es la misma cosa que que una prueba de 
+\begin_inset Formula $P\gr Q$
+\end_inset
+
+.
+ En una deducción de 
+\begin_inset Formula $Q$
+\end_inset
+
+ desde 
+\begin_inset Formula $P$
+\end_inset
+
+, 
+\begin_inset Formula $P$
+\end_inset
+
+ es una suposición y el último paso es 
+\begin_inset Formula $Q$
+\end_inset
+
+, mientras que en una prueba de 
+\begin_inset Formula $P\gr Q$
+\end_inset
+
+ no hay suposiciones y el último paso es 
+\begin_inset Formula $P\gr Q$
+\end_inset
+
+.
+ Pero (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: vacio DT"
+
+\end_inset
+
+) dice que cualquier deducción de 
+\begin_inset Formula $Q$
+\end_inset
+
+ desde 
+\begin_inset Formula $P$
+\end_inset
+
+ se puede convertir en una prueba de 
+\begin_inset Formula $P\gr Q$
+\end_inset
+
+.
+ Desde el punto de vista de la lógica, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: vacio DT"
+
+\end_inset
+
+) justifica una práctica común en matemática.
+ Desde el punto de vista de los matemáticos, (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: vacio DT"
+
+\end_inset
+
+) indica que el cálculo de predicados está de acuerdo con la matemática
+ acostumbrada.
+\end_layout
+
+\begin_layout Standard
+En el pasaje de 
+\begin_inset Formula $\Delta,$
+\end_inset
+
+ 
+\begin_inset Formula $P\vdash Q$
+\end_inset
+
+ a 
+\begin_inset Formula $\Delta\vdash P\gr Q$
+\end_inset
+
+ por el teorema de la deducción, diremos que la suposición 
+\begin_inset Formula $P$
+\end_inset
+
+ se ha descargado.
+ Cuando una suposición se descarga no desaparece, se transfiere a travez
+ de 
+\begin_inset Formula $\vdash$
+\end_inset
+
+ en el antecedente de un condicional.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Teorema}
+\end_layout
+
+\end_inset
+
+(el teorema de la deducción).
+ Si 
+\begin_inset Formula $\Delta,$
+\end_inset
+
+ 
+\begin_inset Formula $P\vdash Q$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\Delta\vdash P\gr Q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Teorema}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Prueba}
+\end_layout
+
+\end_inset
+
+Sea 
+\begin_inset Formula $S_{1},\dots,S_{n}$
+\end_inset
+
+ una deducción de 
+\begin_inset Formula $Q$
+\end_inset
+
+ desde 
+\begin_inset Formula $\Delta\cup\left\{ P\right\} .$
+\end_inset
+
+ Primero haremos un análisis previo.
+ La idea es convertir cada paso 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+ en 
+\begin_inset Formula $P\gr S_{i}$
+\end_inset
+
+, usando solamente fórmulas en 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ como suposición.
+ Entonces 
+\begin_inset Formula $P\gr S_{n}$
+\end_inset
+
+ es 
+\begin_inset Formula $P\gr Q$
+\end_inset
+
+.
+ El paso de la forma 
+\begin_inset Formula $P\gr S_{i}$
+\end_inset
+
+ se llaman pasos claves.
+ En general la sucesión 
+\begin_inset Formula $P\gr S_{1},\dots,P\gr S_{n}$
+\end_inset
+
+ no es una deducción desde 
+\begin_inset Formula $\Delta$
+\end_inset
+
+, así que mostraremos como insertar pasos antes de cada paso clave para
+ hacer una deducción completa desde 
+\begin_inset Formula $\Delta.$
+\end_inset
+
+ Comenzaremos con 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ es un axioma o está en 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ o es el propio 
+\begin_inset Formula $P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Caso}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ es un axioma.
+ La siguiente secuencia de tres pasos es una dedución de 
+\begin_inset Formula $P\gr S_{1}$
+\end_inset
+
+ desde 
+\begin_inset Formula $\Delta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+axioma
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S_{1}.\gr.P\gr S_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $P\gr S_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+MP
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Caso}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Caso}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ está en 
+\begin_inset Formula $\Delta$
+\end_inset
+
+.
+ La siguiente secuencia de tres pasos es una dedución de 
+\begin_inset Formula $P\gr S_{1}$
+\end_inset
+
+ desde 
+\begin_inset Formula $\Delta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+suposición
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $S_{1}.\gr.P\gr S_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $P\gr S_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+MP
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Caso}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Caso}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ es 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $P\gr S_{1}$
+\end_inset
+
+ es 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $P\gr P$
+\end_inset
+
+, y ya suministramos una prueba de cinco pasos de 
+\begin_inset Formula $P\gr P$
+\end_inset
+
+ en la sección de cálculo de proposiciones.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Caso}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Así tenemos una secuencia de tres pasos que es la deducción de 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $P\gr S_{1}$
+\end_inset
+
+desde 
+\begin_inset Formula $\Delta.$
+\end_inset
+
+ Llamaremos a esta secuencia 
+\begin_inset Formula $\mathcal{S}_{1}$
+\end_inset
+
+.
+ Ahora consideremos 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+.
+ Lo mismo que 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+ puede ser un axioma, o está en 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ o es 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ Para cada caso imitaremos el caso correspondiente a 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+.
+ A esta secuencia la llamaremos 
+\begin_inset Formula $\mathcal{S}_{2}$
+\end_inset
+
+.
+ El resultado es una secuencia que es la prueba de 
+\begin_inset Formula $P\gr S_{2}$
+\end_inset
+
+ a partir de 
+\begin_inset Formula $\Delta.$
+\end_inset
+
+ Por ejemplo supongamos que 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ sea un axioma y 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+una suposición, entonces 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{S}_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\{ \begin{array}{ccc}
+1. & S_{1} & \mbox{axioma}\\
+2. & S_{1}\gr P.\gr S_{1} & \mbox{A1}\\
+3. & P.\gr S_{1} & \mbox{MP 2, 1}\end{array}\right.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathcal{S}_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left\{ \begin{array}{ccc}
+4. & S_{1} & \mbox{suposición}\\
+5. & S_{1}\gr P.\gr S_{1} & \mbox{A1}\\
+6. & P.\gr S_{1} & \mbox{MP 2, 1}\end{array}\right.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suponga que uno de los casos 1,2 o 3 se aplica a cada uno de 
+\begin_inset Formula $S_{1},\dots,S_{m}$
+\end_inset
+
+.
+ Procederemos como arriba para tener 
+\begin_inset Formula $\mathcal{S}_{1},\dots,\mathcal{S}_{m}$
+\end_inset
+
+ los cuales son una deducción de 
+\begin_inset Formula $P\gr S_{m}$
+\end_inset
+
+ desde 
+\begin_inset Formula $\Delta$
+\end_inset
+
+, en la cual 
+\begin_inset Formula $P\gr S_{1},\dots,P\gr S_{m}$
+\end_inset
+
+ son pasos.
+ Supongamos que 
+\begin_inset Formula $S_{m+1}$
+\end_inset
+
+ se infiere por modus ponens sobre los pasos 
+\begin_inset Formula $S_{k}$
+\end_inset
+
+ y 
+\begin_inset Formula $S_{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Caso}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S_{k}$
+\end_inset
+
+ es 
+\begin_inset Formula $S_{j}\gr S_{m+1}$
+\end_inset
+
+, y 
+\begin_inset Formula $S_{m+1}$
+\end_inset
+
+ se infiere por modus ponens sobre los pasos 
+\begin_inset Formula $S_{k}$
+\end_inset
+
+ y 
+\begin_inset Formula $S_{j}$
+\end_inset
+
+.
+ En la deducción 
+\begin_inset Formula $\mathcal{S}_{1},\dots,\mathcal{S}_{m}$
+\end_inset
+
+ desde 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ aparecen los siguientes pasos claves:
+\end_layout
+
+\begin_layout Standard
+(a) 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $P\gr\left(S_{j}\gr S_{m+1}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+y
+\end_layout
+
+\begin_layout Standard
+(b) 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $P\gr S_{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entonces 
+\begin_inset Formula $\mathcal{S}_{m+1}$
+\end_inset
+
+ es
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features>
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(i)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $P\gr\left(S_{j}\gr S_{m+1}\right):\gr:P\gr S_{j}.\gr.P\gr S_{m+1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(ii)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $P\gr S_{j}.\gr.P\gr S_{m+1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP (i) (a)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(iii)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $P\gr S_{m+1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP (ii) (b)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Caso}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Continuaremos de esta manera para todos 
+\begin_inset Formula $S_{1},\dots,S_{n}$
+\end_inset
+
+ dando una deducción de 
+\begin_inset Formula $\mathcal{S}_{1},\dots,\mathcal{S}_{n}$
+\end_inset
+
+ de 
+\begin_inset Formula $p\gr Q$
+\end_inset
+
+ desde 
+\begin_inset Formula $\Delta.$
+\end_inset
+
+ Para cada 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+ uno de los 4 casos se aplica.
+ 
+\end_layout
+
+\begin_layout Standard
+Probaremos por inducción sobre 
+\begin_inset Formula $n$
+\end_inset
+
+ la siguiente proposición:
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Si 
+\begin_inset Formula $S_{1},\dots,S_{n}$
+\end_inset
+
+ es una deducción de 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ desde 
+\begin_inset Formula $\Delta\cup\left\{ P\right\} $
+\end_inset
+
+, entonces hay una deducción de 
+\begin_inset Formula $P\gr S_{n}$
+\end_inset
+
+ desde 
+\begin_inset Formula $\Delta$
+\end_inset
+
+, en la cual 
+\emph default
+
+\begin_inset Formula $P\gr S_{1},\dots,P\gr S_{n}$
+\end_inset
+
+ 
+\emph on
+son pasos.
+
+\emph default
+ 
+\end_layout
+
+\begin_layout Standard
+
+\noun on
+Base
+\noun default
+: Si 
+\begin_inset Formula $n=1$
+\end_inset
+
+, entonces 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+es un axioma, o está en 
+\begin_inset Formula $\Delta$
+\end_inset
+
+, o es 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ Por lo cual, uno de los tres primeros casos se aplica.
+\end_layout
+
+\begin_layout Standard
+
+\noun on
+Paso Inductivo: 
+\noun default
+Supongamos que para 
+\begin_inset Formula $n$
+\end_inset
+
+ se cumple la hipótesis inductiva.
+ Consideremos la deducción 
+\emph on
+
+\begin_inset Formula $S_{1},\dots,S_{n},S_{n+1}$
+\end_inset
+
+, con 
+\begin_inset Formula $n+1$
+\end_inset
+
+ 
+\emph default
+pasos de 
+\begin_inset Formula $S_{n+1}$
+\end_inset
+
+ desde 
+\emph on
+
+\begin_inset Formula $\Delta\cup\left\{ P\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Formula $S_{1},\dots,S_{n}$
+\end_inset
+
+,
+\emph default
+ es una deducción de 
+\begin_inset Formula $S_{n+1}$
+\end_inset
+
+ desde 
+\emph on
+
+\begin_inset Formula $\Delta\cup\left\{ P\right\} $
+\end_inset
+
+.
+ 
+\emph default
+Entonces, por la hipótesis inductiva hay una deducción de 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $P\gr S_{n}$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+en la cual
+\emph on
+ 
+\emph default
+
+\begin_inset Formula $P\gr S_{1},\dots,P\gr S_{n}$
+\end_inset
+
+ son pasos
+\emph on
+.
+ 
+\emph default
+Entonces a 
+\begin_inset Formula $S_{n+1}$
+\end_inset
+
+ se aplica uno de los cuatro casos detallados más arriba
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Prueba}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Ejemplo}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\vdash\sim A\left(x\right).\gr.A\left(x\right)\gr B\left(x\right)$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "simAgrAgrB"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Prueba}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features>
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+as
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim A\left(x\right).\gr.\sim B\left(y\right)\gr\sim A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $\sim B\left(y\right)\gr\sim A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP 2,1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim B\left(y\right)\gr\sim A\left(x\right).\gr.A\left(x\right)\gr B\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $A\left(x\right)\gr B\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP 4,3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim A\left(x\right).\gr.A\left(x\right)\gr B\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DT 5,1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Prueba}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Ejemplo}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La prueba en el ejemplo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "simAgrAgrB"
+
+\end_inset
+
+ no es una prueba formal.
+ Los pasos 1 al 5 constituyen una deducción de 
+\begin_inset Formula $A\left(x\right)\gr B\left(y\right)$
+\end_inset
+
+de 
+\begin_inset Formula $A\left(x\right)$
+\end_inset
+
+.
+ En el paso 6 el teorema de la deducción sa aplica para dar 
+\begin_inset Formula $\sim A\left(x\right).\gr.A\left(x\right)\gr B\left(x\right)$
+\end_inset
+
+.
+ La secuencia 1 a 6 es un conjunto de instrucciones para construir una prueba
+ formal.
+ Le llamaremos esbozo de una prueba.
+ El paso 6 dice: "siga la prueba del teorema de la deducción para convertir
+ los pasos 1 a 5 en una prueba de 
+\begin_inset Formula $\sim A\left(x\right).\gr.A\left(x\right)\gr B\left(x\right)$
+\end_inset
+
+.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Desde ahora daremos esbozos de prueba en lugar de pruebas formales.
+ Indentaremos pasos para indicar que pasos dependen de que suposición.
+ En el esbozo de prueba arriba, los pasos del 1 al 5 están en la misma columna
+ que 
+\begin_inset Formula $\sim A\left(x\right)$
+\end_inset
+
+ para indicar que serán deducidos de la suposición
+\begin_inset Formula $\sim A\left(x\right)$
+\end_inset
+
+.
+ El paso 6, donde 
+\begin_inset Formula $\sim A\left(x\right)$
+\end_inset
+
+ se descarga, la fórmula se la mueve a la izquierda para indicar que esta
+ no depende de 
+\begin_inset Formula $\sim A\left(x\right).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Teorema}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\vdash\sim\sim P\gr P$
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "simsimPgrP"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Teorema}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Prueba}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="3">
+<features>
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $\sim\sim P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+as
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $\sim\sim P.\gr.\sim P\gr\sim\sim\sim P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+TCP
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+3.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $\sim P\gr\sim\sim\sim P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP 2,1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $\sim P\gr\sim\sim\sim P.\gr.\sim\sim P\gr P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $\sim\sim P\gr P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP 4,3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP 5,1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+7.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $\sim\sim P\gr P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+DT 1-6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Prueba}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En el esbozo de la prueba de arriba, 
+\begin_inset Quotes eld
+\end_inset
+
+TCP
+\begin_inset Quotes erd
+\end_inset
+
+ después del paso 2 significa 
+\begin_inset Quotes eld
+\end_inset
+
+en este punto inserte la prueba formal de un teorema de la Sección de Cálculo
+ de Predicados
+\begin_inset Quotes erd
+\end_inset
+
+ para resolver 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $\sim\sim P.\gr.\sim P\gr\sim\sim\sim P$
+\end_inset
+
+.
+\begin_inset Quotes erd
+\end_inset
+
+ (es el último teorema de dicha sección) No daremos una prueba formal pero
+ si computaremos los pasos de una prueba formal.
+ Los pasos 1 y del 3 al seis usan un paso cada uno de la prueba formal.
+ El Paso 2 lleva 7 pasos.
+ En total del paso 1 al 6 se lleva 12 pasos.
+ El paso 7 llama al teorema de la deducción para aplicar a la deducción
+ de estos 12 pasos.
+ El paso 1 requiere 5 pasos para la deducción 
+\begin_inset Formula $\sim\sim P\gr\sim\sim P$
+\end_inset
+
+ y de ahí en más solamente 3 por cada paso.
+ De aquí que la cantidad de pasos en una prueba formal de 
+\begin_inset Formula $\sim\sim P\gr P$
+\end_inset
+
+ es 
+\begin_inset Formula $3\left(12\right)+2=38$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+Para evitar el teorema de la deducción y usar una pequeña ingenuidad, uno
+ puede encontrar una prueba formal mas corta de 
+\begin_inset Formula $\sim\sim P\gr P$
+\end_inset
+
+.
+ Sin embargo, la técnica de comenzar por la suposición y usar el teorema
+ de la deducción es de gran ayuda en descubrir pruebas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Teorema}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\vdash P\gr\sim\sim P$
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "PgrsimsimP"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Teorema}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Prueba}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features>
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim\sim\sim P\gr\sim P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "simsimPgrP"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim\sim\sim P\gr\sim P.\gr.P\gr\sim\sim P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\gr\sim\sim P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP 2,1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Prueba}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Teorema}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\vdash P\gr Q.\gr.\sim Q\gr\sim P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Teorema}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Prueba}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="3">
+<features>
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $P\gr Q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+as
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\sim\sim P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+as
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\sim\sim P\gr P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "simsimPgrP"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP 3,2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $Q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP 1,4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $Q\gr\sim\sim Q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+T
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "PgrsimsimP"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\sim\sim Q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP 6,5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $\sim\sim P\gr\sim\sim Q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Prueba}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

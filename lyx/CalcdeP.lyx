@@ -1,0 +1,2152 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass amsart
+\begin_preamble
+
+\newtheorem{Teorema}{Teorema}
+\newenvironment{Prueba}[1][Prueba]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+El cálculo de Proposiciones
+\end_layout
+
+\begin_layout Standard
+El cálculo de proposiciones es la parte del cálculo de predicados que queda
+ cuando se descarta los esquemas de axiomas del A4 al A6 y el Ax Gen.
+ Para poner esto de otra forma, usamos los esquemas de axiomas del A1 al
+ A3, modus ponens, y la misma definición de deducción.
+ Desarrollaremos el cálculo de proposiciones primero, y entonces usaremos
+ esto para desarrollar el cálculo de predicados.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\vdash A(x)\rightarrow A\left(x\right)$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "A(x)ǵrA(x)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Daremos una prueba formal
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $A\left(x\right)\rightarrow:A\left(x\right)\rightarrow A\left(x\right).\rightarrow A\left(x\right).:\rightarrow:.A\left(x\right)\rightarrow.A\left(x\right)\rightarrow A\left(x\right):\rightarrow:A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $A\left(x\right)\rightarrow:A\left(x\right)\rightarrow A\left(x\right).\rightarrow A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $A\left(x\right)\rightarrow.A\left(x\right)\rightarrow A\left(x\right):\rightarrow:A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $A\left(x\right)\rightarrow.A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El teorema es la proposición 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+ es un teorema
+\begin_inset Quotes erd
+\end_inset
+
+ Ya que esta proposición está en el metalenguaje, el teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "A(x)ǵrA(x)"
+
+\end_inset
+
+ es un metateorema.
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Un metalenguaje es un lenguaje que se usa para referirse a otro lenguaje.
+ Al lenguaje acerca del cual se está hablando se le llama lenguaje objeto
+\end_layout
+
+\end_inset
+
+.
+ Esta prueba es un argumento en el metalenguaje diseñada para convencer
+ al lector que hay una prueba formal de 
+\begin_inset Formula $A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+.
+ No hay argumento mas convincente que la exhibición de la propia prueba
+ formal.
+ 
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $\Delta=\left\{ P_{1},\ldots,P_{k}\right\} ,$
+\end_inset
+
+ escribimos 
+\begin_inset Quotes eld
+\end_inset
+
+ 
+\begin_inset Formula $P_{1},\ldots,P_{k}\vdash Q$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ para 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $\Delta\vdash Q$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\sim A\left(x\right)\vdash A(x)\rightarrow B\left(y\right)$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "noA(x)vdashA(x)ǵrB(y)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+daremos una deducción formal
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sim A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sim A\left(x\right).\rightarrow.\sim B\left(y\right)\rightarrow\sim A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sim B\left(y\right)\rightarrow\sim A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\sim B\left(y\right)\rightarrow\sim A\left(x\right).\rightarrow.A\left(x\right)\rightarrow B\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $A\left(x\right)\rightarrow B\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No se da el análisis (la justificación para los pasos) en la prueba de los
+ teoremas 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "A(x)ǵrA(x)"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "noA(x)vdashA(x)ǵrB(y)"
+
+\end_inset
+
+ ya que la definición de deducción no prevé eso.
+ Nada de eso es necesario; cada paso puede efectivamente chequearse para
+ ver si es un axioma, una suposición, o se puede inferir de los pasos anteriores
+ por modus ponens.
+ La prueba formal de 
+\begin_inset Formula $A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+, puede ser analizada como sigue.
+ El paso 1 es un axioma: es la instancia de A2 en la que 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $A\left(x\right)$
+\end_inset
+
+, 
+\begin_inset Formula $P$
+\end_inset
+
+ es 
+\begin_inset Formula $A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $Q$
+\end_inset
+
+ es 
+\begin_inset Formula $A\left(x\right)$
+\end_inset
+
+.
+ El paso 2 es también un axioma: es la instancia de A1 en la cual 
+\begin_inset Formula $P$
+\end_inset
+
+ es 
+\begin_inset Formula $A\left(x\right)$
+\end_inset
+
+y 
+\begin_inset Formula $Q$
+\end_inset
+
+ es 
+\begin_inset Formula $A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+.
+ El paso 3 se infiere por modus ponens sobre los pasos 1 y 2.
+ El paso 4 es una instancia del axioma A1 en el cual 
+\begin_inset Formula $P$
+\end_inset
+
+ es 
+\begin_inset Formula $A\left(x\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $Q$
+\end_inset
+
+ es también 
+\begin_inset Formula $A\left(x\right).$
+\end_inset
+
+ El paso 5 se infiere por modus ponens de los pasos 3 y 4.
+\end_layout
+
+\begin_layout Standard
+Ya que este apunte se escribe para humanos mas que para robots deductivos
+ chequeadores, de ahora en adelante suministraremos un análisis con cada
+ deducción formal.
+ La cantidad de detalle en un análisis es cuestión de gusto.
+ Para la prueba formal de 
+\begin_inset Formula $A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+ nos parece bien el siguiente análisis.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\left(x\right)\rightarrow:A\left(x\right)\rightarrow A\left(x\right).\rightarrow A\left(x\right).:\rightarrow:.A\left(x\right)\rightarrow.A\left(x\right)\rightarrow A\left(x\right):\rightarrow:A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\left(x\right)\rightarrow:A\left(x\right)\rightarrow A\left(x\right).\rightarrow A\left(x\right)$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\left(x\right)\rightarrow.A\left(x\right)\rightarrow A\left(x\right):\rightarrow:A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP, 1,2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\left(x\right)\rightarrow.A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+A1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP, 3,4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+A2
+\begin_inset Quotes erd
+\end_inset
+
+ después del paso 1 indica que el paso 1 es una instancia del esquema de
+ axioma A2.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+MP, 1,2
+\begin_inset Quotes erd
+\end_inset
+
+ después del paso 3 indica que el paso 3 se infiere por modus ponens de
+ los pasos 1 y 2, con el paso 1 como la mayor premisa y el paso 2 la menor
+ premisa.
+ (Siempre damos el número de la premisa mayor primero)
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\vdash\sim A(x)\rightarrow.A\left(x\right)\rightarrow B\left(y\right)$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "vdashsimA(x)ǵrA(x)grB(y)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim B\left(y\right)\rightarrow\sim A\left(x\right).\rightarrow.A\left(x\right)\rightarrow B\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim B\left(y\right)\rightarrow\sim A\left(x\right).\rightarrow.A\left(x\right)\rightarrow B\left(y\right).:\rightarrow:.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim A\left(x\right):\rightarrow:\sim B\left(y\right)\rightarrow\sim A\left(x\right).\rightarrow.A\left(x\right)\rightarrow B\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim A\left(x\right):\rightarrow:\sim B\left(y\right)\rightarrow\sim A\left(x\right).\rightarrow.A\left(x\right)\rightarrow B\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP, 2,1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim A\left(x\right):\rightarrow:\sim B\left(y\right)\rightarrow\sim A\left(x\right).\rightarrow.A\left(x\right)\rightarrow B\left(y\right).:\rightarrow.:$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim A\left(x\right):\rightarrow:\sim B\left(y\right)\rightarrow\sim A\left(x\right).\rightarrow.\sim A\left(x\right):\rightarrow:A\left(x\right)\rightarrow B\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim A\left(x\right):\rightarrow:\sim B\left(y\right)\rightarrow\sim A\left(x\right).\rightarrow.\sim A\left(x\right):\rightarrow:A\left(x\right)\rightarrow B\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP, 4,3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim A\left(x\right).\rightarrow.\sim B\left(y\right)\rightarrow\sim A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim A\left(x\right).\rightarrow.A\left(x\right)\rightarrow B\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP, 5, 6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $A\left(x\right)\rightarrow B\left(y\right),B\left(y\right)\rightarrow C\left(z\right),A\left(x\right)\vdash C\left(z\right)$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "transitividaddelgr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\left(x\right)\rightarrow B\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+as
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B\left(y\right)\rightarrow C\left(z\right),$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+as
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+as
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $B\left(y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP, 1, 2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $C\left(z\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP, 2, 4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+as
+\begin_inset Quotes erd
+\end_inset
+
+ es una abreviatura para suposición o asunción.
+ 
+\end_layout
+
+\begin_layout Standard
+La prueba formal de 
+\begin_inset Formula $A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+ se puede modificar mínimamente para dar la prueba formal de 
+\begin_inset Formula $B\left(y\right)\rightarrow B\left(y\right)$
+\end_inset
+
+ o de 
+\begin_inset Formula $A\left(x\right)\rightarrow\sim C\left(z\right).\rightarrow.A\left(x\right)\rightarrow\sim C\left(z\right)$
+\end_inset
+
+.
+ Necesitamos solamente reemplazar 
+\begin_inset Formula $A\left(x\right)$
+\end_inset
+
+ por 
+\begin_inset Formula $B\left(y\right)$
+\end_inset
+
+ o por 
+\begin_inset Formula $A\left(x\right)\rightarrow\sim C\left(z\right)$
+\end_inset
+
+.
+ Una prueba formal de 
+\begin_inset Formula $P\rightarrow P$
+\end_inset
+
+ para cualquier fórmula 
+\begin_inset Formula $P$
+\end_inset
+
+ puede obtenerse directamente reemplazando 
+\begin_inset Formula $A\left(x\right)$
+\end_inset
+
+ por 
+\begin_inset Formula $P$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\vdash P\rightarrow P$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "PgrP"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $P$
+\end_inset
+
+ una fórmula fija pero arbitraria.
+ Entonces la secuencia de pasos abajo es una prueba formal de 
+\begin_inset Formula $P\rightarrow P$
+\end_inset
+
+ 
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\rightarrow:P\rightarrow P.\rightarrow P.:\rightarrow:.P\rightarrow.P\rightarrow P:\rightarrow:P\rightarrow P$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\rightarrow:P\rightarrow P.\rightarrow P$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\rightarrow.P\rightarrow P:\rightarrow:P\rightarrow P$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP, 1,2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\rightarrow.P\rightarrow P$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+A1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\rightarrow P$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP, 3,4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P\rightarrow P$
+\end_inset
+
+ no es una fórmula porque 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $P$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ no es un símbolo formal.
+ Llamamos 
+\begin_inset Formula $P\rightarrow P$
+\end_inset
+
+ un esquema de fórmula.
+ cualquier fórmula particular de 
+\begin_inset Formula $P\rightarrow P$
+\end_inset
+
+, tal como 
+\begin_inset Formula $A\left(x\right)\rightarrow\sim C\left(z\right).\rightarrow A\left(x\right)\rightarrow\sim C\left(z\right)$
+\end_inset
+
+ la llamaremos una instancia de 
+\begin_inset Formula $P\rightarrow P$
+\end_inset
+
+ .
+ Entonces el teorema (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "PgrP"
+
+\end_inset
+
+) establece que cualquier instancia de 
+\begin_inset Formula $P\rightarrow P$
+\end_inset
+
+ es un teorema.
+ Entonces llamamos 
+\begin_inset Formula $P\rightarrow P$
+\end_inset
+
+ un esquema de teorema.
+ La prueba del teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "PgrP"
+
+\end_inset
+
+ da un procedimiento uniforme y efectivo para construir una prueba formal
+ de cualquier instancia de 
+\begin_inset Formula $P\rightarrow P$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+Desde ahora probaremos esquemas de teoremas en lugar de teoremas formales
+ individuales.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $\vdash\sim P\rightarrow.P\rightarrow Q$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "vdashsimPǵrPgrQ"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim Q\rightarrow\sim P.\rightarrow.P\rightarrow Q$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim Q\rightarrow\sim P.\rightarrow.P\rightarrow Q.:\rightarrow:.$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim P:\rightarrow:\sim Q\rightarrow\sim P.\rightarrow.P\rightarrow Q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim P:\rightarrow:\sim Q\rightarrow\sim P.\rightarrow.P\rightarrow Q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP, 2,1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim P:\rightarrow:\sim Q\rightarrow\sim P.\rightarrow.P\rightarrow Q.:\rightarrow.:$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim P:\rightarrow:\sim Q\rightarrow\sim P.\rightarrow.\sim P:\rightarrow:P\rightarrow Q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim P:\rightarrow:\sim Q\rightarrow\sim P.\rightarrow.\sim P:\rightarrow:P\rightarrow Q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP, 4,3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim P.\rightarrow.\sim Q\rightarrow\sim P$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim P.\rightarrow.P\rightarrow Q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP, 5, 6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Daremos abajo algunos ejemplos para clarificar la distinción entre un teorema,
+ un esquema de teorema, una afirmación que algo es un teorema y una afirmación
+ que algo es un esquema de teorema
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Una fórmula.
+ También un teorema
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P\rightarrow P$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Un Esquema de fórmula.
+ También un esquema de Teorema
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\vdash A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+La afirmación 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+ es un teorema
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\vdash P\rightarrow P$
+\end_inset
+
+ 
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+La afirmación 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $P\rightarrow P$
+\end_inset
+
+ es un esquema de teorema
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ejercicios
+\end_layout
+
+\begin_layout Enumerate
+Dar una prueba formal de 
+\begin_inset Formula 
+\[
+A\left(x\right)\longrightarrow B\left(y\right).\longrightarrow.A\left(x\right):\longrightarrow:A\left(x\right)\longrightarrow B\left(y\right).\longrightarrow.B\left(y\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+La siguiente prueba formal, ¿es correcta?
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\left(x\right)\rightarrow.B\left(y\right)\rightarrow A\left(x\right):\rightarrow:A\left(x\right)\rightarrow B\left(y\right).\rightarrow.A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\left(x\right)\rightarrow.B\left(y\right)\rightarrow A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\left(x\right)\rightarrow B\left(y\right).\rightarrow.A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP 1,2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\left(x\right)\rightarrow.B\left(y\right)\rightarrow A\left(x\right):\rightarrow:A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sustituyendo 
+\begin_inset Formula $B\left(y\right)$
+\end_inset
+
+ por 
+\begin_inset Formula $B\left(y\right)\rightarrow A\left(x\right)$
+\end_inset
+
+ en 3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A\left(x\right)\rightarrow A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+MP 4,2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Dar una deducción formal para cada una de las siguientes 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\sim A\left(x\right)\rightarrow\sim B\left(y\right),\, B\left(y\right),\, A\left(x\right)\rightarrow C\left(z\right)\vdash C\left(z\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sim A\left(x\right)\rightarrow.B\left(y\right)\rightarrow\sim C\left(z\right),\,\sim A\left(x\right)\rightarrow B\left(y\right),C\left(z\right)\vdash A\left(x\right)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $\sim P\vdash P\rightarrow Q$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
