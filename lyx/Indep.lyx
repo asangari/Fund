@@ -1,5 +1,5 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass article
@@ -10,18 +10,26 @@
 \begin_modules
 theorems-std
 \end_modules
-\language english
+\maintain_unincluded_children false
+\language spanish
+\language_package default
 \inputencoding auto
+\fontencoding global
 \font_roman default
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \paperfontsize 12
 \spacing single
 \use_hyperref false
@@ -29,21 +37,31 @@ theorems-std
 \use_geometry true
 \use_amsmath 2
 \use_esint 1
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
-\defskip medskip
+\paragraph_indentation default
 \quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -83,7 +101,7 @@ Un axioma propio
 \begin_inset Formula $T$
 \end_inset
 
- en el cual 
+ en el cuál 
 \begin_inset Formula $S$
 \end_inset
 
@@ -99,7 +117,7 @@ Un axioma propio
 \end_inset
 
 .
- Séa el dominio de 
+ Sea el dominio de 
 \begin_inset Formula $M$
 \end_inset
 
@@ -107,7 +125,7 @@ Un axioma propio
 \begin_inset Formula $a$
 \end_inset
 
- solamente, y séa 
+ solamente, y sea 
 \begin_inset Formula $<$
 \end_inset
 
@@ -144,6 +162,13 @@ Un axioma propio
 \end_layout
 
 \begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
 En la teoría 
 \begin_inset Formula $F$
 \end_inset
@@ -159,14 +184,18 @@ En la teoría
 
 , usando algunos teoremas de F que puedan ser probados a partir de los otros
  axiomas de F.
-\begin_inset Formula \[
-\left(x+y\right)\left(1+1\right)=\left(x+y\right)1+\left(x+y\right)1=x+y+x+y\]
+\begin_inset Formula 
+\[
+\left(x+y\right)\left(1+1\right)=\left(x+y\right)1+\left(x+y\right)1=x+y+x+y
+\]
 
 \end_inset
 
 distribuyendo de otra forma
-\begin_inset Formula \[
-\left(x+y\right)\left(1+1\right)=x\left(1+1\right)+y\left(1+1\right)=x+x+y+y\]
+\begin_inset Formula 
+\[
+\left(x+y\right)\left(1+1\right)=x\left(1+1\right)+y\left(1+1\right)=x+x+y+y
+\]
 
 \end_inset
 
@@ -192,18 +221,29 @@ La independencia de todos los axiomas propios es un asunto de elegancia,
  Un axioma dependiente no causa daño real; es meramente superfluo.
 \end_layout
 
+\begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
 \begin_layout Example
 Las dos leyes distributivas para la teoría de anillos son
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
  &  & R6.\ \forall x\forall y\forall z\left(x\left(y+z\right)=xy+xz\right)\\
- &  & R7.\ \forall x\forall y\forall z\left(\left(y+z\right)x=yx+zx\right)\end{eqnarray*}
+ &  & R7.\ \forall x\forall y\forall z\left(\left(y+z\right)x=yx+zx\right)
+\end{eqnarray*}
 
 \end_inset
 
 Es costumbre definir un anillo conmutativo cómo un anillo que satisface
  la propiedad adicional 
-\begin_inset Formula \[
-R8.\ \forall x\forall y\left(xy=yx\right)\]
+\begin_inset Formula 
+\[
+R8.\ \forall x\forall y\left(xy=yx\right)
+\]
 
 \end_inset
 
@@ -212,7 +252,7 @@ En la teoría de anillos conmutativos,R6 y R7 son dependiente porque cada
  Pero todo tan pronto como R6 o R7 se omiten, los otros se vuelven independiente
 s.
  Un axioma no es dependiente o independiente por sí mismo, sino relativo
- a conjunto se axiomas.
+ a conjunto de axiomas.
  
 \end_layout
 
@@ -324,7 +364,7 @@ Un ejemplo importante de una proposición independiente es la proposición
 .
  Ya que la consistencia de la teoría de conjuntos no ha sido probada, una
  proposición más precisa de este resultado es: si la teoría es consistente,
- entonces el axioma de elección independiente.
+ entonces el axioma de elección es independiente.
 \end_layout
 
 \begin_layout Standard
@@ -365,8 +405,10 @@ Un símbolo de predicado de
 \end_inset
 
  y
-\begin_inset Formula \[
-\vdash_{T}\forall v_{1},\dots,\forall v_{n}\left(G\left(v_{1},\dots,v_{n}\right)\longleftrightarrow P\left(v_{1},\dots,v_{n}\right)\right)\]
+\begin_inset Formula 
+\[
+\vdash_{T}\forall v_{1},\dots,\forall v_{n}\left(G\left(v_{1},\dots,v_{n}\right)\longleftrightarrow P\left(v_{1},\dots,v_{n}\right)\right)
+\]
 
 \end_inset
 
@@ -383,12 +425,14 @@ BA
 \end_inset
 
  y los siguientes axiomas propios
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
  &  & BA12\ \forall x\forall y\forall z\left(x\leq y\wedge y\leq z\longrightarrow x\leq z\right)\\
  &  & BA13\ \forall x\forall y\left(x\leq y\wedge y\leq x\longrightarrow x=y\right)\\
- &  & BA14.\forall x\forall y\forall z\left(x\leq y\longrightarrow x\cup z\leq x\cup z\right)\\
+ &  & BA14.\forall x\forall y\forall z\left(x\leq y\longrightarrow x\cup z\leq y\cup z\right)\\
  &  & BA15.\forall x\forall y\forall z\left(x\leq y\longrightarrow x\cap z\leq y\cap z\right)\\
- &  & BA16\ \forall x\forall y\left(x\leq y\longrightarrow y^{\prime}\leq x^{\prime}\right)\end{eqnarray*}
+ &  & BA16\ \forall x\forall y\left(x\leq y\longrightarrow y^{\prime}\leq x^{\prime}\right)
+\end{eqnarray*}
 
 \end_inset
 
@@ -397,8 +441,10 @@ El símbolo de predicados
 \end_inset
 
  es dependiente porque
-\begin_inset Formula \[
-\vdash_{BA^{\ast}}\forall x_{1}\forall x_{2}\left(x_{1}\leq x_{2}\longleftrightarrow x_{1}\cup x_{2}=x_{2}\right)\]
+\begin_inset Formula 
+\[
+\vdash_{BA^{\ast}}\forall x_{1}\forall x_{2}\left(x_{1}\leq x_{2}\longleftrightarrow x_{1}\cup x_{2}=x_{2}\right)
+\]
 
 \end_inset
 
@@ -439,8 +485,10 @@ Un símbolo de operación de
 \end_inset
 
  y 
-\begin_inset Formula \[
-\vdash_{T}\forall v_{1}\dots\forall v_{n+1}\left(F\left(v_{1},\dots,v_{n}\right)=v_{n+1}\longleftrightarrow P\left(v_{1},\dots,v_{n},v_{n+1}\right)\right)\]
+\begin_inset Formula 
+\[
+\vdash_{T}\forall v_{1}\dots\forall v_{n+1}\left(F\left(v_{1},\dots,v_{n}\right)=v_{n+1}\longleftrightarrow P\left(v_{1},\dots,v_{n},v_{n+1}\right)\right)
+\]
 
 \end_inset
 
@@ -452,7 +500,7 @@ AG
 \begin_inset Formula $^{\prime}$
 \end_inset
 
- es el resultado de adjuntar a AG el simbolo de operación de 
+ es el resultado de adjuntar a AG el símbolo de operación de 
 \begin_inset Formula $1$
 \end_inset
 
@@ -465,8 +513,10 @@ AG
 \end_inset
 
  y reemplazar AG3 por
-\begin_inset Formula \[
-AG3^{\prime}.\ \forall x\left(x+\left(-x\right)=0\right)\]
+\begin_inset Formula 
+\[
+AG3^{\prime}.\ \forall x\left(x+\left(-x\right)=0\right)
+\]
 
 \end_inset
 
@@ -475,11 +525,24 @@ El símbolo de operación
 \end_inset
 
  es dependiente porque
-\begin_inset Formula \[
-\vdash_{GA^{\prime}}\forall x_{1}\forall x_{2}\left(-x_{1}=x_{2}\longleftrightarrow x_{1}+x_{2}=0\right)\]
+\begin_inset Formula 
+\[
+\vdash_{GA^{\prime}}\forall x_{1}\forall x_{2}\left(-x_{1}=x_{2}\longleftrightarrow x_{1}+x_{2}=0\right)
+\]
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
 En la teoría 
 \begin_inset Formula $LA$
 \end_inset
@@ -489,8 +552,10 @@ En la teoría
 \end_inset
 
  es dependiente porque
-\begin_inset Formula \[
-\vdash_{LA}\forall x_{1}\forall x_{2}\forall x_{3}\left(x_{1}\cup x_{2}=x_{3}\longleftrightarrow x_{1}\leq x_{3}\wedge x_{2}\leq x_{3}\wedge\forall x_{4}\left(x_{1}\leq x_{4}\wedge x_{2}\leq x_{4}\rightarrow x_{3}\leq x_{4}\right)\right)\]
+\begin_inset Formula 
+\[
+\vdash_{LA}\forall x_{1}\forall x_{2}\forall x_{3}\left(x_{1}\cup x_{2}=x_{3}\longleftrightarrow x_{1}\leq x_{3}\wedge x_{2}\leq x_{3}\wedge\forall x_{4}\left(x_{1}\leq x_{4}\wedge x_{2}\leq x_{4}\rightarrow x_{3}\leq x_{4}\right)\right)
+\]
 
 \end_inset
 
@@ -506,12 +571,19 @@ Similarmente,
 \end_layout
 
 \begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
 En la teoría R de anillos, el símbolo de operación 
 \begin_inset Formula $\cdot$
 \end_inset
 
  es independiente.
- Séa 
+ Sea 
 \begin_inset Formula $M_{1}$
 \end_inset
 
@@ -524,7 +596,7 @@ En la teoría R de anillos, el símbolo de operación
 \end_inset
 
 .
- Séa 
+ Sea 
 \begin_inset Formula $M_{2}$
 \end_inset
 
@@ -536,7 +608,11 @@ En la teoría R de anillos, el símbolo de operación
 \begin_inset Formula $M_{2}$
 \end_inset
 
- asigna a por la operación 
+ asigna a 
+\begin_inset Formula $\cdot$
+\end_inset
+
+ la operación 
 \begin_inset Formula $\circ$
 \end_inset
 
@@ -696,7 +772,7 @@ cierta tanto en
 \begin_inset Formula $M_{2}$
 \end_inset
 
- son identicos salvo por 
+ son idénticos salvo por 
 \begin_inset Formula $\cdot.$
 \end_inset
 
@@ -771,8 +847,10 @@ Un símbolo de constante
 
 \begin_layout Example
 El símbolo de constante 0 de AG es dependiente porque 
-\begin_inset Formula \[
-\vdash_{AG}\forall x_{1}\left(0=x_{1}\longleftrightarrow\forall x_{2}\left(x_{1}+x_{2}=x_{2}\right)\right)\]
+\begin_inset Formula 
+\[
+\vdash_{AG}\forall x_{1}\left(0=x_{1}\longleftrightarrow\forall x_{2}\left(x_{1}+x_{2}=x_{2}\right)\right)
+\]
 
 \end_inset
 
@@ -784,8 +862,10 @@ Muchas teorías tienen símbolos de operaciones y de constantes dependientes
  porque es más intuitivo trabajar con símbolos de operaciones y de constantes
  que con una fórmula.
  Por ejemplo un teorema de AG es 
-\begin_inset Formula \begin{equation}
-\forall x\exists!y\left(x+y=0\right)\label{uno}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\forall x\exists!y\left(x+y=0\right)\label{uno}
+\end{equation}
 
 \end_inset
 
@@ -802,12 +882,14 @@ Sea AG
 \end_inset
 
  y el axioma propio
-\begin_inset Formula \begin{equation}
-\forall x\left(x+\left(-x\right)=0\right)\label{dos}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\forall x\left(x+\left(-x\right)=0\right)\label{dos}
+\end{equation}
 
 \end_inset
 
-Cuando se trabaja con AG informalmente, es costumbre despues de probar 
+Cuando se trabaja con AG informalmente, es costumbre después de probar 
 \begin_inset Formula $\left(\ref{uno}\right),$
 \end_inset
 
@@ -842,7 +924,7 @@ Cuando se trabaja con AG informalmente, es costumbre despues de probar
 
 ) para los cuales el símbolo de operación no ocurre en los axiomas.
  Este procedimiento se justifica porque todas las extensiones sucesivas
- son esencialmente de la misma teoria.
+ son esencialmente de la misma teoría.
  Como ejemplo mostramos exactamente como AG se relaciona a AG
 \begin_inset Formula $^{\ast}.$
 \end_inset
@@ -860,8 +942,10 @@ Primero,
 \end_inset
 
  porque
-\begin_inset Formula \[
-\vdash_{AG^{\ast}}\forall x_{1}\forall x_{2}\left(-x_{1}=x_{2}\longleftrightarrow x_{1}+x_{2}=0\right)\]
+\begin_inset Formula 
+\[
+\vdash_{AG^{\ast}}\forall x_{1}\forall x_{2}\left(-x_{1}=x_{2}\longleftrightarrow x_{1}+x_{2}=0\right)
+\]
 
 \end_inset
 
@@ -913,11 +997,11 @@ Segundo,
 \begin_inset Formula $M$
 \end_inset
 
- asigna a 
+ asigna 
 \begin_inset Formula $a$
 \end_inset
 
- 
+ a 
 \begin_inset Formula $0$
 \end_inset
 
@@ -938,7 +1022,7 @@ Segundo,
 \end_inset
 
  hay un único elemento 
-\begin_inset Formula $d\prime$
+\begin_inset Formula $d'$
 \end_inset
 
  de 
@@ -946,7 +1030,7 @@ Segundo,
 \end_inset
 
  tal que 
-\begin_inset Formula $d+d=a$
+\begin_inset Formula $d+d'=a$
 \end_inset
 
 .
@@ -959,7 +1043,7 @@ Segundo,
 \end_inset
 
  por lo 
-\begin_inset Formula $-d=d.$
+\begin_inset Formula $-d=d'.$
 \end_inset
 
  Sea 
@@ -982,7 +1066,7 @@ Segundo,
 \begin_inset Formula $-$
 \end_inset
 
- de AG.
+ de AG*.
  Entonces 
 \begin_inset Formula $M^{\ast}$
 \end_inset
@@ -1094,7 +1178,7 @@ Probar que
 \begin_inset Formula $T$
 \end_inset
 
- es completa si y solo no hay proposición de 
+ es completa si y solo si no hay proposición de 
 \begin_inset Formula $T$
 \end_inset
 
@@ -1118,7 +1202,7 @@ Probar que la proposición
 \begin_inset Formula $T$
 \end_inset
 
- si y solo hay modelos 
+ si y solo si hay modelos 
 \begin_inset Formula $M_{1}$
 \end_inset
 
@@ -1187,7 +1271,7 @@ La teoría OAG de grupos abelianos ordenados tiene los símbolos propios
 \begin_inset Formula $<$
 \end_inset
 
-, y los axiomas AG1 al AG4, L1 a L3 y 
+, y los axiomas propios AG1 al AG4, L1 a L3 y 
 \begin_inset Newline newline
 \end_inset
 
@@ -1233,6 +1317,23 @@ Sea
 F11.
  
 \begin_inset Formula $\forall x\left(x\neq0\rightarrow x\cdot x'=1\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Mostrar que cada modelo para 
+\begin_inset Formula $F$
+\end_inset
+
+ puede ser extendido para un modelo para 
+\begin_inset Formula $F*$
+\end_inset
+
+.
+ Discutir 
+\begin_inset Formula $0'$
 \end_inset
 
 

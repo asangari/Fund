@@ -1,5 +1,5 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass article
@@ -7,18 +7,26 @@
 \begin_modules
 theorems-std
 \end_modules
-\language english
+\maintain_unincluded_children false
+\language spanish
+\language_package default
 \inputencoding auto
+\fontencoding global
 \font_roman default
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \paperfontsize 12
 \spacing single
 \use_hyperref false
@@ -26,21 +34,31 @@ theorems-std
 \use_geometry true
 \use_amsmath 2
 \use_esint 1
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
-\defskip medskip
+\paragraph_indentation default
 \quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -253,10 +271,13 @@ La prueba del teorema 1 de la sección de decibilidad usa una numeración
 \end_inset
 
  como sigue
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \begin{tabular}{lllllllllllll}
  \ensuremath{\mathbf{s}} &  \ensuremath{\sim} &  \ensuremath{\rightarrow} &  \ensuremath{\forall} &  \ensuremath{(} &  \ensuremath{,} &  \ensuremath{)} &  \ensuremath{\alpha} &  \ensuremath{\beta} &  \ensuremath{\gamma} &  \ensuremath{x} &  \ensuremath{|} &  \ensuremath{\#}\\
-\ensuremath{\mathbf{g}\left(s\right)} &  \ensuremath{1} &  \ensuremath{3} &  \ensuremath{5} &  \ensuremath{7} &  \ensuremath{9} &  \ensuremath{11} &  \ensuremath{13} &  \ensuremath{15} &  \ensuremath{17} &  \ensuremath{19} &  \ensuremath{21} &  \ensuremath{23}\end{tabular}\]
+\ensuremath{\mathbf{g}\left(s\right)} &  \ensuremath{1} &  \ensuremath{3} &  \ensuremath{5} &  \ensuremath{7} &  \ensuremath{9} &  \ensuremath{11} &  \ensuremath{13} &  \ensuremath{15} &  \ensuremath{17} &  \ensuremath{19} &  \ensuremath{21} &  \ensuremath{23}
+\end{tabular}
+\]
 
 \end_inset
 
@@ -282,8 +303,10 @@ Sean
 \end_inset
 
  por ejemplo
-\begin_inset Formula \[
-g\left(A\left(x\right)\right)=g\left(\alpha\#\left(x\right)\right)=2^{13}3^{23}5^{7}7^{19}11^{11}\]
+\begin_inset Formula 
+\[
+g\left(A\left(x\right)\right)=g\left(\alpha\#\left(x\right)\right)=2^{13}3^{23}5^{7}7^{19}11^{11}
+\]
 
 \end_inset
 
@@ -352,7 +375,7 @@ Una numeración de Gödel permite que enunciados de N se traduzcan en enunciados
 \end_layout
 
 \begin_layout Standard
-Para enunciar el teorema de Göedel necesitamos la noción de 
+Para enunciar el teorema de Gödel necesitamos la noción de 
 \begin_inset Formula $\omega-$
 \end_inset
 
@@ -452,7 +475,7 @@ Sea
 \begin_inset Formula $\mathcal{G}$
 \end_inset
 
- ua predicado de 2 lugares definido por: 
+ un predicado de 2 lugares definido por: 
 \begin_inset Formula $\mathcal{G}\left(a,b\right)$
 \end_inset
 
@@ -460,7 +483,7 @@ Sea
 \begin_inset Formula $a$
 \end_inset
 
- es le número de Gödel de una fórmula 
+ es el número de Gödel de una fórmula 
 \begin_inset Formula $P\left(x\right)$
 \end_inset
 
@@ -518,11 +541,11 @@ Sea
 \end_inset
 
  la proposición 
-\begin_inset Formula $P\left(i\right)$
+\begin_inset Formula $P\left(\bar{i}\right)$
 \end_inset
 
 , o sea 
-\begin_inset Formula $\forall y\sim G\left(i,y\right)$
+\begin_inset Formula $\forall y\sim G\left(\bar{i},y\right)$
 \end_inset
 
 .
@@ -560,7 +583,7 @@ Suponga que N es consistente.
 \end_inset
 
  es un teorema de N, o sea 
-\begin_inset Formula $\vdash_{N}\forall y\sim G\left(i,y\right)$
+\begin_inset Formula $\vdash_{N}\forall y\sim G\left(\bar{i},y\right)$
 \end_inset
 
 .
@@ -587,7 +610,7 @@ Suponga que N es consistente.
 
 .
  Luego 
-\begin_inset Formula $\vdash_{N}G\left(i,j\right)$
+\begin_inset Formula $\vdash_{N}G\left(\bar{i},\bar{j}\right)$
 \end_inset
 
  por lema 
@@ -603,7 +626,7 @@ reference "lem:Sea--ua"
 \end_inset
 
  da 
-\begin_inset Formula $\vdash_{N}\sim G\left(i,j\right)$
+\begin_inset Formula $\vdash_{N}\sim G\left(\bar{i},\bar{j}\right)$
 \end_inset
 
 , contradiciendo la consistencia de N.
@@ -654,7 +677,7 @@ reference "lem:Sea--ua"
 \end_inset
 
  - consistencia, 
-\begin_inset Formula $\sim\forall y\sim G\left(i,y\right)$
+\begin_inset Formula $\sim\forall y\sim G\left(\bar{i},y\right)$
 \end_inset
 
  no es un teorema de N.
@@ -728,8 +751,8 @@ Por uso de una proposición más complicada que
 \begin_inset Formula $\omega$
 \end_inset
 
- - consistencia en el teorema de Göedel por la hipótesis mas débil de consistenc
-ia.
+ - consistencia en el teorema de Gödel por la hipótesis mas débil de consistenci
+a.
  Bosquejamos la prueba de Rosser.
 \end_layout
 
@@ -739,8 +762,10 @@ ia.
 \end_inset
 
 ,
-\begin_inset Formula \[
-\vdash_{N}Q\left(\bar{0}\right)\wedge Q\left(\bar{1}\right)\wedge\cdots\wedge Q\left(\bar{k}\right)\rightarrow\forall z\left(z\leq\bar{k}\rightarrow Q\left(z\right)\right)\]
+\begin_inset Formula 
+\[
+\vdash_{N}Q\left(\bar{0}\right)\wedge Q\left(\bar{1}\right)\wedge\cdots\wedge Q\left(\bar{k}\right)\rightarrow\forall z\left(z\leq\bar{k}\rightarrow Q\left(z\right)\right)
+\]
 
 \end_inset
 
@@ -768,7 +793,7 @@ name "lem5"
 
 \begin_layout Proof
 (a) es el teorema 24 de la sección de la teoría de números.
- Cada instancia de (b) se sigue inmediatamente po spec de 
+ Cada instancia de (b) se sigue inmediatamente por spec de 
 \begin_inset Formula $\vdash_{N}\forall x\forall y.x\leq y\vee y\leq x$
 \end_inset
 
@@ -801,7 +826,7 @@ Sea
 \end_inset
 
  es el número de Gödel de una prueba de 
-\begin_inset Formula $\sim P\left(x\right)$
+\begin_inset Formula $\sim P\left(\bar{a}\right)$
 \end_inset
 
  en N.
@@ -855,8 +880,10 @@ Sea
 \end_inset
 
 , o sea
-\begin_inset Formula \[
-\forall y\left(G\left(\bar{j},y\right)\rightarrow\exists z\left(z\leq y\wedge H\left(\bar{j},z\right)\right)\right)\]
+\begin_inset Formula 
+\[
+\forall y\left(G\left(\bar{j},y\right)\rightarrow\exists z\left(z\leq y\wedge H\left(\bar{j},z\right)\right)\right)
+\]
 
 \end_inset
 
@@ -919,7 +946,7 @@ Supongamos que
 
 .
  Entonces 
-\begin_inset Formula $\vdash_{N}G\left(\bar{i},\bar{k}\right)$
+\begin_inset Formula $\vdash_{N}G\left(\bar{j},\bar{k}\right)$
 \end_inset
 
  por lema 
@@ -962,7 +989,7 @@ reference "lem:Sea--ua"
 
  en N.
  Entonces 
-\begin_inset Formula $\mathcal{H}\left(i,n\right)$
+\begin_inset Formula $\mathcal{H}\left(j,n\right)$
 \end_inset
 
  es falso para cualquier 
@@ -1007,8 +1034,10 @@ reference "lem5"
 \end_inset
 
  y el cálculo de proposiciones 
-\begin_inset Formula \[
-\vdash_{N}\forall z\left(z\leq\bar{k}\rightarrow\sim H\left(\bar{j},z\right)\right)\]
+\begin_inset Formula 
+\[
+\vdash_{N}\forall z\left(z\leq\bar{k}\rightarrow\sim H\left(\bar{j},z\right)\right)
+\]
 
 \end_inset
 
@@ -1096,7 +1125,7 @@ reference "lem:Sea--ua"
 
 .
  Entonces por el cálculo de proposiciones, 
-\begin_inset Formula $\vdash_{N}\sim G\left(\bar{j},\bar{0}\right)\wedge\sim G\left(\bar{j},\bar{1}\right)\wedge\cdots\wedge\sim G\left(\bar{j},\bar{k}\right)$
+\begin_inset Formula $\vdash_{N}\sim G\left(\bar{j},\bar{0}\right)\wedge\sim G\left(\bar{j},\bar{1}\right)\wedge\cdots\wedge\sim G\left(\bar{j},\bar{m}\right)$
 \end_inset
 
 .
@@ -1107,7 +1136,7 @@ reference "lem5"
 
 \end_inset
 
-, el cálculo de proposiciones y spec da (i) 
+ a), el cálculo de proposiciones y spec da (i) 
 \begin_inset Formula $\vdash_{N}y\leq\bar{m}\rightarrow\sim G\left(\bar{j},y\right)$
 \end_inset
 
@@ -1146,15 +1175,19 @@ reference "lem5"
 
 \end_inset
 
- da 
-\begin_inset Formula \[
-\vdash_{N}\sim G\left(\bar{j},y\right)\vee\exists z\left(z\leq y\wedge H\left(\bar{j},z\right)\right)\]
+b) da 
+\begin_inset Formula 
+\[
+\vdash_{N}\sim G\left(\bar{j},y\right)\vee\exists z\left(z\leq y\wedge H\left(\bar{j},z\right)\right)
+\]
 
 \end_inset
 
 Entonces el cálculo de proposiciones y gen da
-\begin_inset Formula \[
-\vdash_{N}\forall y\left(G\left(\bar{j},y\right)\rightarrow\exists z\left(z\leq y\wedge H\left(\bar{j},z\right)\right)\right)\]
+\begin_inset Formula 
+\[
+\vdash_{N}\forall y\left(G\left(\bar{j},y\right)\rightarrow\exists z\left(z\leq y\wedge H\left(\bar{j},z\right)\right)\right)
+\]
 
 \end_inset
 
@@ -1164,7 +1197,7 @@ O sea
 
 .
  Pero 
-\begin_inset Formula $\vdash_{N}R$
+\begin_inset Formula $\vdash_{N}\sim R$
 \end_inset
 
  contradiciendo la consistencia de N.
@@ -1172,7 +1205,7 @@ O sea
 
 \begin_layout Standard
 La prueba del teorema de Gödel Rosser es constructiva: la prueba de los
- lemas 3 y 6 dan un procedimiento efectivo apra construir las fórmulas 
+ lemas 3 y 6 dan un procedimiento efectivo para construir las fórmulas 
 \begin_inset Formula $G$
 \end_inset
 
@@ -1190,7 +1223,7 @@ La prueba del teorema de Gödel Rosser es constructiva: la prueba de los
 \begin_layout Standard
 El teorema de Göedel Rosser no es una peculiaridad de N.
  La prueba va a través de varias formulaciones para las que los lemas 3,
- 5 y 7 se mantienen.
+ 5 y 6 se mantienen.
  Estas incluyen formulaciones mas fuertes y más débiles que N.
  En particular, la prueba se mantiene si 
 \begin_inset Formula $R$
@@ -1306,7 +1339,7 @@ Esbozaremos la prueba.
 
  no es probable.
  Por medio de la numeración de Gödel y la expresibilidad, la prueba (teorema
- 4) que si N es consistente entonces N es no probable puede traducirse en
+ 4) que si N es consistente entonces S es no probable puede traducirse en
  la prueba de Consis
 \begin_inset Formula $\rightarrow S$
 \end_inset
@@ -1318,7 +1351,7 @@ Esbozaremos la prueba.
 
 .
  Entonces 
-\begin_inset Formula $\vdash S$
+\begin_inset Formula $\vdash_{N}S$
 \end_inset
 
  por modus ponens.
@@ -1350,7 +1383,7 @@ Mostrar que 5 y 16 no son números de Gödel
 
 \begin_layout Enumerate
 Establecer como distinguir el número de Gödel de una cadena del número de
- Gödel de de una sucesión de cadenas.
+ Gödel de una sucesión de cadenas.
 \end_layout
 
 \begin_layout Enumerate
@@ -1358,7 +1391,7 @@ Encontrar la expresión cuyo número de Gödel es 46656
 \end_layout
 
 \begin_layout Enumerate
-Enontrar el número de Gödel de 
+Encontrar el número de Gödel de 
 \begin_inset Formula $A\left(x\right)\rightarrow B\left(y\right)$
 \end_inset
 
@@ -1370,12 +1403,16 @@ Sea N' el resultado de adjuntar
 \begin_inset Formula $\sim S$
 \end_inset
 
- como un axioma propio a N.
+ (
+\begin_inset Formula $S$
+\end_inset
+
+ es la proposición de Gödel) como un axioma propio a N.
  Probar que si N es consistente, entonces N' es consistente pero 
 \begin_inset Formula $\omega$
 \end_inset
 
- - inonsistente.
+ - inconsistente.
 \end_layout
 
 \begin_layout Enumerate

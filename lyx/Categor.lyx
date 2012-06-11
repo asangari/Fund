@@ -1,0 +1,3399 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options false
+\begin_modules
+theorems-std
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Completitud y Categoricidad
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:ciertaEnUnModelo"
+
+\end_inset
+
+
+\begin_inset Formula $T$
+\end_inset
+
+ es completo si sólo si cualquier proposición de 
+\begin_inset Formula $T$
+\end_inset
+
+ que es cierta en un modelo para 
+\begin_inset Formula $T$
+\end_inset
+
+ es cierta en cualquier modelo para 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Suponga que 
+\begin_inset Formula $T$
+\end_inset
+
+ es completa, y 
+\begin_inset Formula $S$
+\end_inset
+
+ es una proposición de 
+\begin_inset Formula $T$
+\end_inset
+
+ que es cierta en el modelo 
+\begin_inset Formula $M$
+\end_inset
+
+ para 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Mostremos que 
+\begin_inset Formula $S$
+\end_inset
+
+ es cierta en cualquier modelo para 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Procederemos por contradicción.
+ Suponga que 
+\begin_inset Formula $S$
+\end_inset
+
+ no es cierto el modelo 
+\begin_inset Formula $M'$
+\end_inset
+
+ para 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $S$
+\end_inset
+
+ no es un teorema de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Similarmente, 
+\begin_inset Formula $\sim S$
+\end_inset
+
+ no es un teorema de 
+\begin_inset Formula $T$
+\end_inset
+
+ porque 
+\begin_inset Formula $\sim S$
+\end_inset
+
+ no es cierto en 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Luego ni 
+\begin_inset Formula $S$
+\end_inset
+
+ ni 
+\begin_inset Formula $\sim S$
+\end_inset
+
+ es teorema de 
+\begin_inset Formula $T$
+\end_inset
+
+ contradiciendo la completitud de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Ahora suponga que cualquier proposición de 
+\begin_inset Formula $T$
+\end_inset
+
+ que es cierta en un modelo para 
+\begin_inset Formula $T$
+\end_inset
+
+ es cierta en cualquier modelo para 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $T$
+\end_inset
+
+ inconsistente entonces es 
+\begin_inset Formula $T$
+\end_inset
+
+ es completa.
+ Así, suponga que 
+\begin_inset Formula $T$
+\end_inset
+
+ es consistente.
+ Sea 
+\begin_inset Formula $S$
+\end_inset
+
+ una proposición de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Ya que 
+\begin_inset Formula $T$
+\end_inset
+
+ es consistente, 
+\begin_inset Formula $T$
+\end_inset
+
+ tiene un modelo 
+\begin_inset Formula $M$
+\end_inset
+
+ por el teorema de completitud.
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ o 
+\begin_inset Formula $\sim S$
+\end_inset
+
+ es cierta en 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Por hipótesis, 
+\begin_inset Formula $S$
+\end_inset
+
+ o 
+\begin_inset Formula $\sim S$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T$
+\end_inset
+
+ por teorema 11 de la sección de completitud.
+ Ya que 
+\begin_inset Formula $S$
+\end_inset
+
+ es arbitrario, 
+\begin_inset Formula $T$
+\end_inset
+
+ es completa.
+\end_layout
+
+\begin_layout Example
+\begin_inset Formula $AG$
+\end_inset
+
+ no es completa porque la proposición 
+\begin_inset Formula $\forall x\forall y(x=y)$
+\end_inset
+
+ es cierta en un modelo con exactamente un elemento y es falsa en un modelo
+ con más de un elemento.
+ 
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $M$
+\end_inset
+
+ y 
+\begin_inset Formula $M'$
+\end_inset
+
+ modelos para 
+\begin_inset Formula $T$
+\end_inset
+
+ con dominios 
+\begin_inset Formula $D$
+\end_inset
+
+ y 
+\begin_inset Formula $D'$
+\end_inset
+
+.
+ Para cada símbolo de predicado 
+\begin_inset Formula $G$
+\end_inset
+
+ de 
+\begin_inset Formula $T$
+\end_inset
+
+, sean 
+\begin_inset Formula $g$
+\end_inset
+
+ y 
+\begin_inset Formula $g'$
+\end_inset
+
+ los predicados asignados a 
+\begin_inset Formula $G$
+\end_inset
+
+ por 
+\begin_inset Formula $M$
+\end_inset
+
+ y 
+\begin_inset Formula $M'$
+\end_inset
+
+ .
+ Para cada símbolo de operación 
+\begin_inset Formula $F$
+\end_inset
+
+ de 
+\begin_inset Formula $T$
+\end_inset
+
+, sean 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $f'$
+\end_inset
+
+ las operaciones asignadas a 
+\begin_inset Formula $F$
+\end_inset
+
+ por 
+\begin_inset Formula $M$
+\end_inset
+
+ y 
+\begin_inset Formula $M'$
+\end_inset
+
+.
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ es isomorfo a 
+\begin_inset Formula $M$
+\end_inset
+
+ si y sólo si hay una correspondencia uno a uno entre 
+\begin_inset Formula $D$
+\end_inset
+
+ y 
+\begin_inset Formula $D'$
+\end_inset
+
+ (digamos 
+\begin_inset Formula $d$
+\end_inset
+
+ está apareado con 
+\begin_inset Formula $d$
+\end_inset
+
+) Tal que para cualquier 
+\begin_inset Formula $n$
+\end_inset
+
+ upla 
+\begin_inset Formula $(d_{1},\ldots,d_{n})$
+\end_inset
+
+ de elementos de 
+\begin_inset Formula $D$
+\end_inset
+
+ y cualquier símbolo de predicado 
+\begin_inset Formula $G$
+\end_inset
+
+ de 
+\begin_inset Formula $T$
+\end_inset
+
+ y cualquier símbolo de operación 
+\begin_inset Formula $F$
+\end_inset
+
+ de 
+\begin_inset Formula $T$
+\end_inset
+
+ y cualquier símbolo de constante 
+\begin_inset Formula $c$
+\end_inset
+
+ de 
+\begin_inset Formula $T$
+\end_inset
+
+ y cualquier elemento 
+\begin_inset Formula $d$
+\end_inset
+
+ de 
+\begin_inset Formula $D$
+\end_inset
+
+, 
+\begin_inset Formula $g(d_{1},\ldots,d_{n})=\mathbf{T}$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $g'\left(d'_{1},\ldots,d'_{n}\right)=\mathbf{T}$
+\end_inset
+
+; y 
+\begin_inset Formula $f(d_{1},\ldots;d_{n})=d$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $f(d'_{1},\ldots;d'_{n})=d'$
+\end_inset
+
+ ; y 
+\begin_inset Formula $M$
+\end_inset
+
+ asigna 
+\begin_inset Formula $d$
+\end_inset
+
+ a 
+\begin_inset Formula $c$
+\end_inset
+
+ si y sólo si 
+\begin_inset Formula $M$
+\end_inset
+
+ asigna 
+\begin_inset Formula $d'$
+\end_inset
+
+ a 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $M$
+\end_inset
+
+ es isomorfo a 
+\begin_inset Formula $M'$
+\end_inset
+
+, entonces para los propósitos prácticos 
+\begin_inset Formula $M$
+\end_inset
+
+ y 
+\begin_inset Formula $M'$
+\end_inset
+
+ son lo mismo.
+ En particular, una fórmula de 
+\begin_inset Formula $T$
+\end_inset
+
+ es cierta en 
+\begin_inset Formula $M$
+\end_inset
+
+ si sólo si es cierta en 
+\begin_inset Formula $M'$
+\end_inset
+
+.
+ Cuando todos los modelos de un conjunto de modelos son isomorfos, decimos
+ que para cualquier 
+\begin_inset Formula $M$
+\end_inset
+
+ y 
+\begin_inset Formula $M'$
+\end_inset
+
+ en el conjunto, 
+\begin_inset Formula $M$
+\end_inset
+
+ es isomorfo a 
+\begin_inset Formula $M'$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T$
+\end_inset
+
+ es categórica si sólo si todos los modelos para 
+\begin_inset Formula $T$
+\end_inset
+
+ son isomorfos.
+ 
+\end_layout
+
+\begin_layout Standard
+Las teorías algebraicas familiares no son categóricas porque ellas tiene
+ modelos con diferentes números de elementos.
+ Una ventaja del tratamiento axiomático en álgebra es que un teorema establece
+ una fórmula de verdad en cada uno de los muchos y diferentes modelos.
+ 
+\end_layout
+
+\begin_layout Standard
+La forma obvia de hacer una teoría categórica es agregar axiomas hasta que
+ quede un solo modelo.
+ (esto debe hacerse con algún cuidado para evitar reducir el número de modelos
+ a cero.) Los axiomas que fijan el número de elementos en un modelo hacen,
+ a veces, que una teoría se haga categórica.
+ 
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $\exists!n$
+\end_inset
+
+ la proposición 
+\begin_inset Formula $\exists x_{1}\ldots\exists x_{n}\left(x_{1}\neq x_{2}\wedge\ldots\wedge x_{1}\neq x_{n}\wedge x_{2}\neq x_{3}\wedge\ldots\wedge x_{2}\neq x_{n}\wedge\ldots\wedge x_{n-1}\neq x_{n}\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Así, 
+\begin_inset Formula $\exists!3$
+\end_inset
+
+ es 
+\begin_inset Formula $\exists x_{1}\exists x_{2}\exists x_{3}\left(x_{1}\neq x_{2}\wedge x_{1}\neq x_{3}\wedge x_{2}\neq x_{3}\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Cualquier modelo para 
+\begin_inset Formula $\exists!n$
+\end_inset
+
+ tiene exactamente 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos.
+ 
+\end_layout
+
+\begin_layout Example
+Sea 
+\begin_inset Formula $AG_{2}$
+\end_inset
+
+ el resultado de adjuntar 
+\begin_inset Formula $\exists!2$
+\end_inset
+
+ a 
+\begin_inset Formula $AG$
+\end_inset
+
+ como un axioma propio, y sea 
+\begin_inset Formula $AG_{4}$
+\end_inset
+
+ el resultado de adjuntar 
+\begin_inset Formula $\exists!4$
+\end_inset
+
+ a AG como un axioma propio.
+ Entonces 
+\begin_inset Formula $AG_{2}$
+\end_inset
+
+ es categórica y 
+\begin_inset Formula $AG_{4}$
+\end_inset
+
+ no es categórica.
+ 
+\end_layout
+
+\begin_layout Proof
+Si a 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ el modelo para 
+\begin_inset Formula $AG_{2}$
+\end_inset
+
+ definido abajo
+\end_layout
+
+\begin_layout Proof
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $+$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ un modelo para 
+\begin_inset Formula $AG_{2}$
+\end_inset
+
+ con elementos 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ y sea 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ que asigna 
+\begin_inset Formula $a$
+\end_inset
+
+ a 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $a+a=a$
+\end_inset
+
+ y 
+\begin_inset Formula $b+a=b$
+\end_inset
+
+ ya que 
+\begin_inset Formula $AG2$
+\end_inset
+
+ es cierto en 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ Entonces 
+\begin_inset Formula $a+b=b$
+\end_inset
+
+; porque 
+\begin_inset Formula $AG4$
+\end_inset
+
+ es cierto en 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+.
+ Afirmamos que 
+\begin_inset Formula $b+b=a$
+\end_inset
+
+; porque si 
+\begin_inset Formula $b+b=b$
+\end_inset
+
+; entonces no habría un 
+\begin_inset Formula $y$
+\end_inset
+
+ tal que 
+\begin_inset Formula $b+y=a$
+\end_inset
+
+; contradiciendo en hecho que 
+\begin_inset Formula $AG3$
+\end_inset
+
+ es cierto en 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ se define por 
+\end_layout
+
+\begin_layout Proof
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $+$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $a$
+\end_inset
+
+ esta apareada con 
+\begin_inset Formula $0$
+\end_inset
+
+, y 
+\begin_inset Formula $b$
+\end_inset
+
+ esta apareada con 
+\begin_inset Formula $1$
+\end_inset
+
+, entonces las tablas para 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ se corresponden entrada a entrada, mostrando que 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ son isomorfos.
+ Ya que 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ es arbitrario, cualquier modelo para
+\begin_inset Formula $AG2$
+\end_inset
+
+ es isomorfos a 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $AG_{2}$
+\end_inset
+
+ es categórica.
+ 
+\end_layout
+
+\begin_layout Standard
+Por computación directa se muestra que 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{4}$
+\end_inset
+
+ son modelos para 
+\begin_inset Formula $AG_{4}$
+\end_inset
+
+ donde 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+ asigna 
+\begin_inset Formula $0$
+\end_inset
+
+ a 
+\begin_inset Formula $0$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{4}$
+\end_inset
+
+ asigna 
+\begin_inset Formula $a$
+\end_inset
+
+ a 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $+$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $+$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M_{3}$
+\end_inset
+
+ no es isomorfo 
+\begin_inset Formula $M_{4}$
+\end_inset
+
+ porque el enunciado 
+\begin_inset Formula $\forall x\left(x+x=0\right)$
+\end_inset
+
+ es cierta en 
+\begin_inset Formula $M_{4}$
+\end_inset
+
+ y no es cierta en 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Theorem
+Si 
+\begin_inset Formula $T$
+\end_inset
+
+ es categórica, entonces 
+\begin_inset Formula $T$
+\end_inset
+
+ es completa.
+ 
+\end_layout
+
+\begin_layout Proof
+Suponga que 
+\begin_inset Formula $T$
+\end_inset
+
+ es categórica.
+ Entonces cualquier proposición de 
+\begin_inset Formula $T$
+\end_inset
+
+ que es cierta en un modelo para 
+\begin_inset Formula $T$
+\end_inset
+
+, es cierta en cualquier modelo para 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $T$
+\end_inset
+
+ es completa por teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:ciertaEnUnModelo"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset label
+LatexCommand label
+name "Ex:LaTeoDLEsComp"
+
+\end_inset
+
+La teoría 
+\begin_inset Formula $DL$
+\end_inset
+
+ es completa pero no categórica.
+ El axioma 
+\begin_inset Formula $L4$
+\end_inset
+
+ (en conjunción con L1 a L3 ) fuerza a cualquier modelo para 
+\begin_inset Formula $DL$
+\end_inset
+
+ a ser infinito.
+ Los racionales y los reales con el significado usual de 
+\begin_inset Formula $<$
+\end_inset
+
+ son modelos para 
+\begin_inset Formula $DL$
+\end_inset
+
+.
+ Ya que los racionales son contables y los reales no lo son, de 
+\begin_inset Formula $DL$
+\end_inset
+
+ no es categórica.
+ Por un teorema de Cantor, todos los modelos infinitos contables para 
+\begin_inset Formula $DL$
+\end_inset
+
+ son isomorfos a los racionales.
+ Usamos el teorema de Cantor para mostrar que 
+\begin_inset Formula $DL$
+\end_inset
+
+ es completo.
+ Sea 
+\begin_inset Formula $S$
+\end_inset
+
+ una proposición de 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ el resultado de adjuntar 
+\begin_inset Formula $S$
+\end_inset
+
+ a los axiomas propios de 
+\begin_inset Formula $DL$
+\end_inset
+
+ y sea 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ el resultado de adjuntar 
+\begin_inset Formula $\sim S$
+\end_inset
+
+ a los axiomas propios de 
+\begin_inset Formula $DL$
+\end_inset
+
+.
+ Afirmamos que 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ o 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ no es consistente.
+ Entonces 
+\begin_inset Formula $\vdash_{DL}\sim S$
+\end_inset
+
+ o 
+\begin_inset Formula $\vdash_{DL}\sim\sim S$
+\end_inset
+
+ por el teorema 5 de la sección de consistencia y completitud.
+ Luego 
+\begin_inset Formula $\vdash_{DL}\sim S$
+\end_inset
+
+ o 
+\begin_inset Formula $\vdash_{DL}S$
+\end_inset
+
+ por el cálculo de predicados, y 
+\begin_inset Formula $DL$
+\end_inset
+
+ es completo.
+ Suponga por contradicción que T1 y T2 son consistentes.
+ Entonces 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ tienen modelos numerables 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ por el teorema de completitud.
+ 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ son modelos para 
+\begin_inset Formula $DL$
+\end_inset
+
+ ya 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ son extensiones de 
+\begin_inset Formula $DL$
+\end_inset
+
+.
+ 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ infinitos numerables porque todo modelo para 
+\begin_inset Formula $DL$
+\end_inset
+
+ es infinito.
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ es cierto en 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ y falso en 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ pero esto es imposible ya que 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ son isomorfos por el teorema Cantor.
+ Luego 
+\begin_inset Formula $DL$
+\end_inset
+
+ es completa.
+ 
+\end_layout
+
+\begin_layout Example
+Algunos de los más de interesantes resultados acerca de la completitud y
+ categoricidad requiere algún entendimiento de los números cardinales y
+ los métodos transfinitos.
+ Intuitivamente, el número cardinal de un conjunto es el número de elementos
+ del conjunto.
+ El número cardinal de un conjunto finito es un entero no negativo.
+ El número cardinal de un conjunto infinito se llama un número cardinal
+ transfinito.
+ Cualquier conjunto 
+\begin_inset Formula $A$
+\end_inset
+
+ tiene un único número cardinal 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\bar{A}=\bar{B}$
+\end_inset
+
+ si y sólo si hay una correspondencia uno a uno entre 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\bar{A}\leq\bar{B}$
+\end_inset
+
+ si sólo si hay una correspondencia uno a uno entre 
+\begin_inset Formula $A$
+\end_inset
+
+ y un subconjunto de 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\bar{A}<\bar{B}$
+\end_inset
+
+ si 
+\begin_inset Formula $A\leq B$
+\end_inset
+
+ y 
+\begin_inset Formula $A\neq B$
+\end_inset
+
+ .
+ Por el teorema de Schröder-Berstein: 
+\begin_inset Formula $A\leq B$
+\end_inset
+
+ y 
+\begin_inset Formula $B\leq A$
+\end_inset
+
+ implica que 
+\begin_inset Formula $A=B$
+\end_inset
+
+.
+ Todos los conjuntos numerables infinitos tienen el mismo cardinal 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ Brevemente, discutiremos teorías con conjuntos no contables de símbolos
+ propios.
+ Por el momento asumiremos sin prueba que el teorema compactitud se aplica
+ a tales teorías.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:CardTrans"
+
+\end_inset
+
+Sea T con un modelo infinito 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Entonces para cualquier número cardinal transfinito 
+\begin_inset Formula $C$
+\end_inset
+
+, 
+\begin_inset Formula $T$
+\end_inset
+
+ tiene un modelo con al menos 
+\begin_inset Formula $C$
+\end_inset
+
+ elementos.
+ 
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ un conjunto con números cardinal 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $T'$
+\end_inset
+
+ el resultado de adjuntar a 
+\begin_inset Formula $T$
+\end_inset
+
+ un nuevo símbolo de constante para cada elemento de 
+\begin_inset Formula $A$
+\end_inset
+
+, y adjuntar a 
+\begin_inset Formula $T$
+\end_inset
+
+ un nuevo axioma propio 
+\begin_inset Formula $a\neq b$
+\end_inset
+
+ para cada par de nuevos símbolos de constante distintos.
+ Sea 
+\begin_inset Formula $X$
+\end_inset
+
+ cualquier subconjuntos finito de axiomas propios de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Sean 
+\begin_inset Formula $a_{1},\ldots,a_{n}$
+\end_inset
+
+ todos los símbolos nuevos distintos de constantes que ocurren en 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $M'$
+\end_inset
+
+ lo mismo que 
+\begin_inset Formula $M$
+\end_inset
+
+ excepto que 
+\begin_inset Formula $M'$
+\end_inset
+
+ asigna un elemento diferente del dominio a cada 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+.
+ Esto es siempre posible porque 
+\begin_inset Formula $M$
+\end_inset
+
+ es infinito.
+ Entonces 
+\begin_inset Formula $M'$
+\end_inset
+
+ es un modelo para 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $T'$
+\end_inset
+
+ tiene un modelo 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ por el teorema de compactitud.
+ 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ es un modelo para 
+\begin_inset Formula $T$
+\end_inset
+
+ porque 
+\begin_inset Formula $T'$
+\end_inset
+
+ es una extensión de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ El número cardinal de 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ es a lo sumo 
+\begin_inset Formula $C$
+\end_inset
+
+, porque cada nuevo axioma propio 
+\begin_inset Formula $a\neq b$
+\end_inset
+
+ es cierto en 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:NNoCat"
+
+\end_inset
+
+Si la teoría de números de primer orden es consistente, entonces no es categóric
+a.
+ 
+\end_layout
+
+\begin_layout Proof
+Suponga que 
+\begin_inset Formula $N$
+\end_inset
+
+ es consistente.
+ Entonces 
+\begin_inset Formula $N$
+\end_inset
+
+ tiene un modelo numerable 
+\begin_inset Formula $M$
+\end_inset
+
+ por el teorema de completitud.
+ Los axiomas propios de 
+\begin_inset Formula $N$
+\end_inset
+
+ fuerzan a cualquier modelo a ser infinito.
+ Entonces por teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:CardTrans"
+
+\end_inset
+
+, 
+\begin_inset Formula $N$
+\end_inset
+
+ tiene un modelo 
+\begin_inset Formula $M'$
+\end_inset
+
+ cuyo número cardinal es al menos el número cardinal de los reales.
+ Luego 
+\begin_inset Formula $N$
+\end_inset
+
+ no es categórica, ya que 
+\begin_inset Formula $M$
+\end_inset
+
+ es contable y 
+\begin_inset Formula $M'$
+\end_inset
+
+ es no numerable.
+ 
+\end_layout
+
+\begin_layout Standard
+Se intenta que una teoría de primer orden de números sea categórica.
+ Queremos que los enteros no negativos, con el significado usual de 
+\begin_inset Formula $+,\cdot,'$
+\end_inset
+
+, y 
+\begin_inset Formula $0$
+\end_inset
+
+, sea el único modelo (excepto para copias isomorfas).
+ Pero no importa cuantos axiomas se adjunten a 
+\begin_inset Formula $N$
+\end_inset
+
+, el teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:NNoCat"
+
+\end_inset
+
+ aun se aplica, y la teoría resultante no es categórica, si es consistente.
+ 
+\end_layout
+
+\begin_layout Standard
+Un conjunto está bien ordenado si y sólo si está linealmente ordenado y
+ cualquier conjunto no vacío tiene un elemento mínimo, o sea, tiene un elemento
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ tal que 
+\begin_inset Formula $a\le b$
+\end_inset
+
+, para cualquier 
+\begin_inset Formula $b$
+\end_inset
+
+ en el conjunto.
+ Si 
+\begin_inset Formula $A$
+\end_inset
+
+ está bien ordenado, y 
+\begin_inset Formula $B$
+\end_inset
+
+ es un subconjunto de 
+\begin_inset Formula $A$
+\end_inset
+
+ tal que cualquier 
+\begin_inset Formula $x$
+\end_inset
+
+ en 
+\begin_inset Formula $A$
+\end_inset
+
+ está en 
+\begin_inset Formula $B$
+\end_inset
+
+, siempre y cuando cualquier 
+\begin_inset Formula $y$
+\end_inset
+
+ menor que 
+\begin_inset Formula $x$
+\end_inset
+
+ está en 
+\begin_inset Formula $B$
+\end_inset
+
+, entonces 
+\begin_inset Formula $B=A$
+\end_inset
+
+ (inducción transfinita).
+ Para cualquier número cardinal transfinito 
+\begin_inset Formula $C$
+\end_inset
+
+, hay un conjunto bien ordenado de número cardinal 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Una teoría de primer orden generalizada es como la teoría de primer orden
+ excepto que ésta puede tener un conjunto no numerable de símbolos propios.
+ Una teoría de primer orden generalizada con un conjunto numerable de símbolos
+ propios no es formal porque la noción de fórmula no es efectiva.
+ La teoría 
+\begin_inset Formula $T'$
+\end_inset
+
+ en la prueba del teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:CardTrans"
+
+\end_inset
+
+ es de tales teorías.
+ El próximo teorema extiende el teorema de completitud a las teorías de
+ primer orden generalizadas.
+ Restringiremos nuestra atención a teorías cuyos conjuntos de símbolos propios
+ son bien ordenados.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:TALoSumoC"
+
+\end_inset
+
+Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ una teoría generalizada de primer orden, y sea 
+\begin_inset Formula $C$
+\end_inset
+
+ el número cardinal del conjunto de símbolos propios de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $T$
+\end_inset
+
+ tiene un modelo con a lo sumo 
+\begin_inset Formula $C$
+\end_inset
+
+ elementos si 
+\begin_inset Formula $C$
+\end_inset
+
+ es transfinito.
+ 
+\end_layout
+
+\begin_layout Proof
+Las pruebas de los teoremas y lemas de 3 a 7 en la sección del teorema de
+ completitud siguen como antes, reemplazando sucesiones infinitas por conjuntos
+ bien ordenados de número cardinal 
+\begin_inset Formula $C$
+\end_inset
+
+, y la inducción ordinaria por inducción transfinita.
+ Por ejemplo en la prueba del teorema 7 en la sección del teorema de completitud
+, la sucesión infinita de nuevos símbolos de constantes ser remplazado por
+ un conjunto bien ordenado de número cardinal 
+\begin_inset Formula $C$
+\end_inset
+
+ de nuevos símbolos de constante, y el teorema se prueba por inducción transfini
+ta.
+ La prueba del teorema 8 en la sección del teorema de completitud es la
+ misma que antes (inducción ordinaria), pero ahora el modelo 
+\begin_inset Formula $M$
+\end_inset
+
+ tiene a lo sumo 
+\begin_inset Formula $C$
+\end_inset
+
+ elementos en lugar de a lo sumo 
+\begin_inset Formula $\omega$
+\end_inset
+
+ elementos.
+ 
+\end_layout
+
+\begin_layout Standard
+Ya que del teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:TALoSumoC"
+
+\end_inset
+
+, todos los teoremas que se siguen del teorema de completitud se extienden
+ para teorías de primer orden generalizadas con exactamente la misma prueba.
+ En el teorema generalizado de Löwenhein-Skolem, numerable (o sea 
+\begin_inset Formula $\leq$
+\end_inset
+
+
+\begin_inset Formula $\omega$
+\end_inset
+
+) se reemplaza por 
+\begin_inset Formula $\leq C$
+\end_inset
+
+; donde 
+\begin_inset Formula $C$
+\end_inset
+
+ es el número cardinal del conjunto de símbolos propios de la teoría, si
+ 
+\begin_inset Formula $C$
+\end_inset
+
+ es transfinita.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:ModeloExacCElem"
+
+\end_inset
+
+Si 
+\begin_inset Formula $T$
+\end_inset
+
+ tiene un modelo infinito, entonces para cualquier número cardinal 
+\begin_inset Formula $C$
+\end_inset
+
+ transfinito, 
+\begin_inset Formula $T$
+\end_inset
+
+ tiene un modelo con exactamente C elementos.
+ 
+\end_layout
+
+\begin_layout Proof
+Suponga que 
+\begin_inset Formula $T$
+\end_inset
+
+ tiene un modelo infinito 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ un conjunto bien ordenado de número cardinal 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Defina 
+\begin_inset Formula $T'$
+\end_inset
+
+ como en la prueba del teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:CardTrans"
+
+\end_inset
+
+.
+ Entonces exactamente como en la prueba del teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:CardTrans"
+
+\end_inset
+
+, 
+\begin_inset Formula $T'$
+\end_inset
+
+ tiene un modelo 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+.
+ Por el teorema generalizado de Löwenhein-Skolem, 
+\begin_inset Formula $T'$
+\end_inset
+
+ tiene un modelo 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ con a lo sumo 
+\begin_inset Formula $C$
+\end_inset
+
+ elementos.
+ 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ tiene al menos 
+\begin_inset Formula $C$
+\end_inset
+
+ elementos ya que cada axioma propio 
+\begin_inset Formula $a\neq b$
+\end_inset
+
+ es cierto en 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ tiene exactamente 
+\begin_inset Formula $C$
+\end_inset
+
+ elementos por el teorema de Schröder Berstein.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thmTodosConMismoCard"
+
+\end_inset
+
+Suponga que cualquier modelo para 
+\begin_inset Formula $T$
+\end_inset
+
+ es infinito, y para algún número cardinal transfinito 
+\begin_inset Formula $C$
+\end_inset
+
+ todos los modelos para 
+\begin_inset Formula $T$
+\end_inset
+
+ con número cardinal 
+\begin_inset Formula $C$
+\end_inset
+
+ son isomorfos.
+ Entonces 
+\begin_inset Formula $T$
+\end_inset
+
+ es completo.
+\end_layout
+
+\begin_layout Proof
+(Compare con el ejemplo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Ex:LaTeoDLEsComp"
+
+\end_inset
+
+) Sea 
+\begin_inset Formula $S$
+\end_inset
+
+ una proposición de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ el resultado de adjuntar 
+\begin_inset Formula $S$
+\end_inset
+
+ como un axioma propio a 
+\begin_inset Formula $T$
+\end_inset
+
+, y sea 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ el resultado de adjuntar 
+\begin_inset Formula $\sim S$
+\end_inset
+
+ como un axioma propio a 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Aseguramos que 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ o 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ es inconsistente.
+ Entonces 
+\begin_inset Formula $\vdash_{T}\sim S$
+\end_inset
+
+ o 
+\begin_inset Formula $\vdash_{T}S$
+\end_inset
+
+ por teorema 5 de la sección de consistencia y completitud y el cálculo
+ de proposiciones, 
+\begin_inset Formula $T$
+\end_inset
+
+ es completo.
+ Suponga por contradicción que 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ son consistentes.
+ Entonces 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ tienen modelos 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ por el teorema de completitud.
+ 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ son modelos para 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ infinitos.
+ Entonces por teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:ModeloExacCElem"
+
+\end_inset
+
+, 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ tienen modelos 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{4}$
+\end_inset
+
+ de número cardinal 
+\begin_inset Formula $C$
+\end_inset
+
+ .
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ es cierto en 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+ y falso en 
+\begin_inset Formula $M_{4}$
+\end_inset
+
+.
+ Esto es imposible porque siendo modelos para 
+\begin_inset Formula $T$
+\end_inset
+
+ de número cardinal 
+\begin_inset Formula $C$
+\end_inset
+
+ , 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{4}$
+\end_inset
+
+ son isomorfos.
+ 
+\end_layout
+
+\begin_layout Standard
+La teoría 
+\begin_inset Formula $DL$
+\end_inset
+
+ del ejemplo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Ex:LaTeoDLEsComp"
+
+\end_inset
+
+ es un ejemplo del teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmTodosConMismoCard"
+
+\end_inset
+
+ en el cual 
+\begin_inset Formula $C=\omega$
+\end_inset
+
+.
+ Damos un ejemplo en el que 
+\begin_inset Formula $C\neq\omega$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+Sea T la teoría 
+\begin_inset Formula $ACF^{0}$
+\end_inset
+
+ de los cuerpos algebraicamente cerrados de característica cero.
+ Usemos el teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmTodosConMismoCard"
+
+\end_inset
+
+ para mostrar que 
+\begin_inset Formula $T$
+\end_inset
+
+ es completo.
+ Los números complejos y los números algebraicos son modelos para 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ no es categórica porque los números complejos son no numerables y los números
+ algebraicos son numerables.
+ Pero ya que 
+\begin_inset Formula $T$
+\end_inset
+
+ es completo, cualquier proposición de 
+\begin_inset Formula $T$
+\end_inset
+
+ que es cierta en los números complejos es cierta en los números algebraicos,
+ y viceversa.
+ Todos los modelos para 
+\begin_inset Formula $T$
+\end_inset
+
+ son infinitos ya que cualquier cuerpo de característica cero es infinito.
+ Por un teorema Steinitz, si 
+\begin_inset Formula $C$
+\end_inset
+
+ es un cardinal transfinito mayor que 
+\begin_inset Formula $\omega$
+\end_inset
+
+, entonces todos los cuerpos algebraicamente cerrados de característica
+ cero del número cardinal 
+\begin_inset Formula $C$
+\end_inset
+
+ son isomorfos.
+ Luego 
+\begin_inset Formula $T$
+\end_inset
+
+ es completo por teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thmTodosConMismoCard"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Ejercicios
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $AG3$
+\end_inset
+
+ el resultado de adjuntar 
+\begin_inset Formula $\exists!3$
+\end_inset
+
+ a 
+\begin_inset Formula $AG$
+\end_inset
+
+ como un axioma propio.
+ Mostrar que 
+\begin_inset Formula $AG3$
+\end_inset
+
+ es categórica.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $L_{n}$
+\end_inset
+
+ el resultado de adjuntar 
+\begin_inset Formula $\exists!n$
+\end_inset
+
+ a 
+\begin_inset Formula $L$
+\end_inset
+
+ como axioma propio.
+ Mostrar que 
+\begin_inset Formula $L_{n}$
+\end_inset
+
+ es categórica.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Dar una proposición que cuando se adjunta a 
+\begin_inset Formula $T$
+\end_inset
+
+ como un axioma propio fuerza a cualquier modelo para 
+\begin_inset Formula $T$
+\end_inset
+
+ a tener 
+\begin_inset Formula $2$
+\end_inset
+
+, 5, 7 o 13 elementos.
+ 
+\end_layout
+
+\begin_layout Enumerate
+En 
+\begin_inset Formula $AG$
+\end_inset
+
+ sea 
+\begin_inset Formula $nx$
+\end_inset
+
+ una abreviatura para 
+\begin_inset Formula $\underbrace{x+x++x}_{n\mbox{ veces}}$
+\end_inset
+
+.
+ La teoría de los grupos abelianos libres de torsión es el resultado de
+ adjuntar a 
+\begin_inset Formula $AG$
+\end_inset
+
+ todas las proposiciones 
+\begin_inset Formula $\forall x(nx=0\rightarrow x=0)$
+\end_inset
+
+ como axiomas propios.
+ ¿Es esta teoría categórica? ¿Por qué? 
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $T_{n}$
+\end_inset
+
+ el resultado de adjuntar 
+\begin_inset Formula $\exists!n$
+\end_inset
+
+ a 
+\begin_inset Formula $T$
+\end_inset
+
+ como un axioma propio.
+ Probar que 
+\begin_inset Formula $\vdash_{T_{n}}Q$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $Q$
+\end_inset
+
+ es cierta en cualquier modelo para 
+\begin_inset Formula $T$
+\end_inset
+
+ con exactamente 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos.
+\end_layout
+
+\begin_layout Enumerate
+Probar que si 
+\begin_inset Formula $T$
+\end_inset
+
+ tiene un modelo con al menos 
+\begin_inset Formula $n$
+\end_inset
+
+ elementos para cualquier entero positivo 
+\begin_inset Formula $n$
+\end_inset
+
+, entonces 
+\begin_inset Formula $T$
+\end_inset
+
+ tiene un modelo con exactamente 
+\begin_inset Formula $C$
+\end_inset
+
+ elementos para cualquier cardinal transfinito 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Probar que 
+\begin_inset Formula $T$
+\end_inset
+
+ es completa si y solo si cualquier proposición de 
+\begin_inset Formula $T$
+\end_inset
+
+ que es cierta en un modelo numerable para 
+\begin_inset Formula $T$
+\end_inset
+
+ es cierta en cualquier modelo numerable para 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Establecer el teorema correspondiente para una teoría generalizada de primer
+ orden.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Sean 
+\begin_inset Formula $M$
+\end_inset
+
+ y 
+\begin_inset Formula $M'$
+\end_inset
+
+ modelos isomorfos para 
+\begin_inset Formula $T$
+\end_inset
+
+ con dominios 
+\begin_inset Formula $D$
+\end_inset
+
+ y 
+\begin_inset Formula $D'$
+\end_inset
+
+.
+ Sea el elemento 
+\begin_inset Formula $d$
+\end_inset
+
+ de 
+\begin_inset Formula $D$
+\end_inset
+
+ y sea el correspondiente 
+\begin_inset Formula $d'$
+\end_inset
+
+ de 
+\begin_inset Formula $D'$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $p=(d_{1},d_{2},\ldots)$
+\end_inset
+
+ un punto de 
+\begin_inset Formula $M$
+\end_inset
+
+, y sea 
+\begin_inset Formula $p'=\left(d_{1}',d'_{2},\ldots\right)$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $P$
+\end_inset
+
+ una fórmula de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Mostrar que 
+\begin_inset Formula $p$
+\end_inset
+
+ satisface 
+\begin_inset Formula $P$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $p'$
+\end_inset
+
+ satisface 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ Entonces mostrar que 
+\begin_inset Formula $P$
+\end_inset
+
+ es cierto en 
+\begin_inset Formula $M$
+\end_inset
+
+ si y solo si 
+\begin_inset Formula $P$
+\end_inset
+
+ es cierto en 
+\begin_inset Formula $M'$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document

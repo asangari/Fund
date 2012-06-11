@@ -1100,7 +1100,7 @@ Suponga que
 
 \begin_inset Formula 
 \begin{equation}
-\mbox{Si }S_{1},\dots,S_{n}\mbox{ es una deducción desde}\Delta\mbox{, entonces hay una deducción desde }\Delta\mbox{ donde }\forall vS_{1},\dots,\forall vS_{n}\mbox{ son pasos}\label{forallTeo}
+\mbox{Si }S_{1},\dots,S_{n}\mbox{ es una deducción desde}\Delta\mbox{, entonces hay una deducción desde }\Delta\mbox{ donde }\forall vS_{1},\dots,\forall vS_{n}\mbox{ suceden como pasos}\label{forallTeo}
 \end{equation}
 
 \end_inset
@@ -1639,7 +1639,7 @@ A4
 \begin_inset Text
 
 \begin_layout Plain Layout
-MP, (i),(b)
+MP, (1),(b)
 \end_layout
 
 \end_inset
@@ -1671,7 +1671,7 @@ MP, (i),(b)
 \begin_inset Text
 
 \begin_layout Plain Layout
-MP, (ii),(a)
+MP, (2),(a)
 \end_layout
 
 \end_inset
@@ -3036,7 +3036,7 @@ reference "Regla C"
 \end_inset
 
  da que 
-\begin_inset Formula $\vdash\forall\left(P\rightarrow Q\right).\rightarrow.\exists vP\rightarrow Q$
+\begin_inset Formula $\vdash\forall v\left(P\rightarrow Q\right).\rightarrow.\exists vP\rightarrow Q$
 \end_inset
 
 .

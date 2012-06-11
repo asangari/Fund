@@ -130,6 +130,13 @@ Equivalencia y reemplazo
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:equiParatodo"
+
+\end_inset
+
+
 \begin_inset Formula $\forall v(P\leftrightarrow Q).\rightarrow.\forall vP\leftrightarrow\forall vQ$
 \end_inset
 
@@ -974,13 +981,20 @@ Caso 4.
 \end_inset
 
 .
- El teorema 1 da 
-\begin_inset Formula $\forall v(P\leftrightarrow Q).\rightarrow.\forall vP\leftrightarrow\forall vQ$
+ El teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:equiParatodo"
+
+\end_inset
+
+ da 
+\begin_inset Formula $\forall v(Q_{U}\leftrightarrow Q_{V}).\rightarrow.\forall vQ_{U}\leftrightarrow\forall vQ_{V}$
 \end_inset
 
 .
  Entonces por modus ponens da 
-\begin_inset Formula $\forall vP\leftrightarrow\forall vQ$
+\begin_inset Formula $\forall vQ_{U}\leftrightarrow\forall vQ_{V}$
 \end_inset
 
  .

@@ -1728,7 +1728,10 @@ name "Cualquier-teorema-del"
 \end_layout
 
 \begin_layout Proof
-Sea 
+Probaremos que cada paso de cada prueba es una tautología.
+ Entonces cada teorema es una tautología, ya que cada teorema es el último
+ paso de alguna prueba.
+ Sea 
 \begin_inset Formula $S_{1},\dots,S_{n}$
 \end_inset
 
@@ -1738,7 +1741,7 @@ Sea
 \end_inset
 
 .
- Mostraremos que cualquier paso en una 
+ Mostraremos que cualquier paso en 
 \begin_inset Formula $S_{1},\dots,S_{n}$
 \end_inset
 
@@ -1759,7 +1762,7 @@ reference "Cualquier-axioma-del"
 
 \end_inset
 
- cualquier axioma es un teorema.
+ cualquier axioma es una tautología.
  Supongamos ahora que para una prueba con 
 \begin_inset Formula $n$
 \end_inset
