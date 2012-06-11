@@ -1,0 +1,1827 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass amsart
+\use_default_options false
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Decidibilidad 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T$
+\end_inset
+
+ es decidible sí y sólo si hay un procedimiento efectivo, llamado un procedimien
+to de decisión, para decidir si una fórmula arbitraria de 
+\begin_inset Formula $T$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ En el lenguaje de la sección 3, 
+\begin_inset Formula $T$
+\end_inset
+
+ decidible si sólo si la noción del teorema es efectiva.
+ En el lenguaje de la sección 22, 
+\begin_inset Formula $T$
+\end_inset
+
+ es decidible si sólo si su conjunto de teoremas es decidible.
+ La decidibilidad tiene sentido para el cálculo proposicional, y el cálculo
+ de proposiciones es decidible porque el método de las tablas de verdad
+ es un procedimiento de decisión.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:posibiEnumTeor"
+
+\end_inset
+
+Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ una teoría de primer orden formal.
+ Entonces los teoremas de 
+\begin_inset Formula $T$
+\end_inset
+
+ pueden ser efectivamente enumerados.
+ 
+\end_layout
+
+\begin_layout Proof
+Cualquier fórmula de 
+\begin_inset Formula $T$
+\end_inset
+
+ es una cadena en los 12 símbolos formales 
+\begin_inset Formula $\sim\,\rightarrow\,\forall\,(\,,\,)\,\alpha\,\beta\,\gamma\, x\,|\,\#$
+\end_inset
+
+.
+ Agreguemos un símbolo treceavo, 
+\begin_inset Formula $:$
+\end_inset
+
+, que lo usamos para separar fórmulas.
+ Escribamos una prueba con pasos 
+\begin_inset Formula $S_{1},\ldots,S_{n}$
+\end_inset
+
+ como
+\begin_inset Formula $S_{1}:\ldots:S_{n}:$
+\end_inset
+
+ Entonces cualquier prueba es una cadena en esos trece símbolos.
+ Todas las cadenas en esos 13 símbolos pueden ser efectivamente enumeradas
+ como en la prueba del teorema 3 de la sección del teorema de completitud.
+ Alimentaremos con cadenas una máquina de chequeo de pruebas.
+ Si la cadena es de la forma 
+\begin_inset Formula $S_{1}:\ldots:S_{n}:$
+\end_inset
+
+, la máquina reparte la cadena en las subcadenas 
+\begin_inset Formula $S_{1},\ldots,S_{n}$
+\end_inset
+
+ de otra manera rechaza la cadena.
+ La máquina chequea para ver si 
+\begin_inset Formula $S_{1},\ldots,S_{n}$
+\end_inset
+
+ es una prueba.
+ Sí ésta es una prueba, la máquina imprime el último paso 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+.
+ Así la máquina imprime una sucesión 
+\begin_inset Formula $P_{1},P_{2}\ldots$
+\end_inset
+
+ de últimos pasos de pruebas.
+ Cualquier teorema aparece en esta sucesión al menos una vez porque cualquier
+ teorema es el último paso de alguna prueba, y cualquier posible prueba
+ es examinada.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula $T$
+\end_inset
+
+ es decidible si sólo si los teoremas pueden ser efectivamente numerados
+ y la sus no teoremas (fórmulas que no son teoremas) pueden ser efectivamente
+ enumerados.
+ 
+\end_layout
+
+\begin_layout Proof
+Suponga que 
+\begin_inset Formula $T$
+\end_inset
+
+ es decidible.
+ Sea 
+\begin_inset Formula $P_{1},P_{2},\ldots$
+\end_inset
+
+ la enumeración efectiva de las fórmulas de 
+\begin_inset Formula $T$
+\end_inset
+
+ dada en la prueba del teorema tres de la sección de completitud.
+ La máquina de hacer decisiones examina cada 
+\begin_inset Formula $P_{i}$
+\end_inset
+
+ por vez y pone en la lista uno los teoremas y en la lista dos los que no
+ son teoremas.
+ Entonces, la lista uno es una enumeración efectiva de los teoremas de 
+\begin_inset Formula $T$
+\end_inset
+
+ y la lista dos es una enumeración efectiva de los no teoremas de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Supongamos ahora que 
+\begin_inset Formula $Q_{1},Q_{2},\ldots$
+\end_inset
+
+ es una enumeración efectiva de los teoremas de 
+\begin_inset Formula $T$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{1},R_{2},\ldots$
+\end_inset
+
+ es una enumeración efectiva de los no teoremas de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ La máquina va a través de la sucesión 
+\begin_inset Formula $Q_{1},R_{1},Q_{2},R_{2},\ldots,Q_{i},R_{i},\ldots$
+\end_inset
+
+ hasta que encuentra a 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $P$
+\end_inset
+
+ es un 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+, entonces es un teorema; si 
+\begin_inset Formula $P$
+\end_inset
+
+ es un 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+ entonces no es un teorema.
+ Luego 
+\begin_inset Formula $T$
+\end_inset
+
+ es decidible.
+\end_layout
+
+\begin_layout Theorem
+Una teoría formal de primer orden es decidible si sólo si sus teoremas pueden
+ ser enumerados efectivamente.
+ 
+\end_layout
+
+\begin_layout Proof
+Teoremas 1 y 2 
+\end_layout
+
+\begin_layout Standard
+La máquina que aparece en el teorema uno y dos, y 4 abajo, son construcciones
+ matemáticas.
+ Las computadoras digitales existentes, no tienen suficiente memoria para
+ ejecutar estos procedimientos efectivos.
+ 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:CompletaDecidible"
+
+\end_inset
+
+Sí una teoría formal de primer orden es completa, entonces es decidible
+ 
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $T$
+\end_inset
+
+ una teoría formal de primer orden completa.
+ Si 
+\begin_inset Formula $T$
+\end_inset
+
+ es inconsistente, entonces 
+\begin_inset Formula $T$
+\end_inset
+
+ en decidible porque cualquier fórmula de 
+\begin_inset Formula $T$
+\end_inset
+
+ es un teorema.
+ Así suponga que 
+\begin_inset Formula $T$
+\end_inset
+
+ es consistente.
+ Sea 
+\begin_inset Formula $P$
+\end_inset
+
+ una proposición de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $Q_{1},Q_{2},\ldots$
+\end_inset
+
+ una enumeración efectiva de los teoremas de 
+\begin_inset Formula $T$
+\end_inset
+
+ dados por teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:posibiEnumTeor"
+
+\end_inset
+
+.
+ La máquina examina cada 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ por vez.
+ Sí algún 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ es 
+\begin_inset Formula $P$
+\end_inset
+
+, entonces 
+\begin_inset Formula $P$
+\end_inset
+
+ es un teorema.
+ Si algún 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ es 
+\begin_inset Formula $\sim P$
+\end_inset
+
+; entonces 
+\begin_inset Formula $P$
+\end_inset
+
+ no es un teorema ya que 
+\begin_inset Formula $T$
+\end_inset
+
+ es consistente.
+ Algún 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ es o 
+\begin_inset Formula $P$
+\end_inset
+
+ o 
+\begin_inset Formula $\sim P$
+\end_inset
+
+ porque 
+\begin_inset Formula $T$
+\end_inset
+
+ es completa.
+ Ya que la máquina decidirá, después de examinar un número finito de 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+, si 
+\begin_inset Formula $P$
+\end_inset
+
+ es, o no, un teorema.
+ Si 
+\begin_inset Formula $P$
+\end_inset
+
+ es una fórmula con variable libres, entonces la máquina trabaja con la
+ clausura de 
+\begin_inset Formula $P$
+\end_inset
+
+, ya que 
+\begin_inset Formula $P$
+\end_inset
+
+ es un teorema si y sólo si la clausura es un teorema.
+ 
+\end_layout
+
+\begin_layout Standard
+La prueba del teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:CompletaDecidible"
+
+\end_inset
+
+ señala un aspecto importante de la noción de procedimiento efectivo.
+ Aunque no sabemos, en principio, cuantos 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ tienen que ser examinados para llegar a una decisión a cerca de 
+\begin_inset Formula $P$
+\end_inset
+
+, el procedimiento es efectivo ya que sabemos que se tomará una decisión
+ después examinar un número finito de 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+.
+ Las teorías 
+\begin_inset Formula $DL$
+\end_inset
+
+ y 
+\begin_inset Formula $ACF^{0}$
+\end_inset
+
+ probadas completas en el ejemplo cinco de la sección de completitud y categoric
+idad, son formales, y luego decidibles por teorema cuatro.
+ Damos un ejemplo de una teoría que es decidible pero no completa.
+ 
+\end_layout
+
+\begin_layout Example
+Sea 
+\begin_inset Formula $AG_{4}$
+\end_inset
+
+ el resultado de adjuntar 
+\begin_inset Formula $\exists!4$
+\end_inset
+
+ a 
+\begin_inset Formula $AG$
+\end_inset
+
+ como un axioma propio.
+ Cualquier modelo para 
+\begin_inset Formula $AG_{4}$
+\end_inset
+
+ tiene exactamente cuatro elementos.
+ Un teorema del álgebra establece que hay dos modelos no isomorfos con cuatro
+ elementos.
+ Estos son los modelos 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{4}$
+\end_inset
+
+ del ejemplo 3 de la sección de completitud y categoricidad.
+ Una fórmula 
+\begin_inset Formula $P$
+\end_inset
+
+ de 
+\begin_inset Formula $AG_{4}$
+\end_inset
+
+ es un teorema de 
+\begin_inset Formula $AG_{4}$
+\end_inset
+
+ si y sólo si es cierta tanto en 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+ como en 
+\begin_inset Formula $M_{4}$
+\end_inset
+
+.
+ La verdad de 
+\begin_inset Formula $P$
+\end_inset
+
+ en 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{4}$
+\end_inset
+
+ puede ser efectivamente chequeada ya que 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $M_{4}$
+\end_inset
+
+ son finitos.
+ Luego 
+\begin_inset Formula $AG_{4}$
+\end_inset
+
+ es decidible.
+ El enunciado 
+\begin_inset Formula $\forall x(x+x=0)$
+\end_inset
+
+ es cierto en 
+\begin_inset Formula $M_{3}$
+\end_inset
+
+ y falso en 
+\begin_inset Formula $M_{4}$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $AG_{4}$
+\end_inset
+
+ no es completa.
+ 
+\end_layout
+
+\begin_layout Standard
+Dos teorías de primer orden decidibles importantes son la teoría de los
+ grupos abelianos y la teoría de los cuerpos reales cerrados.
+ 
+\end_layout
+
+\begin_layout Standard
+Algunas teorías de primer orden no decidibles son la teoría de números,
+ la teoría de conjuntos, el cálculo de predicados, y la teoría de grupos,
+ anillos, cuerpos, y redes.
+ Una teoría es no decidible si y sólo si hay una prueba que no tiene procedimien
+to de decisión para ella.
+ Hay muchas teorías cuya decibilidad es desconocida.
+ 
+\begin_inset Formula $T$
+\end_inset
+
+ es esencialmente no decidible si y sólo si 
+\begin_inset Formula $T$
+\end_inset
+
+ es no decidible, y cualquier extensión consistente de 
+\begin_inset Formula $T$
+\end_inset
+
+ con las mismas fórmulas que 
+\begin_inset Formula $T$
+\end_inset
+
+ es no decidible.
+ La teoría 
+\begin_inset Formula $Q$
+\end_inset
+
+ definida abajo es esencialmente no decidible.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q$
+\end_inset
+
+ tiene los mismos símbolos propios que 
+\begin_inset Formula $N$
+\end_inset
+
+, y los siguientes axiomas propios 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+label=
+\backslash
+ Q
+\backslash
+arabic{enumi}.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\forall$
+\end_inset
+
+
+\begin_inset Formula $x\forall y(x'=y'\rightarrow x=y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall x(x'\neq0)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall x\left(x=0\vee\exists y\left(x=y'\right)\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall x(x+0=x)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall x\forall y\left(x+y'=(x+y)'\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall x(x0=x)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall x\forall y(xy'=xy+x)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+El procedimiento de decisión para las teorías de grupos abelianos y de cuerpos
+ reales cerrados usan el método de eliminación de cuantificadores.
+ Esbozaremos un procedimiento de decisión para la teoría 
+\begin_inset Formula $DL$
+\end_inset
+
+ que usa eliminación de cuantificadores.
+ 
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $P$
+\end_inset
+
+ una proposición de 
+\begin_inset Formula $DL$
+\end_inset
+
+.
+ Es suficiente considerar proposiciones, ya que una fórmula es un teorema
+ si y sólo si su clausura es un teorema.
+ Sea 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall x\left(x=x\right)$
+\end_inset
+
+.
+ Mostremos que 
+\begin_inset Formula $P$
+\end_inset
+
+ es equivalente a 
+\series bold
+
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+
+\series default
+ o 
+\begin_inset Formula $\sim\mathbf{T}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $P$
+\end_inset
+
+ es equivalente a 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $P$
+\end_inset
+
+ es un teorema ya que 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+ es un teorema.
+ Si 
+\begin_inset Formula $P$
+\end_inset
+
+ es equivalente a 
+\series bold
+
+\begin_inset Formula $\sim\mathbf{T}$
+\end_inset
+
+
+\series default
+, entonces 
+\begin_inset Formula $P$
+\end_inset
+
+ no es un teorema ya que 
+\begin_inset Formula $DL$
+\end_inset
+
+ es consistente.
+ Usemos los siguientes teoremas de 
+\begin_inset Formula $DL$
+\end_inset
+
+.
+ 1 a 12 son teoremas del cálculo de predicados.
+ Solamente de 13 a 18 dependen de los axiomas propios de 
+\begin_inset Formula $DL$
+\end_inset
+
+.
+ Usemos también las leyes asociativas y conmutativa de la conjunción y la
+ disyunción sin mención explícita.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sim\sim T\leftrightarrow T$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\wedge P\leftrightarrow P$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T\vee P\leftrightarrow T$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sim T\wedge P\leftrightarrow\sim T$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sim T\vee P\leftrightarrow P$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\exists vQ\leftrightarrow Q$
+\end_inset
+
+ si 
+\begin_inset Formula $v$
+\end_inset
+
+ no es libre en 
+\begin_inset Formula $Q$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P\wedge\left(Q\vee R\right)\leftrightarrow\left(P\wedge Q\right)\vee\left(P\wedge R\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\exists v\left(Q_{1}\vee\ldots\vee Q_{k}\right)\leftrightarrow\exists vQ_{1}\vee\ldots\vee\exists vQ_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\exists v\left(R\wedge S\right)\leftrightarrow R\wedge\exists vS$
+\end_inset
+
+ si 
+\begin_inset Formula $v$
+\end_inset
+
+ no es libre en 
+\begin_inset Formula $R$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $v=v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\exists v(v=u)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\exists v\left(v=u\wedge S\right)\leftrightarrow S\left(u/v\right)$
+\end_inset
+
+ si 
+\begin_inset Formula $S$
+\end_inset
+
+ admite 
+\begin_inset Formula $u$
+\end_inset
+
+ para 
+\begin_inset Formula $v$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sim(v<v)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sim(u=v)\leftrightarrow u<v\vee v<u$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sim(u<v)\leftrightarrow u=v\vee v<u$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\exists v\left(v<u_{1}\wedge v<u_{2}\wedge\ldots\wedge v<u_{j}\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\exists v\left(u_{1}<v\wedge u_{2}<v\wedge\ldots\wedge u_{j}<v\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula 
+\begin{align*}
+\exists v\left(u_{1}<v\wedge u_{2}<v\wedge\ldots\wedge u_{j}<v\wedge v<w_{1}\wedge v<w_{2}\wedge\ldots\wedge v<w_{k}\right) & \leftrightarrow\\
+u_{1}<w_{1}\wedge u_{1}<w_{2}\wedge\ldots\wedge u_{1}<w_{k}\wedge\\
+\wedge u_{2}<w_{1}\wedge u_{2}<w_{2}\wedge\ldots\wedge u_{2}<w_{k}\wedge\ldots\wedge\\
+\wedge u_{j}<w_{1}\wedge u_{j}<w_{2}\wedge\ldots\wedge u_{j}<w_{k}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En los pasos de arriba, 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+ se piensa como una fórmula atómica, o sea, la variable 
+\begin_inset Formula $x$
+\end_inset
+
+ y el cuantificador 
+\begin_inset Formula $\forall x$
+\end_inset
+
+ que ocurre en 
+\begin_inset Formula $T$
+\end_inset
+
+ se ignoran.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+label=
+\backslash
+ Paso 
+\backslash
+arabic{enumi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Reduzca 
+\begin_inset Formula $P$
+\end_inset
+
+ a la forma normal prenexa 
+\begin_inset Formula $Zv_{1}\cdots Zv_{n}Q$
+\end_inset
+
+ y reemplace cada 
+\begin_inset Formula $\forall v_{i}$
+\end_inset
+
+ por 
+\begin_inset Formula $\exists v_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $Q'$
+\end_inset
+
+ la fórmula que viene después de 
+\begin_inset Formula $\exists v_{n}$
+\end_inset
+
+ (
+\begin_inset Formula $Q'$
+\end_inset
+
+ es 
+\begin_inset Formula $Q$
+\end_inset
+
+ o 
+\begin_inset Formula $Q$
+\end_inset
+
+).
+ En 
+\begin_inset Formula $Q'$
+\end_inset
+
+, use 10 para remplazar cada subfórmula 
+\begin_inset Formula $v=v$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+, y use 13 para reemplazar cada fórmula 
+\begin_inset Formula $\sim\left(v<v\right)$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $Q''$
+\end_inset
+
+ el resultado.
+ Si 
+\begin_inset Formula $Q'$
+\end_inset
+
+ es 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+ o 
+\begin_inset Formula $\sim\mathbf{T}$
+\end_inset
+
+ use 1 y 6 para reducir 
+\begin_inset Formula $P$
+\end_inset
+
+ a 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+ o 
+\begin_inset Formula $\sim\mathbf{T}$
+\end_inset
+
+.Si 
+\begin_inset Formula $Q''$
+\end_inset
+
+ es una tautología o una contradicción, reemplácela por 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+ o 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+ y use 1 y 6 para reducir 
+\begin_inset Formula $P$
+\end_inset
+
+ a 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+ o 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+ .De otra forma proceda al paso 3 
+\end_layout
+
+\begin_layout Enumerate
+Reduzca 
+\begin_inset Formula $Q''$
+\end_inset
+
+ a la forma normal disyuntiva.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Use 14 para remplazar cada subfórmula 
+\begin_inset Formula $(u=v)$
+\end_inset
+
+ por 
+\begin_inset Formula $u<v\vee v<u$
+\end_inset
+
+ y use 15 para reemplazar 
+\begin_inset Formula $\sim(u<v)$
+\end_inset
+
+ por 
+\begin_inset Formula $u=v\vee v<u$
+\end_inset
+
+ Luego use 7 para reducir a una fórmula 
+\begin_inset Formula $Q_{1}\vee\ldots\vee Q_{k}$
+\end_inset
+
+; donde cada 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ es la conjunción de fórmulas atómicas.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Use 8 para remplazar 
+\begin_inset Formula $\exists v\left(Q_{1}\vee\ldots\vee Q_{k}\right)$
+\end_inset
+
+por 
+\begin_inset Formula $\exists vQ_{1}\vee\ldots\vee\exists vQ_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+(1) Elimine 
+\begin_inset Formula $\exists$
+\end_inset
+
+ y todas las ocurrencias de 
+\begin_inset Formula $v_{n}$
+\end_inset
+
+ en 
+\begin_inset Formula $\exists v_{n}$
+\end_inset
+
+ como sigue.
+ Si 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ no es libre en 
+\begin_inset Formula $Q_{1}$
+\end_inset
+
+, use 6 para remplazar 
+\begin_inset Formula $\exists v_{n}Q_{1}$
+\end_inset
+
+ por 
+\begin_inset Formula $Q_{1}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ es libre en 
+\begin_inset Formula $Q_{1}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $Q_{1}$
+\end_inset
+
+ es 
+\begin_inset Formula $R\wedge S$
+\end_inset
+
+; donde 
+\begin_inset Formula $v_{n}$
+\end_inset
+
+ no es libre en 
+\begin_inset Formula $R$
+\end_inset
+
+ y es libre en 
+\begin_inset Formula $S$
+\end_inset
+
+: Entonces use 9 para reemplazar 
+\begin_inset Formula $\exists v_{n}(R\wedge S)$
+\end_inset
+
+ por 
+\begin_inset Formula $R\wedge\exists v_{n}S$
+\end_inset
+
+ y considere 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ (Si 
+\begin_inset Formula $v_{n}$
+\end_inset
+
+ es libre en cualquier subfórmula atómica de 
+\begin_inset Formula $Q_{1}$
+\end_inset
+
+; entonces 
+\begin_inset Formula $R$
+\end_inset
+
+ no existe y 
+\begin_inset Formula $S$
+\end_inset
+
+ es todo de 
+\begin_inset Formula $Q_{1}$
+\end_inset
+
+)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+label=
+\backslash
+ Caso 
+\backslash
+arabic{enumii}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $v_{n}=u$
+\end_inset
+
+: Entonces use 11 para reemplazar 
+\begin_inset Formula $\exists v_{n}S$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $v_{n}=u\wedge S'$
+\end_inset
+
+.
+ Entonces use 12 para reemplazar 
+\begin_inset Formula $\exists v_{n}S$
+\end_inset
+
+ por 
+\begin_inset Formula $S'(u/v_{n})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $=$
+\end_inset
+
+ no ocurre en 
+\begin_inset Formula $S$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+label=
+\backslash
+ Subcaso 
+\backslash
+arabic{enumii}.
+\backslash
+arabic{enumiii}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $v_{n}<u_{1}\wedge v_{n}<u_{2}\wedge\ldots\wedge v_{n}<u_{j}$
+\end_inset
+
+.
+ Entonces use 16 para reemplazar 
+\begin_inset Formula $\exists v_{n}$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $u_{1}<v_{n}\wedge u_{2}<v_{n}\wedge\ldots\wedge u_{j}<v_{n}$
+\end_inset
+
+.
+ Entonces use 17 para reemplazar 
+\begin_inset Formula $\exists v_{n}S$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S$
+\end_inset
+
+ es 
+\begin_inset Formula $u_{1}<v\wedge u_{2}<v\wedge\ldots\wedge u_{j}<v\wedge v<w_{1}\wedge v<w_{2}\wedge\ldots\wedge v<w_{k}$
+\end_inset
+
+.
+ Entonces use 18 para reemplazar 
+\begin_inset Formula $\exists v_{n}S$
+\end_inset
+
+ por 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $u_{1}<w_{1}\wedge u_{1}<w_{2}\wedge\ldots\wedge u_{1}<w_{k}\wedge u_{2}<w_{1}\wedge u_{2}<w_{2}\wedge\ldots\wedge u_{2}<w_{k}\wedge\ldots\wedge u_{j}<w_{1}\wedge u_{j}<w_{2}\wedge\ldots\wedge u_{j}<w_{k}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Paso
+\series default
+ 6(i) Repita el paso 6(1) por cada 
+\begin_inset Formula $Q_{i}$
+\end_inset
+
+ para eliminar 
+\begin_inset Formula $\exists$
+\end_inset
+
+ y todas las ocurrencias de 
+\begin_inset Formula $v_{n}$
+\end_inset
+
+ en 
+\begin_inset Formula $\exists v_{n}Q_{1}\vee\ldots\exists v_{n}Q_{k}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Use 1 a 6 cuando se aplique.
+ Entonces repita los pasos 2 a 7 para 
+\begin_inset Formula $v_{n-1},v_{n-2},\ldots,v_{1}$
+\end_inset
+
+ por vez.
+ El resultado es una proposición en la que no hay cuantificadores.
+ Ya que 
+\begin_inset Formula $DL$
+\end_inset
+
+ no tiene símbolos de constante, esta proposición debe ser 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+ o 
+\begin_inset Formula $\sim\mathbf{T}$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Example
+Aplicaremos el procedimiento de decisión para 
+\begin_inset Formula $DL$
+\end_inset
+
+ a 
+\begin_inset Formula $\exists x\forall y(y<x)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+label=
+\backslash
+ Paso 
+\backslash
+arabic{enumi}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Reemplace 
+\begin_inset Formula $\exists x\forall y(y<x)$
+\end_inset
+
+ por 
+\begin_inset Formula $\exists x\sim\exists y\sim(y<x)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+No cambia 
+\end_layout
+
+\begin_layout Enumerate
+No cambia 
+\end_layout
+
+\begin_layout Enumerate
+Reemplace 
+\begin_inset Formula $\sim(y<x)$
+\end_inset
+
+ por 
+\begin_inset Formula $y=x\vee y<x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Reemplace 
+\begin_inset Formula $\exists y(y=x\vee y<x)$
+\end_inset
+
+ por 
+\begin_inset Formula $\exists y(y=x)\vee\exists y(y<x)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+label=
+\backslash
+arabic{enumii}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Reemplace 
+\begin_inset Formula $\exists y(y=x)$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Reemplace 
+\begin_inset Formula $\exists y(y<x)$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Reemplace 
+\begin_inset Formula $\mathbf{T}\vee\mathbf{T}$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathbf{T}$
+\end_inset
+
+: Entonces reemplace 
+\begin_inset Formula $\exists x\sim\mathbf{T}$
+\end_inset
+
+ por 
+\begin_inset Formula $\sim\mathbf{T}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Luego 
+\begin_inset Formula $\exists x\forall y(y<x)$
+\end_inset
+
+ no es un teorema de 
+\begin_inset Formula $DL$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ejercicios
+\end_layout
+
+\begin_layout Enumerate
+¿Por qué el teorema 1 no da un procedimiento de decisión para todas las
+ teorías formales de primer orden? 
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $T'$
+\end_inset
+
+ el resultado de adjuntar a los axiomas propios de 
+\begin_inset Formula $T$
+\end_inset
+
+ un conjunto finito de proposiciones de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Probar que si 
+\begin_inset Formula $T'$
+\end_inset
+
+ es indecidible, entonces 
+\begin_inset Formula $T$
+\end_inset
+
+ es indecidible 
+\end_layout
+
+\begin_layout Enumerate
+Dar sin prueba un ejemplo de una teoría que sea indecidible pero no esencialment
+e indecidible.
+\end_layout
+
+\begin_layout Enumerate
+Suponiendo que 
+\begin_inset Formula $Q$
+\end_inset
+
+ es indecidible, probar que el cálculo de predicados en indecidible.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Sea 
+\begin_inset Formula $T'$
+\end_inset
+
+ una extensión consistente de 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Probar que si 
+\begin_inset Formula $T$
+\end_inset
+
+ es esencialmente indecidible, 
+\begin_inset Formula $T'$
+\end_inset
+
+ es esencialmente indecidible.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Suponiendo que 
+\begin_inset Formula $Q$
+\end_inset
+
+ es esencialmente indecidible y 
+\begin_inset Formula $N$
+\end_inset
+
+ es consistente, probar que 
+\begin_inset Formula $N$
+\end_inset
+
+ es esencialmente indecidible.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Probar que si 
+\begin_inset Formula $T$
+\end_inset
+
+ es completa, las siguientes afirmaciones son equivalentes: (a) 
+\begin_inset Formula $T$
+\end_inset
+
+ es indecidible (b) 
+\begin_inset Formula $T$
+\end_inset
+
+ es esencialmente indecidible (c) 
+\begin_inset Formula $T$
+\end_inset
+
+ no es formal.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Probar que si 
+\begin_inset Formula $T$
+\end_inset
+
+ es consistente y decidible, entonces 
+\begin_inset Formula $T$
+\end_inset
+
+ tiene una extensión consistente, completa y decidible; con las mismas fórmulas
+ que 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+9.
+ Suponga que 
+\begin_inset Formula $T$
+\end_inset
+
+ está finitamente axiomatizada.
+ Suponga que para algún número cardinal 
+\begin_inset Formula $C$
+\end_inset
+
+, 
+\begin_inset Formula $T$
+\end_inset
+
+ tiene un modelo de número cardinal 
+\begin_inset Formula $C$
+\end_inset
+
+, y todos los modelos para 
+\begin_inset Formula $T$
+\end_inset
+
+ de número cardinal 
+\begin_inset Formula $C$
+\end_inset
+
+ son isomorfos.
+ Probar que 
+\begin_inset Formula $T$
+\end_inset
+
+ es decidible.
+\end_layout
+
+\end_body
+\end_document
