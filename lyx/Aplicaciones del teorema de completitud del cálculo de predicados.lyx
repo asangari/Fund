@@ -1928,8 +1928,27 @@ Suponga que
 
 \end_layout
 
-\begin_layout Example
-5.
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+start = 5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
  
 \begin_inset Formula $yz\neq0$
 \end_inset
@@ -1937,27 +1956,21 @@ Suponga que
 
 \end_layout
 
-\begin_layout Example
-6.
- 
+\begin_layout Enumerate
 \begin_inset Formula $z=0\wedge y0=0\rightarrow yz=0$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Example
-7.
- 
+\begin_layout Enumerate
 \begin_inset Formula $y0=0$
 \end_inset
 
-
+ 
 \end_layout
 
-\begin_layout Example
-8.
- 
+\begin_layout Enumerate
 \begin_inset Formula $z\neq0$
 \end_inset
 
@@ -2100,6 +2113,7 @@ Suponga que
 SC 5-7
 \end_layout
 
+\end_deeper
 \begin_layout Example
 \begin_inset Quotes eld
 \end_inset
