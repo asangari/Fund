@@ -666,7 +666,7 @@ El conjunto de símbolos propios de la teoría
 
  E3+.
  
-\begin_inset Formula $\forall x_{1}\forall x_{2}\forall y_{1}\forall y_{2}\left(x_{1}=y_{1}\wedge x_{2}=y_{2}.\longrightarrow.x_{1}+x_{2}\longleftrightarrow y_{1}+y_{2}\right)$
+\begin_inset Formula $\forall x_{1}\forall x_{2}\forall y_{1}\forall y_{2}\left(x_{1}=y_{1}\wedge x_{2}=y_{2}.\longrightarrow.x_{1}+x_{2}=y_{1}+y_{2}\right)$
 \end_inset
 
 
